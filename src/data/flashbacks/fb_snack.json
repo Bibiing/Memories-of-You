@@ -1,0 +1,68 @@
+{
+  "id": "fb_snack",
+  "title": "Langit Malam dan Chiki",
+  "chapter": "prologue",
+  "startNode": "fs_01",
+  "nodes": [
+    {
+      "id": "fs_01",
+      "speaker": "System",
+      "text": "Rooftop kos, tengah malam. Angin sepoi-sepoi membawa bau rumput basah.",
+      "next": "fs_02"
+    },
+    {
+      "id": "fs_02",
+      "speaker": "Dia",
+      "text": "*membuka bungkus keripik* Kamu mau?",
+      "next": "fs_03"
+    },
+    {
+      "id": "fs_03",
+      "speaker": "MC",
+      "text": "Kamu beli dari mana jam segini?",
+      "next": "fs_04"
+    },
+    {
+      "id": "fs_04",
+      "speaker": "Dia",
+      "text": "Minimarket bawah. Jalan kaki sepuluh menit. Worth it.",
+      "next": "fs_05"
+    },
+    {
+      "id": "fs_05",
+      "speaker": "MC",
+      "text": "Kamu gila.",
+      "next": "fs_06"
+    },
+    {
+      "id": "fs_06",
+      "speaker": "Dia",
+      "text": "Tapi kamu seneng, kan?",
+      "next": "fs_07"
+    },
+    {
+      "id": "fs_07",
+      "speaker": "MC",
+      "text": "...Ya.",
+      "next": "fs_08"
+    },
+    {
+      "id": "fs_08",
+      "speaker": "Dia",
+      "text": "*menunjuk langit* Coba lihat bintang-bintang itu. Indah banget.",
+      "next": "fs_09"
+    },
+    {
+      "id": "fs_09",
+      "speaker": "MC",
+      "text": "Kamu selalu bisa menemukan hal indah di mana-mana.",
+      "next": "fs_10"
+    },
+    {
+      "id": "fs_10",
+      "speaker": "Dia",
+      "text": "Karena aku lihat ke arah yang benar.",
+      "next": null
+    }
+  ]
+}

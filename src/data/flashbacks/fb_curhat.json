@@ -1,0 +1,62 @@
+{
+  "id": "fb_curhat",
+  "title": "Tentang Ketakutan Kita",
+  "chapter": "prologue",
+  "startNode": "fc_01",
+  "nodes": [
+    {
+      "id": "fc_01",
+      "speaker": "System",
+      "text": "Rooftop yang sama. Tapi kali ini suasana berbeda — lebih serius, lebih jujur.",
+      "next": "fc_02"
+    },
+    {
+      "id": "fc_02",
+      "speaker": "Dia",
+      "text": "Kamu pernah takut tidak punya masa depan?",
+      "next": "fc_03"
+    },
+    {
+      "id": "fc_03",
+      "speaker": "MC",
+      "text": "Sering. Setiap malam sebelum ujian.",
+      "next": "fc_04"
+    },
+    {
+      "id": "fc_04",
+      "speaker": "Dia",
+      "text": "Gue bukan soal ujian. Gue soal... apakah apa yang kita lakukan sekarang ada artinya.",
+      "next": "fc_05"
+    },
+    {
+      "id": "fc_05",
+      "speaker": "MC",
+      "text": "Kamu kenapa tiba-tiba filosofis gini?",
+      "next": "fc_06"
+    },
+    {
+      "id": "fc_06",
+      "speaker": "Dia",
+      "text": "Gue lagi mikirin banyak hal. Tapi yang paling bikin tenang adalah—",
+      "next": "fc_07"
+    },
+    {
+      "id": "fc_07",
+      "speaker": "Dia",
+      "text": "Kalau gue punya teman yang nemenin takut bareng, itu udah lebih dari cukup.",
+      "next": "fc_08"
+    },
+    {
+      "id": "fc_08",
+      "speaker": "MC",
+      "text": "Kamu bicara tentang aku?",
+      "next": "fc_09"
+    },
+    {
+      "id": "fc_09",
+      "speaker": "Dia",
+      "text": "*tersenyum* Gue bakal selalu ada. Itu janji.",
+      "next": null
+    }
+  ]
+}

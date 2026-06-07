@@ -218,6 +218,257 @@ body {
   animation: cactus-wilt 5s ease-in-out infinite;
 }
 
+/* ── Dialogue ────────────────────────────────────────────── */
+.dialogue-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.dialogue-box {
+  pointer-events: auto;
+  width: 90%;
+  max-width: 860px;
+  background: linear-gradient(135deg, rgba(8, 4, 20, 0.93) 0%, rgba(15, 8, 35, 0.95) 100%);
+  border: 1px solid var(--color-border);
+  border-bottom: none;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  padding: 1.25rem 2rem 1.5rem;
+  backdrop-filter: blur(6px);
+  animation: slideUp 0.3s ease both;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+.dialogue-speaker {
+  color: var(--color-primary);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  min-height: 1.1em;
+}
+
+.dialogue-text {
+  color: var(--color-text);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  min-height: 3.7em;
+  white-space: pre-wrap;
+}
+
+.dialogue-advance-indicator {
+  position: absolute;
+  bottom: 0.7rem;
+  right: 1.5rem;
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  animation: dialogue-blink 1.2s ease-in-out infinite;
+}
+
+@keyframes dialogue-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.15; }
+}
+
+/* ── Choices ─────────────────────────────────────────────── */
+.choice-list {
+  pointer-events: auto;
+  width: 90%;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.5rem 2rem 0.75rem;
+  background: rgba(8, 4, 20, 0.9);
+  border: 1px solid var(--color-border);
+  border-top: none;
+  border-bottom: none;
+}
+
+.choice-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 1rem;
+  color: var(--color-text);
+  font-size: 0.88rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast),
+    transform var(--transition-fast);
+  width: 100%;
+  font-family: var(--font-body);
+}
+
+.choice-btn:hover {
+  background: rgba(120, 60, 200, 0.18);
+  border-color: var(--color-primary);
+  transform: translateX(4px);
+}
+
+.choice-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ── Timed Choice ────────────────────────────────────────── */
+.timed-choice-root {
+  pointer-events: auto;
+  width: 90%;
+  max-width: 860px;
+  background: rgba(8, 4, 20, 0.9);
+  border: 1px solid var(--color-border);
+  border-top: none;
+  border-bottom: none;
+  padding: 0.4rem 2rem 0.75rem;
+}
+
+.timed-bar-wrap {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.timed-bar-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 2px;
+  transition: width 0.1s linear;
+}
+
+/* ── Flashback Overlay ───────────────────────────────────── */
+.flashback-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  background: #000;
+  animation: fadeIn 0.55s ease both;
+}
+
+.flashback-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  filter: sepia(55%) contrast(0.88) brightness(0.82);
+}
+
+.flashback-header {
+  position: absolute;
+  top: 1.75rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 51;
+  pointer-events: none;
+}
+
+.flashback-label {
+  display: block;
+  color: rgba(255, 235, 180, 0.65);
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.flashback-title {
+  display: block;
+  color: rgba(255, 242, 200, 0.9);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-top: 0.15rem;
+}
+
+/* ── Interaction Objects ─────────────────────────────────── */
+.interaction-object {
+  position: absolute;
+  z-index: 15;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.interaction-pulse {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 10px var(--color-accent);
+  animation: interaction-pulse 2.2s ease-in-out infinite;
+  transition: transform var(--transition-fast);
+}
+
+.interaction-pulse--hover {
+  transform: scale(1.4);
+}
+
+.interaction-label {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(8, 4, 20, 0.92);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.2rem 0.5rem;
+  font-size: 0.68rem;
+  color: var(--color-text);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.interaction-object:hover .interaction-label,
+.interaction-object:focus-visible .interaction-label {
+  opacity: 1;
+}
+
+@keyframes interaction-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.35); opacity: 0.65; }
+}
+
+/* ── Evening Reflection ──────────────────────────────────── */
+.evening-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  background: rgba(0, 0, 0, 0.62);
+  animation: fadeIn 0.8s ease both;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.evening-day-label {
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-text);
+  opacity: 0.4;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 /* ── Effect overlays ─────────────────────────────────────── */
 .effect-overlay {
   position: absolute;

@@ -134,6 +134,22 @@ function DebugPanelInner() {
               style={{ accentColor: '#43a047' }}
             />
           </label>
+
+          <div style={{ borderTop: '1px solid #333', paddingTop: 8, display: 'flex', flexDirection: 'column', gap: 4 }}>
+            <span style={{ color: '#aaa', fontSize: 10 }}>Quick Actions</span>
+            <button
+              onClick={() => { setScene('evening-reflection') }}
+              style={{ background: '#1a1a00', color: '#FFD54F', border: '1px solid #555', borderRadius: 3, padding: '3px 8px', cursor: 'pointer', fontSize: 11 }}
+            >
+              ▶ Evening Reflection
+            </button>
+            <button
+              onClick={() => { setScene('gameplay') }}
+              style={{ background: '#001a00', color: '#69F0AE', border: '1px solid #555', borderRadius: 3, padding: '3px 8px', cursor: 'pointer', fontSize: 11 }}
+            >
+              ▶ Gameplay
+            </button>
+          </div>
         </div>
       )}
     </div>

@@ -1,0 +1,68 @@
+{
+  "id": "fb_main",
+  "title": "Boneka dari Claw Machine",
+  "chapter": "prologue",
+  "startNode": "fma_01",
+  "nodes": [
+    {
+      "id": "fma_01",
+      "speaker": "System",
+      "text": "Game center. Dua bulan yang lalu.",
+      "next": "fma_02"
+    },
+    {
+      "id": "fma_02",
+      "speaker": "Dia",
+      "text": "Gue bakal dapetin boneka itu.",
+      "next": "fma_03"
+    },
+    {
+      "id": "fma_03",
+      "speaker": "MC",
+      "text": "Kamu sudah masukkan koin ke-delapan.",
+      "next": "fma_04"
+    },
+    {
+      "id": "fma_04",
+      "speaker": "Dia",
+      "text": "Koin ke-sembilan adalah koin keberuntungan. Gue merasa yakin.",
+      "next": "fma_05"
+    },
+    {
+      "id": "fma_05",
+      "speaker": "System",
+      "text": "Capit mesin bergerak. Menyentuh boneka. Hampir—",
+      "next": "fma_06"
+    },
+    {
+      "id": "fma_06",
+      "speaker": "Dia",
+      "text": "...",
+      "next": "fma_07"
+    },
+    {
+      "id": "fma_07",
+      "speaker": "MC",
+      "text": "Mau coba lagi?",
+      "next": "fma_08"
+    },
+    {
+      "id": "fma_08",
+      "speaker": "Dia",
+      "text": "Koin ke-sepuluh adalah koin keberuntungan sejati.",
+      "next": "fma_09"
+    },
+    {
+      "id": "fma_09",
+      "speaker": "System",
+      "text": "Kali ini, boneka kecil berbentuk kaktus jatuh ke lubang hadiah.",
+      "next": "fma_10"
+    },
+    {
+      "id": "fma_10",
+      "speaker": "Dia",
+      "text": "*mengangkat boneka* Ini untuk kamu. Supaya kamu punya teman di kamar.",
+      "next": null
+    }
+  ]
+}

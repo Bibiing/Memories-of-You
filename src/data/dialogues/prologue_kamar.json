@@ -1,0 +1,76 @@
+{
+  "id": "prologue_kamar",
+  "chapter": "prologue",
+  "startNode": "pk_01",
+  "nodes": [
+    {
+      "id": "pk_01",
+      "speaker": "System",
+      "text": "Hari pertama semester baru. Kamarmu masih berantakan dari kepindahan kemarin.",
+      "next": "pk_02"
+    },
+    {
+      "id": "pk_02",
+      "speaker": "MC",
+      "text": "...Hari ini terasa berbeda.",
+      "next": "pk_03"
+    },
+    {
+      "id": "pk_03",
+      "speaker": "Cactus",
+      "text": "Kamu menatap kaktus kecilmu sambil menghela napas panjang.",
+      "next": "pk_04"
+    },
+    {
+      "id": "pk_04",
+      "speaker": "MC",
+      "text": "Sudah lama ya, kita tinggal bareng.",
+      "next": "pk_05"
+    },
+    {
+      "id": "pk_05",
+      "speaker": "System",
+      "text": "Notifikasi di handphonemu berkedip.",
+      "next": "pk_06"
+    },
+    {
+      "id": "pk_06",
+      "speaker": "Dia",
+      "text": "Hei! Udah sampai kos belum? Gue nunggu di kantin ya? 😊",
+      "next": "pk_07"
+    },
+    {
+      "id": "pk_07",
+      "speaker": "MC",
+      "text": "Apa kamu akan pergi ke kantin?",
+      "choices": [
+        {
+          "label": "Iya, sebentar lagi.",
+          "next": "pk_08a",
+          "weights": {
+            "hope": 5
+          }
+        },
+        {
+          "label": "Nanti aja deh, masih capek.",
+          "next": "pk_08b",
+          "weights": {
+            "distress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "pk_08a",
+      "speaker": "MC",
+      "text": "Jantungku entah kenapa berdegup lebih cepat.",
+      "next": null
+    },
+    {
+      "id": "pk_08b",
+      "speaker": "MC",
+      "text": "Tapi tetap saja ada sesuatu yang menarikku ke sana.",
+      "next": null
+    }
+  ]
+}

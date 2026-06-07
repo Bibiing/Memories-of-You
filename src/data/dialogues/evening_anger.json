@@ -1,0 +1,59 @@
+{
+  "id": "evening_anger",
+  "chapter": "anger",
+  "startNode": "ea_01",
+  "nodes": [
+    {
+      "id": "ea_01",
+      "speaker": "Cactus",
+      "text": "Kamu membanting pintu tadi.",
+      "next": "ea_02"
+    },
+    {
+      "id": "ea_02",
+      "speaker": "MC",
+      "text": "Maaf. Tidak sengaja.",
+      "next": "ea_03"
+    },
+    {
+      "id": "ea_03",
+      "speaker": "Cactus",
+      "text": "Kamu boleh marah. Itu wajar. Tapi kemarahan yang ditelan sendirian bisa jadi racun.",
+      "next": "ea_04"
+    },
+    {
+      "id": "ea_04",
+      "speaker": "MC",
+      "text": "Aku tidak tahu harus marah pada siapa.",
+      "choices": [
+        {
+          "label": "Pada keadaan yang tidak adil ini.",
+          "next": "ea_05a",
+          "weights": {
+            "distress": 4
+          }
+        },
+        {
+          "label": "Mungkin pada diriku sendiri.",
+          "next": "ea_05b",
+          "weights": {
+            "distress": 6,
+            "hope": -3
+          }
+        }
+      ]
+    },
+    {
+      "id": "ea_05a",
+      "speaker": "Cactus",
+      "text": "Rasakan saja. Tapi jangan biarkan ia membakarmu habis.",
+      "next": null
+    },
+    {
+      "id": "ea_05b",
+      "speaker": "Cactus",
+      "text": "Jangan terlalu keras pada dirimu. Ini bukan salahmu.",
+      "next": null
+    }
+  ]
+}

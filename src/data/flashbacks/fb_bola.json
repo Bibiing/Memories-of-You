@@ -1,0 +1,68 @@
+{
+  "id": "fb_bola",
+  "title": "Gol Bunuh Diri",
+  "chapter": "prologue",
+  "startNode": "fb2_01",
+  "nodes": [
+    {
+      "id": "fb2_01",
+      "speaker": "System",
+      "text": "Lapangan futsal kampus. Sore yang cerah.",
+      "next": "fb2_02"
+    },
+    {
+      "id": "fb2_02",
+      "speaker": "Dia",
+      "text": "Tenang aja, gue jagoan futsal.",
+      "next": "fb2_03"
+    },
+    {
+      "id": "fb2_03",
+      "speaker": "MC",
+      "text": "Kamu pernah main futsal sebelumnya?",
+      "next": "fb2_04"
+    },
+    {
+      "id": "fb2_04",
+      "speaker": "Dia",
+      "text": "...Definisikan 'pernah'.",
+      "next": "fb2_05"
+    },
+    {
+      "id": "fb2_05",
+      "speaker": "System",
+      "text": "Lima menit kemudian, Dia berhasil memasukkan bola ke gawang sendiri.",
+      "next": "fb2_06"
+    },
+    {
+      "id": "fb2_06",
+      "speaker": "Dia",
+      "text": "...",
+      "next": "fb2_07"
+    },
+    {
+      "id": "fb2_07",
+      "speaker": "MC",
+      "text": "*terpingkal-pingkal* JAGOAN FUTSAL KAMU BILANG??",
+      "next": "fb2_08"
+    },
+    {
+      "id": "fb2_08",
+      "speaker": "Dia",
+      "text": "Itu strategi. Gue mengecoh lawan dengan cara yang tidak terduga.",
+      "next": "fb2_09"
+    },
+    {
+      "id": "fb2_09",
+      "speaker": "MC",
+      "text": "Gawang sendiri.",
+      "next": "fb2_10"
+    },
+    {
+      "id": "fb2_10",
+      "speaker": "Dia",
+      "text": "*ikut tertawa* Okay, mungkin gue perlu latihan lagi.",
+      "next": null
+    }
+  ]
+}

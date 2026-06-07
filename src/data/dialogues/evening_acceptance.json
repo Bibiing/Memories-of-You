@@ -1,0 +1,59 @@
+{
+  "id": "evening_acceptance",
+  "chapter": "acceptance",
+  "startNode": "eac_01",
+  "nodes": [
+    {
+      "id": "eac_01",
+      "speaker": "Cactus",
+      "text": "Kamu menyiramku tadi dengan lebih hati-hati dari biasanya.",
+      "next": "eac_02"
+    },
+    {
+      "id": "eac_02",
+      "speaker": "MC",
+      "text": "Iya. Aku sadar kamu sudah lama tidak kusiram dengan benar.",
+      "next": "eac_03"
+    },
+    {
+      "id": "eac_03",
+      "speaker": "Cactus",
+      "text": "Aku melihat perubahanmu. Pelan-pelan, tapi nyata.",
+      "next": "eac_04"
+    },
+    {
+      "id": "eac_04",
+      "speaker": "MC",
+      "text": "Aku masih kangen. Rasanya tidak akan pernah hilang sepenuhnya.",
+      "choices": [
+        {
+          "label": "Tapi mungkin itu memang tidak harus hilang.",
+          "next": "eac_05a",
+          "weights": {
+            "hope": 6,
+            "distress": -3
+          }
+        },
+        {
+          "label": "Aku tidak tahu cara melanjutkan tanpa mereka.",
+          "next": "eac_05b",
+          "weights": {
+            "distress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "eac_05a",
+      "speaker": "Cactus",
+      "text": "Kenangan adalah akar. Ia tidak mengikatmu — ia menopangmu untuk tumbuh.",
+      "next": null
+    },
+    {
+      "id": "eac_05b",
+      "speaker": "Cactus",
+      "text": "Kamu tidak harus tahu caranya sekarang. Langkah pertama saja sudah cukup.",
+      "next": null
+    }
+  ]
+}

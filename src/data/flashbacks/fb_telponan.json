@@ -1,0 +1,74 @@
+{
+  "id": "fb_telponan",
+  "title": "Pukul Satu Dini Hari",
+  "chapter": "prologue",
+  "startNode": "ft_01",
+  "nodes": [
+    {
+      "id": "ft_01",
+      "speaker": "System",
+      "text": "Tiga minggu yang lalu. Kamar kos, pukul 01.23 malam.",
+      "next": "ft_02"
+    },
+    {
+      "id": "ft_02",
+      "speaker": "MC",
+      "text": "*menatap buku teks yang sama selama satu jam*",
+      "next": "ft_03"
+    },
+    {
+      "id": "ft_03",
+      "speaker": "Dia",
+      "text": "Hei. Masih bangun?",
+      "next": "ft_04"
+    },
+    {
+      "id": "ft_04",
+      "speaker": "MC",
+      "text": "Iya. Lagi belajar buat UTS besok. Kamu kenapa telepon jam segini?",
+      "next": "ft_05"
+    },
+    {
+      "id": "ft_05",
+      "speaker": "Dia",
+      "text": "Gue juga nggak bisa tidur. Boleh temenin kamu sambil belajar?",
+      "next": "ft_06"
+    },
+    {
+      "id": "ft_06",
+      "speaker": "MC",
+      "text": "Kamu nggak belajar juga emangnya?",
+      "next": "ft_07"
+    },
+    {
+      "id": "ft_07",
+      "speaker": "Dia",
+      "text": "Udah. Dua jam lalu. Otak gue udah penuh. Sekarang gue lagi tidur-tiduran sambil nemenin kamu.",
+      "next": "ft_08"
+    },
+    {
+      "id": "ft_08",
+      "speaker": "MC",
+      "text": "...Terima kasih ya.",
+      "next": "ft_09"
+    },
+    {
+      "id": "ft_09",
+      "speaker": "Dia",
+      "text": "Untuk apa?",
+      "next": "ft_10"
+    },
+    {
+      "id": "ft_10",
+      "speaker": "MC",
+      "text": "Ada aja.",
+      "next": "ft_11"
+    },
+    {
+      "id": "ft_11",
+      "speaker": "Dia",
+      "text": "*tertawa pelan* Aneh deh kamu.",
+      "next": null
+    }
+  ]
+}

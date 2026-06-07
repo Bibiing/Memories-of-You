@@ -1,0 +1,59 @@
+{
+  "id": "evening_depression",
+  "chapter": "depression",
+  "startNode": "ed2_01",
+  "nodes": [
+    {
+      "id": "ed2_01",
+      "speaker": "Cactus",
+      "text": "...",
+      "next": "ed2_02"
+    },
+    {
+      "id": "ed2_02",
+      "speaker": "MC",
+      "text": "Kamu diam saja?",
+      "next": "ed2_03"
+    },
+    {
+      "id": "ed2_03",
+      "speaker": "Cactus",
+      "text": "Aku tidak tahu harus berkata apa malam ini. Aku hanya... ada di sini.",
+      "next": "ed2_04"
+    },
+    {
+      "id": "ed2_04",
+      "speaker": "MC",
+      "text": "Terima kasih sudah ada.",
+      "choices": [
+        {
+          "label": "Rasanya tidak ada gunanya lagi.",
+          "next": "ed2_05a",
+          "weights": {
+            "distress": 5,
+            "hope": -4
+          }
+        },
+        {
+          "label": "Tapi aku masih bernafas. Itu cukup untuk malam ini.",
+          "next": "ed2_05b",
+          "weights": {
+            "hope": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "ed2_05a",
+      "speaker": "Cactus",
+      "text": "Aku masih di sini. Bahkan ketika semuanya terasa hampa.",
+      "next": null
+    },
+    {
+      "id": "ed2_05b",
+      "speaker": "Cactus",
+      "text": "Ya. Untuk malam ini, itu sudah lebih dari cukup.",
+      "next": null
+    }
+  ]
+}

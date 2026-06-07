@@ -1,0 +1,58 @@
+{
+  "id": "evening_denial",
+  "chapter": "denial",
+  "startNode": "ed_01",
+  "nodes": [
+    {
+      "id": "ed_01",
+      "speaker": "Cactus",
+      "text": "...Daun-daunku mulai menguning. Aku merasakannya.",
+      "next": "ed_02"
+    },
+    {
+      "id": "ed_02",
+      "speaker": "MC",
+      "text": "Kamu kenapa? Aku sudah siram tadi pagi.",
+      "next": "ed_03"
+    },
+    {
+      "id": "ed_03",
+      "speaker": "Cactus",
+      "text": "Bukan soal air. Ada yang berbeda dari biasanya di hatimu hari ini.",
+      "next": "ed_04"
+    },
+    {
+      "id": "ed_04",
+      "speaker": "MC",
+      "text": "Aku tidak ada apa-apa.",
+      "choices": [
+        {
+          "label": "Ini pasti hanya kelelahan saja.",
+          "next": "ed_05a",
+          "weights": {
+            "denial": 5
+          }
+        },
+        {
+          "label": "Mungkin aku memang harus istirahat.",
+          "next": "ed_05b",
+          "weights": {
+            "distress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "ed_05a",
+      "speaker": "Cactus",
+      "text": "Baiklah... Tapi aku di sini kalau kamu mau bercerita.",
+      "next": null
+    },
+    {
+      "id": "ed_05b",
+      "speaker": "Cactus",
+      "text": "Tidur yang baik. Besok mungkin akan terasa lebih ringan.",
+      "next": null
+    }
+  ]
+}

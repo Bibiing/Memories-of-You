@@ -1,0 +1,59 @@
+{
+  "id": "evening_bargaining",
+  "chapter": "bargaining",
+  "startNode": "eb_01",
+  "nodes": [
+    {
+      "id": "eb_01",
+      "speaker": "Cactus",
+      "text": "Kamu tadi berbicara sendiri di kamar.",
+      "next": "eb_02"
+    },
+    {
+      "id": "eb_02",
+      "speaker": "MC",
+      "text": "Aku hanya... mencoba memikirkan apa yang seharusnya kulakukan.",
+      "next": "eb_03"
+    },
+    {
+      "id": "eb_03",
+      "speaker": "Cactus",
+      "text": "Kadang kita mencari cara untuk mengubah sesuatu yang memang tidak bisa diubah.",
+      "next": "eb_04"
+    },
+    {
+      "id": "eb_04",
+      "speaker": "MC",
+      "text": "Kalau saja aku bisa... kalau saja waktu bisa diputar balik...",
+      "choices": [
+        {
+          "label": "Aku pasti akan melakukan segalanya berbeda.",
+          "next": "eb_05a",
+          "weights": {
+            "denial": 4,
+            "distress": 2
+          }
+        },
+        {
+          "label": "Tapi itu tidak mungkin, kan?",
+          "next": "eb_05b",
+          "weights": {
+            "hope": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "eb_05a",
+      "speaker": "Cactus",
+      "text": "Ada kuncup kecil di ujung rantingku. Sepertinya ia ingin memberitahumu sesuatu.",
+      "next": null
+    },
+    {
+      "id": "eb_05b",
+      "speaker": "Cactus",
+      "text": "Kamu sudah mulai melihat kenyataan. Itu butuh keberanian.",
+      "next": null
+    }
+  ]
+}

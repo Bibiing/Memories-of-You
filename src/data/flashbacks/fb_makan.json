@@ -1,0 +1,68 @@
+{
+  "id": "fb_makan",
+  "title": "Satu Porsi Berdua",
+  "chapter": "prologue",
+  "startNode": "fm_01",
+  "nodes": [
+    {
+      "id": "fm_01",
+      "speaker": "System",
+      "text": "Kantin kampus. Jam makan siang yang ramai.",
+      "next": "fm_02"
+    },
+    {
+      "id": "fm_02",
+      "speaker": "Dia",
+      "text": "Antrian panjang banget. Kita makan satu porsi berdua aja ya?",
+      "next": "fm_03"
+    },
+    {
+      "id": "fm_03",
+      "speaker": "MC",
+      "text": "Itu mah kamu aja yang mau ngirit.",
+      "next": "fm_04"
+    },
+    {
+      "id": "fm_04",
+      "speaker": "Dia",
+      "text": "*pura-pura tersinggung* Hei! Gue lagi mengurangi pemborosan pangan. Ini bentuk kepedulian lingkungan.",
+      "next": "fm_05"
+    },
+    {
+      "id": "fm_05",
+      "speaker": "MC",
+      "text": "Alasan.",
+      "next": "fm_06"
+    },
+    {
+      "id": "fm_06",
+      "speaker": "Dia",
+      "text": "Okay fine. Gue emang lagi bokek. Tapi beneran deh, makan bareng itu lebih enak.",
+      "next": "fm_07"
+    },
+    {
+      "id": "fm_07",
+      "speaker": "MC",
+      "text": "Nggak salah sih.",
+      "next": "fm_08"
+    },
+    {
+      "id": "fm_08",
+      "speaker": "Dia",
+      "text": "*menyodorkan sendok* Kamu makan dulu.",
+      "next": "fm_09"
+    },
+    {
+      "id": "fm_09",
+      "speaker": "MC",
+      "text": "Kamu kenapa baik banget sih?",
+      "next": "fm_10"
+    },
+    {
+      "id": "fm_10",
+      "speaker": "Dia",
+      "text": "Karena kamu temen gue yang paling rewel dan tetap gue temenin.",
+      "next": null
+    }
+  ]
+}

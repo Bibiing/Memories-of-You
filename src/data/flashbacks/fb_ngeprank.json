@@ -1,0 +1,68 @@
+{
+  "id": "fb_ngeprank",
+  "title": "Operasi Lembar Jawaban",
+  "chapter": "prologue",
+  "startNode": "fn_01",
+  "nodes": [
+    {
+      "id": "fn_01",
+      "speaker": "System",
+      "text": "Koridor laboratorium, satu bulan lalu.",
+      "next": "fn_02"
+    },
+    {
+      "id": "fn_02",
+      "speaker": "Dia",
+      "text": "*berbisik* Ssst. Dengarkan rencananya.",
+      "next": "fn_03"
+    },
+    {
+      "id": "fn_03",
+      "speaker": "MC",
+      "text": "Ini bodoh. Kita bisa ketahuan.",
+      "next": "fn_04"
+    },
+    {
+      "id": "fn_04",
+      "speaker": "Dia",
+      "text": "Kalau ketahuan, kita bilang ini eksperimen psikologi. Percaya deh.",
+      "next": "fn_05"
+    },
+    {
+      "id": "fn_05",
+      "speaker": "MC",
+      "text": "Itu bukan eksperimen psikologi, itu tipuan.",
+      "next": "fn_06"
+    },
+    {
+      "id": "fn_06",
+      "speaker": "Dia",
+      "text": "*tertawa pelan* Bedanya tipis. Oke, gue taruh lembar jawabannya di sini—",
+      "next": "fn_07"
+    },
+    {
+      "id": "fn_07",
+      "speaker": "System",
+      "text": "Tiba-tiba suara langkah kaki terdengar dari ujung koridor.",
+      "next": "fn_08"
+    },
+    {
+      "id": "fn_08",
+      "speaker": "Dia",
+      "text": "LARI.",
+      "next": "fn_09"
+    },
+    {
+      "id": "fn_09",
+      "speaker": "MC",
+      "text": "AKU BILANG JUGA APA!",
+      "next": "fn_10"
+    },
+    {
+      "id": "fn_10",
+      "speaker": "System",
+      "text": "Kalian berdua berlari sambil tertawa tidak karuan sampai ke ujung gedung.",
+      "next": null
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "evening_prologue",
+  "chapter": "prologue",
+  "startNode": "ep_01",
+  "nodes": [
+    {
+      "id": "ep_01",
+      "speaker": "Cactus",
+      "text": "Kamu kelihatan lelah. Tapi juga... berseri-seri?",
+      "next": "ep_02"
+    },
+    {
+      "id": "ep_02",
+      "speaker": "MC",
+      "text": "Hari ini tidak buruk.",
+      "next": "ep_03"
+    },
+    {
+      "id": "ep_03",
+      "speaker": "Cactus",
+      "text": "Ceritakan sesuatu yang membuatmu tersenyum hari ini.",
+      "choices": [
+        {
+          "label": "Senyum seseorang yang kutemui.",
+          "next": "ep_04a",
+          "weights": {
+            "hope": 5
+          }
+        },
+        {
+          "label": "Tidak ada yang spesial.",
+          "next": "ep_04b",
+          "weights": {
+            "distress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "ep_04a",
+      "speaker": "Cactus",
+      "text": "Simpan perasaan itu. Domba kecil itu perlu tumbuh.",
+      "next": null
+    },
+    {
+      "id": "ep_04b",
+      "speaker": "Cactus",
+      "text": "Tidak apa-apa. Istirahat yang cukup malam ini.",
+      "next": null
+    }
+  ]
+}
