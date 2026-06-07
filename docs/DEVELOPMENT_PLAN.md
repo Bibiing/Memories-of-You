@@ -96,7 +96,7 @@
 ## FASE 2 — Rendering & Visual Engine (Minggu 4–5) ✅ SELESAI
 
 **Tujuan:** Sistem rendering scene dan adaptive visual berjalan.
-**Commit:** `[Phase 2]` — feat: Phase 2 — Rendering & Visual Engine
+**Commit:** `ecafaf3` — feat: Phase 2 — Rendering & Visual Engine
 
 ### Minggu 4 — Scene System & Adaptive Theme
 
