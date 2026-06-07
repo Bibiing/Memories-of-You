@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" fill="none">
+  <defs>
+    <linearGradient id="wall-g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8e0d5"/>
+      <stop offset="100%" stop-color="#d4cbc0"/>
+    </linearGradient>
+    <linearGradient id="board-g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3a2a"/>
+      <stop offset="100%" stop-color="#122a1c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#wall-g)"/>
+  <rect y="560" width="1280" height="160" fill="#b8ad9e"/>
+  <rect y="555" width="1280" height="8" fill="#9e9080"/>
+  <rect x="80" y="60" width="880" height="380" rx="4" fill="url(#board-g)"/>
+  <rect x="80" y="60" width="880" height="380" rx="4" stroke="#8B6914" stroke-width="8" fill="none"/>
+  <rect x="80" y="435" width="880" height="16" rx="4" fill="#6B4F12"/>
+  <line x1="160" y1="200" x2="800" y2="200" stroke="#4CAF50" stroke-width="2" opacity="0.4"/>
+  <line x1="160" y1="260" x2="600" y2="260" stroke="#4CAF50" stroke-width="2" opacity="0.3"/>
+  <text font-family="serif" font-size="28" fill="#E8F5E9" opacity="0.5" x="160" y="150">Five Stages of Grief</text>
+  <text font-family="serif" font-size="18" fill="#C8E6C9" opacity="0.4" x="200" y="195">1. Denial  2. Anger  3. Bargaining</text>
+  <text font-family="serif" font-size="18" fill="#C8E6C9" opacity="0.4" x="200" y="255">4. Depression  5. Acceptance</text>
+  <rect x="1000" y="80" width="180" height="340" rx="4" fill="#1a2a1a" opacity="0.4"/>
+  <rect x="1020" y="60" width="180" height="340" rx="4" fill="#1a2a1a" opacity="0.5"/>
+  <line x1="1030" y1="90" x2="1190" y2="90" stroke="#4CAF50" stroke-width="1.5" opacity="0.3"/>
+  <line x1="1030" y1="120" x2="1190" y2="120" stroke="#4CAF50" stroke-width="1.5" opacity="0.3"/>
+  <line x1="1030" y1="150" x2="1190" y2="150" stroke="#4CAF50" stroke-width="1.5" opacity="0.3"/>
+  <rect x="100" y="490" width="280" height="20" rx="3" fill="#8B7355" opacity="0.7"/>
+  <rect x="400" y="490" width="280" height="20" rx="3" fill="#8B7355" opacity="0.7"/>
+  <rect x="700" y="490" width="280" height="20" rx="3" fill="#8B7355" opacity="0.7"/>
+  <rect x="1000" y="490" width="200" height="20" rx="3" fill="#8B7355" opacity="0.7"/>
+  <rect x="100" y="505" width="280" height="60" rx="3" fill="#9c8866" opacity="0.6"/>
+  <rect x="400" y="505" width="280" height="60" rx="3" fill="#9c8866" opacity="0.6"/>
+  <rect x="700" y="505" width="280" height="60" rx="3" fill="#9c8866" opacity="0.6"/>
+  <rect x="1000" y="505" width="200" height="60" rx="3" fill="#9c8866" opacity="0.6"/>
+  <rect x="600" y="455" width="80" height="100" rx="3" fill="#8B7355" opacity="0.8"/>
+  <rect x="560" y="455" width="160" height="16" rx="3" fill="#6B4F12"/>
+  <rect x="1160" y="60" width="70" height="700" fill="#d4cbc0"/>
+  <rect x="1165" y="80" width="60" height="300" rx="2" fill="#e8e0d5" opacity="0.5"/>
+  <rect x="1165" y="200" width="60" height="4" fill="#b8ad9e"/>
+</svg>

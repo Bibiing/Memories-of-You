@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d0620"/>
+      <stop offset="100%" stop-color="#1a0a2e"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1035"/>
+      <stop offset="100%" stop-color="#150d28"/>
+    </linearGradient>
+    <linearGradient id="floor-g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f0820"/>
+      <stop offset="100%" stop-color="#080514"/>
+    </linearGradient>
+    <linearGradient id="window-g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="desk-g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3d2b1f"/>
+      <stop offset="100%" stop-color="#5c3d28"/>
+    </linearGradient>
+  </defs>
+  <!-- Background wall -->
+  <rect width="1280" height="720" fill="url(#wall)"/>
+  <!-- Floor -->
+  <rect y="520" width="1280" height="200" fill="url(#floor-g)"/>
+  <!-- Floor-wall divider / baseboard -->
+  <rect y="516" width="1280" height="8" fill="#2a1f4a"/>
+  <!-- Window - left wall -->
+  <rect x="80" y="120" width="280" height="320" rx="8" fill="url(#window-g)"/>
+  <rect x="80" y="120" width="280" height="320" rx="8" stroke="#3d2b6e" stroke-width="6" fill="none"/>
+  <!-- Window cross bars -->
+  <line x1="80" y1="280" x2="360" y2="280" stroke="#3d2b6e" stroke-width="4"/>
+  <line x1="220" y1="120" x2="220" y2="440" stroke="#3d2b6e" stroke-width="4"/>
+  <!-- Moon in window -->
+  <circle cx="155" cy="220" r="35" fill="#F5F0DC" opacity="0.85"/>
+  <circle cx="172" cy="208" r="28" fill="#1e3a5f"/>
+  <!-- Stars in window -->
+  <circle cx="290" cy="160" r="2" fill="white" opacity="0.8"/>
+  <circle cx="310" cy="200" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="260" cy="180" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="330" cy="240" r="2" fill="white" opacity="0.8"/>
+  <circle cx="120" cy="320" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="270" cy="350" r="2" fill="white" opacity="0.6"/>
+  <!-- Curtains -->
+  <path d="M80,120 Q55,200 65,440 L80,440Z" fill="#2d1b5e" opacity="0.8"/>
+  <path d="M360,120 Q385,200 375,440 L360,440Z" fill="#2d1b5e" opacity="0.8"/>
+  <!-- Desk -->
+  <rect x="450" y="420" width="500" height="110" rx="4" fill="url(#desk-g)"/>
+  <!-- Desk legs -->
+  <rect x="460" y="530" width="20" height="90" fill="#3d2b1f"/>
+  <rect x="910" y="530" width="20" height="90" fill="#3d2b1f"/>
+  <!-- Desk items -->
+  <!-- Laptop -->
+  <rect x="530" y="370" width="200" height="54" rx="4" fill="#2a2a3a"/>
+  <rect x="530" y="418" width="200" height="8" rx="2" fill="#1a1a28"/>
+  <rect x="540" y="378" width="180" height="36" rx="2" fill="#1e2d4a"/>
+  <!-- Monitor glow -->
+  <rect x="540" y="378" width="180" height="36" rx="2" fill="#3d5a80" opacity="0.3"/>
+  <!-- Books stack -->
+  <rect x="780" y="395" width="80" height="28" rx="2" fill="#7B1FA2"/>
+  <rect x="783" y="370" width="72" height="28" rx="2" fill="#1565C0"/>
+  <rect x="786" y="347" width="65" height="26" rx="2" fill="#2E7D32"/>
+  <!-- Mug -->
+  <rect x="690" y="398" width="38" height="26" rx="4" fill="#5c3d28"/>
+  <path d="M728,406 Q740,406 740,416 Q740,422 728,424" stroke="#5c3d28" stroke-width="4" fill="none"/>
+  <!-- Small cactus on desk - 본 게임의 kaktus -->
+  <rect x="875" y="390" width="30" height="35" rx="3" fill="#B5541A"/>
+  <rect x="870" y="386" width="40" height="8" rx="2" fill="#D4622B"/>
+  <rect x="884" y="358" width="12" height="35" rx="6" fill="#2E7D32"/>
+  <!-- Bed - right side -->
+  <rect x="950" y="360" width="280" height="180" rx="8" fill="#1a0f3d"/>
+  <!-- Bed headboard -->
+  <rect x="1180" y="300" width="20" height="240" rx="4" fill="#2d1b5e"/>
+  <!-- Pillows -->
+  <rect x="960" y="368" width="120" height="70" rx="8" fill="#2d1b5e"/>
+  <rect x="1085" y="368" width="120" height="70" rx="8" fill="#251550"/>
+  <!-- Blanket -->
+  <path d="M950,435 Q1090,415 1190,445 L1190,540 L950,540Z" fill="#1e0d3d"/>
+  <path d="M950,445 Q1090,425 1190,455" stroke="#2d1b5e" stroke-width="3" fill="none"/>
+  <!-- Shelf on wall -->
+  <rect x="750" y="140" width="300" height="14" rx="3" fill="#3d2b1f"/>
+  <!-- Items on shelf -->
+  <rect x="760" y="100" width="20" height="40" rx="2" fill="#880E4F"/>
+  <rect x="785" y="105" width="16" height="35" rx="2" fill="#E65100"/>
+  <rect x="805" y="108" width="20" height="32" rx="2" fill="#1A237E"/>
+  <circle cx="850" cy="120" r="18" fill="#37474F" opacity="0.8"/>
+  <circle cx="850" cy="120" r="14" fill="#455A64"/>
+  <!-- Photo frame -->
+  <rect x="890" y="95" width="80" height="48" rx="3" fill="#2a1f4a"/>
+  <rect x="893" y="98" width="74" height="42" rx="2" fill="#3d5a80" opacity="0.5"/>
+  <circle cx="930" cy="119" r="12" fill="#B0BEC5" opacity="0.4"/>
+  <!-- Ambient light from lamp -->
+  <ellipse cx="640" cy="140" rx="60" ry="20" fill="#6b21a8" opacity="0.08"/>
+  <!-- Desk lamp -->
+  <rect x="620" y="380" width="8" height="48" fill="#424242"/>
+  <path d="M628,382 Q660,360 680,370" stroke="#424242" stroke-width="6" fill="none"/>
+  <ellipse cx="685" cy="368" rx="22" ry="10" fill="#FFD54F" opacity="0.9"/>
+  <ellipse cx="685" cy="380" rx="50" ry="15" fill="#FFD54F" opacity="0.1"/>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280" fill="none">
+  <!-- Pot - significantly cracked -->
+  <rect x="65" y="225" width="70" height="45" rx="4" fill="#7B3310"/>
+  <rect x="58" y="218" width="84" height="14" rx="4" fill="#9A4020"/>
+  <line x1="85" y1="225" x2="78" y2="268" stroke="#4A1800" stroke-width="2.5"/>
+  <line x1="112" y1="228" x2="118" y2="268" stroke="#4A1800" stroke-width="2"/>
+  <line x1="100" y1="235" x2="96" y2="268" stroke="#4A1800" stroke-width="1.5"/>
+  <!-- Completely dry soil -->
+  <ellipse cx="100" cy="224" rx="33" ry="5" fill="#2E1108"/>
+  <path d="M74,226 Q84,222 94,226" stroke="#5D4037" stroke-width="1.5" fill="none"/>
+  <path d="M106,226 Q116,222 126,226" stroke="#5D4037" stroke-width="1.5" fill="none"/>
+  <!-- Main trunk - completely dead, grey -->
+  <rect x="87" y="105" width="26" height="125" rx="13" fill="#4E342E"/>
+  <!-- Shriveled, collapsed look -->
+  <path d="M87,115 Q84,125 87,135 Q83,145 87,155 Q83,165 87,175 Q83,185 87,195 Q83,205 87,215" stroke="#3E2723" stroke-width="2.5" fill="none"/>
+  <path d="M113,115 Q116,125 113,135 Q117,145 113,155 Q117,165 113,175 Q117,185 113,195 Q117,205 113,215" stroke="#3E2723" stroke-width="2.5" fill="none"/>
+  <!-- Collapsed arms - touching ground area -->
+  <path d="M87,162 Q62,170 58,195 Q56,210 68,212 Q78,213 80,196 Q84,178 87,164" fill="#4E342E"/>
+  <ellipse cx="63" cy="213" rx="9" ry="7" fill="#4E342E"/>
+  <path d="M113,162 Q138,170 142,195 Q144,210 132,212 Q122,213 120,196 Q116,178 113,164" fill="#4E342E"/>
+  <ellipse cx="137" cy="213" rx="9" ry="7" fill="#4E342E"/>
+  <!-- Top - completely dead -->
+  <ellipse cx="100" cy="105" rx="13" ry="15" fill="#4E342E"/>
+  <!-- Dried stump remains -->
+  <line x1="100" y1="91" x2="100" y2="82" stroke="#3E2723" stroke-width="3"/>
+  <circle cx="100" cy="80" r="4" fill="#3E2723"/>
+  <!-- A few scattered dead spines -->
+  <line x1="87" y1="125" x2="78" y2="124" stroke="#6D4C41" stroke-width="1"/>
+  <line x1="113" y1="135" x2="122" y2="134" stroke="#6D4C41" stroke-width="1"/>
+  <line x1="87" y1="155" x2="78" y2="157" stroke="#6D4C41" stroke-width="1"/>
+</svg>

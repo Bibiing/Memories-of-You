@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280" fill="none">
+  <!-- Pot -->
+  <rect x="65" y="225" width="70" height="45" rx="4" fill="#B5541A"/>
+  <rect x="58" y="218" width="84" height="14" rx="4" fill="#D4622B"/>
+  <!-- Soil -->
+  <ellipse cx="100" cy="224" rx="33" ry="5" fill="#6B3A1F"/>
+  <!-- Main trunk -->
+  <rect x="83" y="90" width="34" height="140" rx="17" fill="#2E7D32"/>
+  <rect x="88" y="92" width="10" height="135" rx="5" fill="#388E3C" opacity="0.5"/>
+  <!-- Left arm - curves up -->
+  <path d="M83,148 Q44,148 44,110 Q44,88 62,88 Q80,88 83,108" fill="#2E7D32"/>
+  <path d="M46,110 Q46,92 62,92 Q76,92 80,108" stroke="#388E3C" stroke-width="4" fill="none" opacity="0.4"/>
+  <!-- Left arm top cap -->
+  <ellipse cx="53" cy="88" rx="12" ry="15" fill="#2E7D32"/>
+  <!-- Right arm - curves up -->
+  <path d="M117,148 Q156,148 156,110 Q156,88 138,88 Q120,88 117,108" fill="#2E7D32"/>
+  <path d="M154,110 Q154,92 138,92 Q124,92 120,108" stroke="#388E3C" stroke-width="4" fill="none" opacity="0.4"/>
+  <!-- Right arm top cap -->
+  <ellipse cx="147" cy="88" rx="12" ry="15" fill="#2E7D32"/>
+  <!-- Top cap -->
+  <ellipse cx="100" cy="90" rx="17" ry="20" fill="#2E7D32"/>
+  <!-- Spines - trunk left -->
+  <line x1="83" y1="110" x2="72" y2="106" stroke="#A5D6A7" stroke-width="1.5"/>
+  <line x1="83" y1="125" x2="72" y2="121" stroke="#A5D6A7" stroke-width="1.5"/>
+  <line x1="83" y1="140" x2="72" y2="136" stroke="#A5D6A7" stroke-width="1.5"/>
+  <line x1="83" y1="155" x2="72" y2="151" stroke="#A5D6A7" stroke-width="1.5"/>
+  <line x1="83" y1="170" x2="72" y2="166" stroke="#A5D6A7" stroke-width="1.5"/>
+  <!-- Spines - trunk right -->
+  <line x1="117" y1="110" x2="128" y2="106" stroke="#A5D6A7" stroke-width="1.5"/>
+  <line x1="117" y1="125" x2="128" y2="121" stroke="#A5D6A7" stroke-width="1.5"/>
+  <line x1="117" y1="140" x2="128" y2="136" stroke="#A5D6A7" stroke-width="1.5"/>
+  <line x1="117" y1="155" x2="128" y2="151" stroke="#A5D6A7" stroke-width="1.5"/>
+  <line x1="117" y1="170" x2="128" y2="166" stroke="#A5D6A7" stroke-width="1.5"/>
+  <!-- Spines - arms -->
+  <line x1="53" y1="76" x2="50" y2="65" stroke="#A5D6A7" stroke-width="1.5"/>
+  <line x1="53" y1="76" x2="42" y2="75" stroke="#A5D6A7" stroke-width="1.5"/>
+  <line x1="147" y1="76" x2="150" y2="65" stroke="#A5D6A7" stroke-width="1.5"/>
+  <line x1="147" y1="76" x2="158" y2="75" stroke="#A5D6A7" stroke-width="1.5"/>
+  <!-- Top spines -->
+  <line x1="100" y1="71" x2="97" y2="60" stroke="#A5D6A7" stroke-width="1.5"/>
+  <line x1="100" y1="71" x2="108" y2="63" stroke="#A5D6A7" stroke-width="1.5"/>
+  <line x1="100" y1="71" x2="92" y2="63" stroke="#A5D6A7" stroke-width="1.5"/>
+  <!-- Small flower on top -->
+  <circle cx="100" cy="70" r="5" fill="#FF8F00"/>
+  <circle cx="100" cy="70" r="3" fill="#FFD54F"/>
+</svg>

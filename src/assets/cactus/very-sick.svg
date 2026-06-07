@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280" fill="none">
+  <!-- Pot - cracked slightly -->
+  <rect x="65" y="225" width="70" height="45" rx="4" fill="#A04020"/>
+  <rect x="58" y="218" width="84" height="14" rx="4" fill="#C14E2A"/>
+  <line x1="95" y1="225" x2="90" y2="265" stroke="#7B2D00" stroke-width="1.5"/>
+  <!-- Dry soil -->
+  <ellipse cx="100" cy="224" rx="33" ry="5" fill="#4E2B0F"/>
+  <line x1="80" y1="222" x2="92" y2="225" stroke="#795548" stroke-width="1.5"/>
+  <line x1="108" y1="222" x2="120" y2="225" stroke="#795548" stroke-width="1.5"/>
+  <line x1="92" y1="225" x2="96" y2="222" stroke="#795548" stroke-width="1.5"/>
+  <!-- Main trunk - brownish, shriveled -->
+  <rect x="85" y="96" width="30" height="134" rx="15" fill="#6D4C0C"/>
+  <rect x="90" y="98" width="8" height="129" rx="4" fill="#7E5714" opacity="0.4"/>
+  <!-- Brown patches dominating -->
+  <ellipse cx="96" cy="130" rx="8" ry="10" fill="#5D4037" opacity="0.7"/>
+  <ellipse cx="106" cy="160" rx="6" ry="8" fill="#4E342E" opacity="0.7"/>
+  <ellipse cx="95" cy="185" rx="5" ry="7" fill="#4E342E" opacity="0.6"/>
+  <!-- Left arm - drooping down heavily -->
+  <path d="M85,155 Q52,160 50,190 Q49,205 62,208 Q76,210 80,190 Q84,172 85,158" fill="#6D4C0C"/>
+  <ellipse cx="58" cy="210" rx="10" ry="8" fill="#6D4C0C"/>
+  <!-- Right arm - drooping down heavily -->
+  <path d="M115,155 Q148,160 150,190 Q151,205 138,208 Q124,210 120,190 Q116,172 115,158" fill="#6D4C0C"/>
+  <ellipse cx="142" cy="210" rx="10" ry="8" fill="#6D4C0C"/>
+  <!-- Top cap - wilted -->
+  <ellipse cx="100" cy="96" rx="15" ry="17" fill="#6D4C0C"/>
+  <!-- Few remaining spines -->
+  <line x1="85" y1="120" x2="75" y2="118" stroke="#A1887F" stroke-width="1.5"/>
+  <line x1="85" y1="145" x2="75" y2="143" stroke="#A1887F" stroke-width="1.5"/>
+  <line x1="115" y1="120" x2="125" y2="118" stroke="#A1887F" stroke-width="1.5"/>
+  <line x1="115" y1="145" x2="125" y2="143" stroke="#A1887F" stroke-width="1.5"/>
+  <!-- Dead flower -->
+  <line x1="100" y1="80" x2="100" y2="70" stroke="#795548" stroke-width="2"/>
+  <circle cx="100" cy="68" r="3" fill="#5D4037"/>
+</svg>

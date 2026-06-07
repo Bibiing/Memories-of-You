@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" fill="none">
+  <defs>
+    <linearGradient id="night-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050212"/>
+      <stop offset="60%" stop-color="#0d0620"/>
+      <stop offset="100%" stop-color="#1a0a2e"/>
+    </linearGradient>
+    <linearGradient id="city" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#150d28"/>
+      <stop offset="100%" stop-color="#0a0818"/>
+    </linearGradient>
+    <radialGradient id="moon-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fffde7" opacity="0.3"/>
+      <stop offset="100%" stop-color="#fffde7" opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Night sky -->
+  <rect width="1280" height="720" fill="url(#night-sky)"/>
+  <!-- Stars -->
+  <circle cx="120" cy="80" r="2" fill="white" opacity="0.9"/>
+  <circle cx="240" cy="45" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="380" cy="90" r="2.5" fill="white" opacity="0.7"/>
+  <circle cx="520" cy="30" r="1.5" fill="white" opacity="0.9"/>
+  <circle cx="650" cy="65" r="2" fill="white" opacity="0.8"/>
+  <circle cx="800" cy="40" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="950" cy="85" r="2" fill="white" opacity="0.9"/>
+  <circle cx="1100" cy="55" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="1200" cy="30" r="2" fill="white" opacity="0.7"/>
+  <circle cx="180" cy="140" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="430" cy="120" r="2" fill="white" opacity="0.7"/>
+  <circle cx="700" cy="100" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="870" cy="130" r="2" fill="white" opacity="0.6"/>
+  <circle cx="1050" cy="120" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="60" cy="200" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="310" cy="170" r="2" fill="white" opacity="0.6"/>
+  <circle cx="560" cy="180" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="770" cy="155" r="2" fill="white" opacity="0.5"/>
+  <circle cx="1000" cy="175" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="1230" cy="145" r="2" fill="white" opacity="0.7"/>
+  <!-- Moon -->
+  <circle cx="900" cy="120" r="80" fill="url(#moon-glow)"/>
+  <circle cx="900" cy="120" r="55" fill="#F5F0DC"/>
+  <circle cx="920" cy="105" r="45" fill="#1a0a2e"/>
+  <!-- Moon craters -->
+  <circle cx="875" cy="135" r="8" fill="#E8E0C0" opacity="0.4"/>
+  <circle cx="862" cy="115" r="5" fill="#E8E0C0" opacity="0.3"/>
+  <!-- City silhouette -->
+  <path d="M0,480 L0,380 L60,380 L60,340 L90,340 L90,300 L120,300 L120,340 L150,340 L150,380 L200,380 L200,350 L220,350 L220,310 L240,310 L240,350 L280,350 L280,380 L320,380 L320,360 L340,360 L340,330 L360,330 L360,360 L400,360 L400,380 L450,380 L450,350 L470,350 L470,300 L500,280 L530,300 L530,350 L560,350 L560,380 L600,380 L600,360 L620,360 L620,340 L640,340 L640,360 L680,360 L680,380 L720,380 L720,340 L750,340 L750,300 L780,300 L780,340 L820,340 L820,380 L860,380 L860,355 L880,355 L880,320 L910,320 L910,355 L950,355 L950,380 L1000,380 L1000,350 L1020,350 L1020,310 L1050,310 L1050,350 L1100,350 L1100,380 L1140,380 L1140,340 L1160,340 L1160,380 L1200,380 L1200,350 L1220,350 L1220,390 L1280,390 L1280,480Z" fill="url(#city)"/>
+  <!-- Building lights (windows) -->
+  <rect x="95" y="310" width="6" height="8" fill="#FFD54F" opacity="0.7"/>
+  <rect x="108" y="315" width="6" height="8" fill="#FFD54F" opacity="0.5"/>
+  <rect x="228" y="320" width="5" height="7" fill="#64B5F6" opacity="0.7"/>
+  <rect x="242" y="325" width="5" height="7" fill="#64B5F6" opacity="0.5"/>
+  <rect x="475" y="310" width="6" height="8" fill="#FFD54F" opacity="0.6"/>
+  <rect x="510" y="305" width="6" height="8" fill="#FFD54F" opacity="0.8"/>
+  <rect x="625" y="345" width="5" height="7" fill="#64B5F6" opacity="0.6"/>
+  <rect x="758" y="308" width="6" height="8" fill="#FFD54F" opacity="0.7"/>
+  <rect x="772" y="315" width="6" height="8" fill="#FFD54F" opacity="0.5"/>
+  <rect x="885" y="328" width="5" height="7" fill="#FF8A65" opacity="0.7"/>
+  <rect x="1025" y="318" width="6" height="8" fill="#64B5F6" opacity="0.6"/>
+  <rect x="1042" y="323" width="5" height="7" fill="#FFD54F" opacity="0.5"/>
+  <rect x="1165" y="345" width="5" height="7" fill="#64B5F6" opacity="0.7"/>
+  <!-- Rooftop floor -->
+  <rect y="480" width="1280" height="240" fill="#0f0820"/>
+  <!-- Rooftop surface detail -->
+  <rect y="480" width="1280" height="12" fill="#1a103a"/>
+  <!-- Rooftop railing -->
+  <rect x="0" y="455" width="1280" height="30" rx="4" fill="#1e1035"/>
+  <!-- Railing posts -->
+  <rect x="40" y="420" width="8" height="65" fill="#2d1b5e"/>
+  <rect x="140" y="420" width="8" height="65" fill="#2d1b5e"/>
+  <rect x="240" y="420" width="8" height="65" fill="#2d1b5e"/>
+  <rect x="340" y="420" width="8" height="65" fill="#2d1b5e"/>
+  <rect x="440" y="420" width="8" height="65" fill="#2d1b5e"/>
+  <rect x="540" y="420" width="8" height="65" fill="#2d1b5e"/>
+  <rect x="640" y="420" width="8" height="65" fill="#2d1b5e"/>
+  <rect x="740" y="420" width="8" height="65" fill="#2d1b5e"/>
+  <rect x="840" y="420" width="8" height="65" fill="#2d1b5e"/>
+  <rect x="940" y="420" width="8" height="65" fill="#2d1b5e"/>
+  <rect x="1040" y="420" width="8" height="65" fill="#2d1b5e"/>
+  <rect x="1140" y="420" width="8" height="65" fill="#2d1b5e"/>
+  <rect x="1240" y="420" width="8" height="65" fill="#2d1b5e"/>
+  <!-- Horizontal railing bar -->
+  <rect x="0" y="425" width="1280" height="6" fill="#2d1b5e"/>
+  <!-- Water tower silhouette -->
+  <rect x="1050" y="350" width="60" height="80" fill="#0f0820"/>
+  <rect x="1040" y="345" width="80" height="12" fill="#150d28"/>
+  <rect x="1055" y="430" width="10" height="55" fill="#0f0820"/>
+  <rect x="1085" y="430" width="10" height="55" fill="#0f0820"/>
+  <!-- Ambient city glow on horizon -->
+  <ellipse cx="640" cy="480" rx="600" ry="60" fill="#4a148c" opacity="0.06"/>
+</svg>

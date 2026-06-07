@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280" fill="none">
+  <!-- Pot - new, clean -->
+  <rect x="65" y="215" width="70" height="55" rx="5" fill="#C1440E"/>
+  <rect x="57" y="207" width="86" height="16" rx="5" fill="#D4622B"/>
+  <!-- Fresh moist soil -->
+  <ellipse cx="100" cy="214" rx="36" ry="8" fill="#3E2011"/>
+  <ellipse cx="100" cy="212" rx="30" ry="5" fill="#4E2B0F"/>
+  <!-- Soil moisture texture -->
+  <path d="M78,213 Q88,210 98,213" stroke="#6D4C41" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M102,213 Q112,210 122,213" stroke="#6D4C41" stroke-width="1" fill="none" opacity="0.6"/>
+  <!-- Main tiny stem - new life! -->
+  <rect x="96" y="165" width="8" height="52" rx="4" fill="#33691E"/>
+  <!-- First tiny pair of leaves -->
+  <ellipse cx="86" cy="185" rx="12" ry="6" fill="#558B2F" transform="rotate(-15 86 185)"/>
+  <ellipse cx="114" cy="185" rx="12" ry="6" fill="#558B2F" transform="rotate(15 114 185)"/>
+  <!-- Second pair of leaves - smaller, newer -->
+  <ellipse cx="91" cy="172" rx="8" ry="4" fill="#7CB342" transform="rotate(-25 91 172)"/>
+  <ellipse cx="109" cy="172" rx="8" ry="4" fill="#7CB342" transform="rotate(25 109 172)"/>
+  <!-- Tiny top bud -->
+  <ellipse cx="100" cy="163" rx="5" ry="6" fill="#8BC34A"/>
+  <ellipse cx="100" cy="160" rx="4" ry="4" fill="#9CCC65"/>
+  <!-- Tiny first spines - just starting -->
+  <line x1="96" y1="200" x2="88" y2="198" stroke="#AED581" stroke-width="1"/>
+  <line x1="104" y1="200" x2="112" y2="198" stroke="#AED581" stroke-width="1"/>
+  <line x1="96" y1="190" x2="89" y2="188" stroke="#AED581" stroke-width="1"/>
+  <line x1="104" y1="190" x2="111" y2="188" stroke="#AED581" stroke-width="1"/>
+  <!-- Sparkle / glow effect - new life energy -->
+  <circle cx="100" cy="160" r="18" fill="#C5E1A5" opacity="0.12"/>
+  <circle cx="100" cy="160" r="10" fill="#DCEDC8" opacity="0.15"/>
+  <!-- Small star sparkles -->
+  <path d="M72,155 L74,151 L76,155 L72,153 L76,153Z" fill="#F9A825" opacity="0.8"/>
+  <path d="M124,148 L126,144 L128,148 L124,146 L128,146Z" fill="#F9A825" opacity="0.7"/>
+  <path d="M115,170 L116,167 L117,170 L115,169 L117,169Z" fill="#FFD54F" opacity="0.9"/>
+  <path d="M82,165 L83,162 L84,165 L82,164 L84,164Z" fill="#FFD54F" opacity="0.9"/>
+  <!-- Morning dew drops -->
+  <ellipse cx="89" cy="188" rx="2" ry="3" fill="#B3E5FC" opacity="0.7"/>
+  <ellipse cx="111" cy="175" rx="1.5" ry="2" fill="#B3E5FC" opacity="0.7"/>
+</svg>
