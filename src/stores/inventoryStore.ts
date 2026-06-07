@@ -27,32 +27,39 @@ const initialState: InventoryState = {
 export const useInventoryStore = create<InventoryState & InventoryActions>((set, get) => ({
   ...initialState,
 
-  unlockFlashback: (id) =>
-    { set((s) => ({
+  unlockFlashback: (id) => {
+    set((s) => ({
       flashbackUnlocked: s.flashbackUnlocked.includes(id)
         ? s.flashbackUnlocked
         : [...s.flashbackUnlocked, id],
-    })); },
+    }))
+  },
 
   isFlashbackUnlocked: (id) => get().flashbackUnlocked.includes(id),
 
-  addToHistory: (missionId) =>
-    { set((s) => ({
+  addToHistory: (missionId) => {
+    set((s) => ({
       actionHistory: s.actionHistory.includes(missionId)
         ? s.actionHistory
         : [...s.actionHistory, missionId],
-    })); },
+    }))
+  },
 
   hasCompletedMission: (missionId) => get().actionHistory.includes(missionId),
 
-  addItem: (itemId) =>
-    { set((s) => ({
+  addItem: (itemId) => {
+    set((s) => ({
       inventory: s.inventory.includes(itemId) ? s.inventory : [...s.inventory, itemId],
-    })); },
+    }))
+  },
 
-  removeItem: (itemId) => { set((s) => ({ inventory: s.inventory.filter((i) => i !== itemId) })); },
+  removeItem: (itemId) => {
+    set((s) => ({ inventory: s.inventory.filter((i) => i !== itemId) }))
+  },
 
   hasItem: (itemId) => get().inventory.includes(itemId),
 
-  hydrate: (state) => { set(state); },
+  hydrate: (state) => {
+    set(state)
+  },
 }))

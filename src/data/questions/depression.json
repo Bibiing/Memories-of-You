@@ -1,0 +1,198 @@
+{
+  "chapter": "depression",
+  "questions": [
+    {
+      "id": "dep-01",
+      "chapter": "depression",
+      "order": 1,
+      "text": "Bagaimana kamu mendeskripsikan energimu hari ini?",
+      "options": [
+        {
+          "label": "Hampir tidak ada — bahkan bangun terasa berat.",
+          "weights": { "distress": 8, "hope": -5, "denial": 0, "incrementsAvoidance": true, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Rendah, tapi aku berhasil melakukan hal-hal yang perlu dilakukan.",
+          "weights": { "distress": 5, "hope": 1, "denial": 0 }
+        },
+        {
+          "label": "Naik-turun — ada momen baik di antara yang buruk.",
+          "weights": { "distress": 4, "hope": 2, "denial": 0, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Lebih baik dari kemarin — sedikit, tapi ada.",
+          "weights": { "distress": -2, "hope": 4, "denial": -1, "ruminationShift": "reflection" }
+        }
+      ]
+    },
+    {
+      "id": "dep-02",
+      "chapter": "depression",
+      "order": 2,
+      "text": "Apakah hari ini kamu keluar kamar atau berinteraksi dengan orang lain?",
+      "options": [
+        {
+          "label": "Tidak. Dunia terasa terlalu besar untuk dihadapi.",
+          "weights": { "distress": 8, "hope": -5, "denial": 0, "incrementsAvoidance": true }
+        },
+        {
+          "label": "Sebentar — perlu, tapi setelahnya langsung kelelahan.",
+          "weights": { "distress": 5, "hope": 1, "denial": 0 }
+        },
+        {
+          "label": "Ya — dipaksakan, tapi ternyata sedikit membantu.",
+          "weights": { "distress": 1, "hope": 4, "denial": -1, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Ya, dan aku benar-benar menikmatinya.",
+          "weights": { "distress": -3, "hope": 6, "denial": -2, "ruminationShift": "reflection" }
+        }
+      ]
+    },
+    {
+      "id": "dep-03",
+      "chapter": "depression",
+      "order": 3,
+      "text": "Saat melihat dirimu di cermin, apa yang kamu rasakan?",
+      "options": [
+        {
+          "label": "Tidak mengenali diri sendiri. Orang itu terlihat sangat lelah.",
+          "weights": { "distress": 8, "hope": -4, "denial": 0, "incrementsInternalized": true, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Sedih, tapi masih ada bagian yang ingin bangkit.",
+          "weights": { "distress": 5, "hope": 2, "denial": 0, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Menghindari cermin — tidak ingin berhadapan dengan itu.",
+          "weights": { "distress": 6, "hope": -3, "denial": 0, "incrementsAvoidance": true }
+        },
+        {
+          "label": "Mulai bisa melihat diri tanpa jeda. Ada orang yang bisa bertahan.",
+          "weights": { "distress": -2, "hope": 5, "denial": -1, "ruminationShift": "reflection" }
+        }
+      ]
+    },
+    {
+      "id": "dep-04",
+      "chapter": "depression",
+      "order": 4,
+      "text": "Apakah ada saat hari ini ketika kamu merasa ingin menghubungi Dia?",
+      "options": [
+        {
+          "label": "Iya — dan aku melakukannya. Responsnya dingin.",
+          "weights": { "distress": 9, "hope": -3, "denial": -2, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Iya, tapi kutahan. Aku tahu itu tidak akan membantu.",
+          "weights": { "distress": 4, "hope": 3, "denial": -1, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Sedikit, tapi pikiran itu berlalu dengan cepat.",
+          "weights": { "distress": 3, "hope": 3, "denial": -2, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Tidak. Aku sudah mulai melepaskan keinginan itu.",
+          "weights": { "distress": -1, "hope": 5, "denial": -3, "ruminationShift": "reflection" }
+        }
+      ]
+    },
+    {
+      "id": "dep-05",
+      "chapter": "depression",
+      "order": 5,
+      "text": "Bagaimana kamu merawat dirimu hari ini — makan, tidur, kebersihan diri?",
+      "options": [
+        {
+          "label": "Hampir tidak ada. Rasanya seperti tidak ada gunanya.",
+          "weights": { "distress": 9, "hope": -5, "denial": 0, "incrementsInternalized": true }
+        },
+        {
+          "label": "Minimal — melakukan hal dasar meski berat.",
+          "weights": { "distress": 5, "hope": 1, "denial": 0 }
+        },
+        {
+          "label": "Cukup baik — mencoba memprioritaskan diri.",
+          "weights": { "distress": -1, "hope": 4, "denial": -1, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Merawat diri dengan sadar sebagai bentuk penyembuhan.",
+          "weights": { "distress": -3, "hope": 6, "denial": -2, "ruminationShift": "reflection" }
+        }
+      ]
+    },
+    {
+      "id": "dep-06",
+      "chapter": "depression",
+      "order": 6,
+      "text": "Adakah sesuatu — sekecil apapun — yang memberimu rasa hangat hari ini?",
+      "options": [
+        {
+          "label": "Tidak ada. Segalanya terasa abu-abu.",
+          "weights": { "distress": 9, "hope": -5, "denial": 0, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Mungkin ada, tapi sulit untuk dirasakan secara penuh.",
+          "weights": { "distress": 5, "hope": 2, "denial": 0 }
+        },
+        {
+          "label": "Ya — secangkir teh panas, musik, atau momen kecil di jendela.",
+          "weights": { "distress": -2, "hope": 5, "denial": -1, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Ya, dan aku memilih untuk benar-benar hadir dalam momen itu.",
+          "weights": { "distress": -4, "hope": 7, "denial": -2, "ruminationShift": "reflection" }
+        }
+      ]
+    },
+    {
+      "id": "dep-07",
+      "chapter": "depression",
+      "order": 7,
+      "text": "Apakah kamu merasa emosi yang kamu rasakan sekarang akan berubah?",
+      "timedSeconds": 25,
+      "options": [
+        {
+          "label": "Tidak. Rasanya seperti ini akan selamanya.",
+          "weights": { "distress": 9, "hope": -6, "denial": 0, "incrementsInternalized": true, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Mungkin. Tapi rasanya sangat jauh.",
+          "weights": { "distress": 6, "hope": 2, "denial": 0 }
+        },
+        {
+          "label": "Iya, meski aku belum tahu kapan atau bagaimana.",
+          "weights": { "distress": 3, "hope": 4, "denial": -1, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Ya. Perasaan tidak ada yang permanen — termasuk yang ini.",
+          "weights": { "distress": -2, "hope": 7, "denial": -2, "ruminationShift": "reflection" }
+        }
+      ]
+    },
+    {
+      "id": "dep-08",
+      "chapter": "depression",
+      "order": 8,
+      "text": "Kaktus sudah tidak bergerak. Kamu memandanginya. Apa yang terlintas?",
+      "options": [
+        {
+          "label": "Seperti melihat diriku sendiri — tidak berdaya.",
+          "weights": { "distress": 8, "hope": -4, "denial": 0, "incrementsInternalized": true, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Sedih, tapi entah kenapa tidak terkejut.",
+          "weights": { "distress": 5, "hope": -2, "denial": -1 }
+        },
+        {
+          "label": "Entah mengapa, aku masih percaya ada sesuatu yang akan muncul dari situ.",
+          "weights": { "distress": 2, "hope": 5, "denial": -1, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Mungkin kita berdua butuh ruang untuk memulai ulang.",
+          "weights": { "distress": -1, "hope": 6, "denial": -2, "ruminationShift": "reflection" }
+        }
+      ]
+    }
+  ]
+}

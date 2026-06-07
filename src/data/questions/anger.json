@@ -1,0 +1,198 @@
+{
+  "chapter": "anger",
+  "questions": [
+    {
+      "id": "ang-01",
+      "chapter": "anger",
+      "order": 1,
+      "text": "Apa yang paling membuatmu marah hari ini terkait situasi ini?",
+      "options": [
+        {
+          "label": "Sikap Dia yang seolah ini bukan masalah besar.",
+          "weights": { "distress": 7, "hope": -3, "denial": 2, "incrementsAggression": true, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Diriku sendiri yang tidak bisa berhenti memikirkannya.",
+          "weights": { "distress": 6, "hope": -2, "denial": 1, "incrementsInternalized": true, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Situasi yang terasa tidak adil.",
+          "weights": { "distress": 5, "hope": -1, "denial": 0 }
+        },
+        {
+          "label": "Tidak ada yang bisa disalahkan — ini hanya tidak berhasil.",
+          "weights": { "distress": 2, "hope": 2, "denial": -2, "ruminationShift": "reflection" }
+        }
+      ]
+    },
+    {
+      "id": "ang-02",
+      "chapter": "anger",
+      "order": 2,
+      "text": "Bagaimana kamu melampiaskan emosi hari ini?",
+      "options": [
+        {
+          "label": "Menghancurkan sesuatu atau melakukan sesuatu secara agresif.",
+          "weights": { "distress": 5, "hope": -4, "denial": 0, "incrementsAggression": true }
+        },
+        {
+          "label": "Olahraga atau aktivitas fisik yang intens.",
+          "weights": { "distress": -3, "hope": 3, "denial": -1, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Menulis atau mencoret-coret di buku catatan.",
+          "weights": { "distress": -2, "hope": 2, "denial": -1, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Menahannya sendirian — tidak ada yang perlu tahu.",
+          "weights": { "distress": 6, "hope": -3, "denial": 1, "incrementsInternalized": true, "incrementsAvoidance": true }
+        }
+      ]
+    },
+    {
+      "id": "ang-03",
+      "chapter": "anger",
+      "order": 3,
+      "text": "Saat memikirkan Dia sekarang, emosi apa yang paling dominan?",
+      "options": [
+        {
+          "label": "Marah — aku merasa dikhianati.",
+          "weights": { "distress": 7, "hope": -3, "denial": 1, "incrementsAggression": true, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Campuran marah dan sedih — keduanya sama kuatnya.",
+          "weights": { "distress": 6, "hope": -1, "denial": 0, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Sudah mulai mati rasa.",
+          "weights": { "distress": 5, "hope": -4, "denial": 0, "incrementsAvoidance": true }
+        },
+        {
+          "label": "Kecewa, tapi mulai menerima bahwa kemarahan tidak menyelesaikan apapun.",
+          "weights": { "distress": 2, "hope": 3, "denial": -2, "ruminationShift": "reflection" }
+        }
+      ]
+    },
+    {
+      "id": "ang-04",
+      "chapter": "anger",
+      "order": 4,
+      "text": "Apakah kamu mengatakan atau melakukan sesuatu yang menyesal hari ini?",
+      "options": [
+        {
+          "label": "Iya — aku bereaksi berlebihan terhadap orang yang tidak bersalah.",
+          "weights": { "distress": 6, "hope": -2, "denial": 0, "incrementsAggression": true }
+        },
+        {
+          "label": "Hampir, tapi berhasil kutahan.",
+          "weights": { "distress": 3, "hope": 2, "denial": 0, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Tidak — aku justru terlalu diam dan memendam.",
+          "weights": { "distress": 5, "hope": -3, "denial": 0, "incrementsInternalized": true }
+        },
+        {
+          "label": "Tidak ada yang istimewa hari ini.",
+          "weights": { "distress": 1, "hope": 1, "denial": 0 }
+        }
+      ]
+    },
+    {
+      "id": "ang-05",
+      "chapter": "anger",
+      "order": 5,
+      "text": "Surat yang kamu tulis untuk Dia — apakah kamu berniat mengirimnya?",
+      "options": [
+        {
+          "label": "Iya. Dia perlu tahu betapa menyakitkannya ini.",
+          "weights": { "distress": 5, "hope": 2, "denial": 1, "incrementsAggression": true, "incrementsHardDenial": true }
+        },
+        {
+          "label": "Belum tahu — aku tulis dulu untuk melampiaskan, nanti kuputuskan.",
+          "weights": { "distress": 3, "hope": 1, "denial": 0 }
+        },
+        {
+          "label": "Tidak. Menulisnya saja sudah cukup untuk hatiku.",
+          "weights": { "distress": -1, "hope": 3, "denial": -1, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Aku belum menulis apa-apa.",
+          "weights": { "distress": 4, "hope": -2, "denial": 1, "incrementsAvoidance": true }
+        }
+      ]
+    },
+    {
+      "id": "ang-06",
+      "chapter": "anger",
+      "order": 6,
+      "text": "Bagaimana tubuhmu hari ini? Apakah kemarahan mempengaruhi fisikmu?",
+      "options": [
+        {
+          "label": "Menegang, sakit kepala, susah bernapas dengan tenang.",
+          "weights": { "distress": 7, "hope": -3, "denial": 0, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Sedikit tegang tapi masih bisa berfungsi.",
+          "weights": { "distress": 4, "hope": 0, "denial": 0 }
+        },
+        {
+          "label": "Kelelahan — seperti menguras energi.",
+          "weights": { "distress": 5, "hope": -2, "denial": 0, "incrementsInternalized": true }
+        },
+        {
+          "label": "Lebih baik setelah beristirahat dan bernapas.",
+          "weights": { "distress": -3, "hope": 4, "denial": -1, "ruminationShift": "reflection" }
+        }
+      ]
+    },
+    {
+      "id": "ang-07",
+      "chapter": "anger",
+      "order": 7,
+      "text": "Apakah ada bagian dari kemarahan ini yang merasa... adil?",
+      "timedSeconds": 20,
+      "options": [
+        {
+          "label": "Ya. Aku berhak marah. Ini memang salah dia.",
+          "weights": { "distress": 5, "hope": -1, "denial": 2, "incrementsAggression": true, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Kemarahan ini adil, tapi cara aku mengekspresikannya tidak.",
+          "weights": { "distress": 3, "hope": 2, "denial": -1, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Tidak tahu. Mungkin kemarahan ini lebih tentang rasa sakitku.",
+          "weights": { "distress": 4, "hope": 1, "denial": -1, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Tidak ada yang benar-benar bersalah. Ini melelahkan.",
+          "weights": { "distress": 3, "hope": 2, "denial": -3 }
+        }
+      ]
+    },
+    {
+      "id": "ang-08",
+      "chapter": "anger",
+      "order": 8,
+      "text": "Kaktus sekarang terlihat sakit parah. Apa perasaanmu?",
+      "options": [
+        {
+          "label": "Frustrasi — seolah semua yang kupedulikan rusak.",
+          "weights": { "distress": 6, "hope": -3, "denial": 2, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Bersalah — seharusnya aku lebih memperhatikannya.",
+          "weights": { "distress": 5, "hope": -2, "denial": 0, "incrementsInternalized": true }
+        },
+        {
+          "label": "Tidak banyak emosi — aku sudah terlalu kelelahan untuk peduli.",
+          "weights": { "distress": 5, "hope": -4, "denial": 0, "incrementsAvoidance": true }
+        },
+        {
+          "label": "Aku akan merawatnya lebih baik mulai sekarang.",
+          "weights": { "distress": -2, "hope": 4, "denial": -2, "ruminationShift": "reflection" }
+        }
+      ]
+    }
+  ]
+}

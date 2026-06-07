@@ -1,0 +1,246 @@
+{
+  "chapter": "denial",
+  "questions": [
+    {
+      "id": "den-01",
+      "chapter": "denial",
+      "order": 1,
+      "text": "Dia sudah memutuskan hubungan ini. Apa yang paling sering terlintas di pikiranmu hari ini?",
+      "options": [
+        {
+          "label": "Pasti ada salah paham. Dia pasti masih peduli.",
+          "weights": { "distress": 2, "hope": 4, "denial": 8, "incrementsHardDenial": true, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Aku memikirkan apa yang seharusnya kulakukan berbeda.",
+          "weights": { "distress": 5, "hope": -2, "denial": 3, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Mencoba memahami alasannya, meski menyakitkan.",
+          "weights": { "distress": 3, "hope": 1, "denial": -2, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Aku berusaha tidak memikirkannya sama sekali.",
+          "weights": { "distress": 4, "hope": -3, "denial": 5, "incrementsAvoidance": true }
+        }
+      ]
+    },
+    {
+      "id": "den-02",
+      "chapter": "denial",
+      "order": 2,
+      "text": "Apakah hari ini kamu mengecek media sosial atau aktivitas Dia?",
+      "options": [
+        {
+          "label": "Iya, berkali-kali. Ada harapan dia akan menghubungiku.",
+          "weights": { "distress": 4, "hope": 5, "denial": 7, "incrementsHardDenial": true, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Sekali, tapi langsung kututup sebelum terlalu jauh.",
+          "weights": { "distress": 3, "hope": 1, "denial": 3 }
+        },
+        {
+          "label": "Tidak. Sudah kupilih untuk tidak.",
+          "weights": { "distress": 2, "hope": 2, "denial": -3, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Tidak, tapi bukan karena aku sudah siap — aku hanya sibuk.",
+          "weights": { "distress": 3, "hope": -1, "denial": 2, "incrementsAvoidance": true }
+        }
+      ]
+    },
+    {
+      "id": "den-03",
+      "chapter": "denial",
+      "order": 3,
+      "text": "Temanmu mengajakmu keluar hari ini. Apa yang kamu lakukan?",
+      "options": [
+        {
+          "label": "Pergi, tapi pikiranku terus ke Dia sepanjang waktu.",
+          "weights": { "distress": 4, "hope": 1, "denial": 4, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Pergi dan berhasil menikmati beberapa momen.",
+          "weights": { "distress": -2, "hope": 3, "denial": -2, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Menolak — tidak mood untuk bersosialisasi.",
+          "weights": { "distress": 3, "hope": -3, "denial": 3, "incrementsAvoidance": true }
+        },
+        {
+          "label": "Pergi hanya agar bisa membicarakan Dia ke temanku.",
+          "weights": { "distress": 3, "hope": 3, "denial": 5, "incrementsHardDenial": true }
+        }
+      ]
+    },
+    {
+      "id": "den-04",
+      "chapter": "denial",
+      "order": 4,
+      "text": "Kamu masih menyimpan foto-foto bersama Dia. Apa yang kamu lakukan dengan itu?",
+      "options": [
+        {
+          "label": "Membuka dan melihatnya lagi — menenangkan sekaligus menyakitkan.",
+          "weights": { "distress": 5, "hope": 2, "denial": 6, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Menyembunyikannya di folder tersembunyi, tapi belum menghapus.",
+          "weights": { "distress": 3, "hope": -1, "denial": 4, "incrementsAvoidance": true }
+        },
+        {
+          "label": "Mulai memilah mana yang ingin kusimpan sebagai kenangan.",
+          "weights": { "distress": 2, "hope": 2, "denial": -3, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Tidak memikirkannya. Itu hanya foto biasa.",
+          "weights": { "distress": 2, "hope": -2, "denial": 2 }
+        }
+      ]
+    },
+    {
+      "id": "den-05",
+      "chapter": "denial",
+      "order": 5,
+      "text": "Bagaimana tidurmu semalam?",
+      "options": [
+        {
+          "label": "Sulit tidur — terus memikirkan skenario 'bagaimana kalau'.",
+          "weights": { "distress": 6, "hope": 1, "denial": 4, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Cukup tidur meski berat untuk memulainya.",
+          "weights": { "distress": 2, "hope": 1, "denial": 1 }
+        },
+        {
+          "label": "Lelah secara fisik — langsung tertidur tanpa sempat berpikir.",
+          "weights": { "distress": 3, "hope": -2, "denial": 2, "incrementsAvoidance": true }
+        },
+        {
+          "label": "Tidur cukup dan berhasil menenangkan diri sebelumnya.",
+          "weights": { "distress": -3, "hope": 4, "denial": -3, "ruminationShift": "reflection" }
+        }
+      ]
+    },
+    {
+      "id": "den-06",
+      "chapter": "denial",
+      "order": 6,
+      "text": "Apakah hari ini ada sesuatu yang mengingatkanmu pada Dia?",
+      "options": [
+        {
+          "label": "Hampir segalanya — lagu, tempat, bahkan bau kopi.",
+          "weights": { "distress": 6, "hope": 2, "denial": 5, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Beberapa hal, tapi aku mencoba memaknainya berbeda.",
+          "weights": { "distress": 3, "hope": 2, "denial": 1, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Ada, tapi kucoba alihkan perhatianku.",
+          "weights": { "distress": 3, "hope": -1, "denial": 3, "incrementsAvoidance": true }
+        },
+        {
+          "label": "Tidak banyak — kupikir aku sudah mulai terbiasa.",
+          "weights": { "distress": 1, "hope": 3, "denial": -2 }
+        }
+      ]
+    },
+    {
+      "id": "den-07",
+      "chapter": "denial",
+      "order": 7,
+      "text": "Apakah kamu masih percaya Dia akan kembali?",
+      "timedSeconds": 15,
+      "options": [
+        {
+          "label": "Ya. Aku yakin ini hanya sementara.",
+          "weights": { "distress": 3, "hope": 6, "denial": 10, "incrementsHardDenial": true, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Mungkin. Aku tidak mau menutup kemungkinan.",
+          "weights": { "distress": 4, "hope": 4, "denial": 6 }
+        },
+        {
+          "label": "Tidak tahu. Aku takut untuk berharap, tapi juga takut untuk berhenti.",
+          "weights": { "distress": 5, "hope": 1, "denial": 3 }
+        },
+        {
+          "label": "Tidak. Sudah waktunya menerima ini.",
+          "weights": { "distress": 2, "hope": 3, "denial": -5, "ruminationShift": "reflection" }
+        }
+      ]
+    },
+    {
+      "id": "den-08",
+      "chapter": "denial",
+      "order": 8,
+      "text": "Kaktus mulai terlihat tidak segar. Apa yang kamu rasakan?",
+      "options": [
+        {
+          "label": "Panik — aku harus memperbaikinya sebelum terlambat.",
+          "weights": { "distress": 5, "hope": 3, "denial": 4, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Sedih, tapi mungkin itu memang jalannya.",
+          "weights": { "distress": 3, "hope": -1, "denial": -2, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Tidak terlalu diperhatikan — aku punya banyak hal di pikiran.",
+          "weights": { "distress": 4, "hope": -3, "denial": 3, "incrementsAvoidance": true }
+        },
+        {
+          "label": "Justru tenang — aku bisa merawatnya sendiri.",
+          "weights": { "distress": -2, "hope": 4, "denial": -4, "ruminationShift": "reflection" }
+        }
+      ]
+    },
+    {
+      "id": "den-09",
+      "chapter": "denial",
+      "order": 9,
+      "text": "Teman-temanmu mencoba menghiburmu. Apa reaksimu?",
+      "options": [
+        {
+          "label": "Berterima kasih tapi di dalam hati merasa mereka tidak mengerti.",
+          "weights": { "distress": 4, "hope": 1, "denial": 5, "incrementsHardDenial": true }
+        },
+        {
+          "label": "Sedikit terbuka — cerita sedikit tentang apa yang kurasakan.",
+          "weights": { "distress": -1, "hope": 3, "denial": -2, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Menghindari topik — berpura-pura tidak ada masalah.",
+          "weights": { "distress": 3, "hope": -2, "denial": 4, "incrementsAvoidance": true }
+        },
+        {
+          "label": "Merasa terganggu — aku tidak butuh dikasihani.",
+          "weights": { "distress": 5, "hope": -1, "denial": 3, "ruminationShift": "brooding" }
+        }
+      ]
+    },
+    {
+      "id": "den-10",
+      "chapter": "denial",
+      "order": 10,
+      "text": "Jika Dia menghubungimu malam ini, apa yang ingin kamu katakan?",
+      "options": [
+        {
+          "label": "Aku rindu. Mari kita bicara dan perbaiki segalanya.",
+          "weights": { "distress": 3, "hope": 7, "denial": 10, "incrementsHardDenial": true, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Aku tidak tahu harus berkata apa — butuh waktu untuk berpikir.",
+          "weights": { "distress": 4, "hope": 2, "denial": 3 }
+        },
+        {
+          "label": "Aku ingin mendengar alasannya — bukan untuk berdamai, tapi untuk paham.",
+          "weights": { "distress": 2, "hope": 1, "denial": -3, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Mungkin lebih baik tidak ada kontak dulu.",
+          "weights": { "distress": 2, "hope": 2, "denial": -4, "ruminationShift": "reflection" }
+        }
+      ]
+    }
+  ]
+}

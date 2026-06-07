@@ -1,0 +1,197 @@
+{
+  "chapter": "prologue",
+  "questions": [
+    {
+      "id": "pro-01",
+      "chapter": "prologue",
+      "order": 1,
+      "text": "Hari ini kamu menghabiskan waktu bersama Dia. Bagaimana perasaanmu sekarang?",
+      "options": [
+        {
+          "label": "Bahagia dan tenang — merasa lengkap",
+          "weights": { "distress": -3, "hope": 5, "denial": 0, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Senang, tapi ada rasa takut kehilangan",
+          "weights": { "distress": 2, "hope": 3, "denial": 0 }
+        },
+        {
+          "label": "Biasa saja, mungkin terlalu terbiasa",
+          "weights": { "distress": 1, "hope": -2, "denial": 0 }
+        },
+        {
+          "label": "Khawatir dia tidak merasakan hal yang sama",
+          "weights": { "distress": 4, "hope": -3, "denial": 2, "ruminationShift": "brooding" }
+        }
+      ]
+    },
+    {
+      "id": "pro-02",
+      "chapter": "prologue",
+      "order": 2,
+      "text": "Kaktus itu kamu rawat bersama-sama. Apa yang kamu rasakan saat melihatnya tumbuh?",
+      "options": [
+        {
+          "label": "Bangga — ini simbol sesuatu yang penting",
+          "weights": { "distress": -2, "hope": 4, "denial": 0 }
+        },
+        {
+          "label": "Senang, tapi tidak terlalu memikirkannya",
+          "weights": { "distress": 0, "hope": 1, "denial": 0 }
+        },
+        {
+          "label": "Takut kalau suatu hari nanti dia layu",
+          "weights": { "distress": 3, "hope": -1, "denial": 0, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Semua tanaman pasti mati. Itu wajar saja.",
+          "weights": { "distress": 1, "hope": -3, "denial": 0 }
+        }
+      ]
+    },
+    {
+      "id": "pro-03",
+      "chapter": "prologue",
+      "order": 3,
+      "text": "Hubungan kalian terasa dekat dan nyata. Apa yang paling kamu syukuri hari ini?",
+      "options": [
+        {
+          "label": "Kehadiran Dia yang selalu ada di saat yang tepat",
+          "weights": { "distress": -3, "hope": 5, "denial": 0, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Tawa kecil dan momen sehari-hari bersama",
+          "weights": { "distress": -2, "hope": 4, "denial": 0 }
+        },
+        {
+          "label": "Susah menyebutkan satu hal — semuanya terasa biasa",
+          "weights": { "distress": 2, "hope": -1, "denial": 0 }
+        },
+        {
+          "label": "Aku tidak terlalu memikirkan soal rasa syukur",
+          "weights": { "distress": 3, "hope": -3, "denial": 0, "ruminationShift": "brooding" }
+        }
+      ]
+    },
+    {
+      "id": "pro-04",
+      "chapter": "prologue",
+      "order": 4,
+      "text": "Jika kamu harus menggambarkan hubungan ini dalam satu kata, apa yang terlintas?",
+      "options": [
+        {
+          "label": "Nyaman",
+          "weights": { "distress": -2, "hope": 3, "denial": 0 }
+        },
+        {
+          "label": "Menyenangkan",
+          "weights": { "distress": -1, "hope": 4, "denial": 0 }
+        },
+        {
+          "label": "Melelahkan",
+          "weights": { "distress": 4, "hope": -2, "denial": 0, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Rumit",
+          "weights": { "distress": 3, "hope": -1, "denial": 1 }
+        }
+      ]
+    },
+    {
+      "id": "pro-05",
+      "chapter": "prologue",
+      "order": 5,
+      "text": "Rooftop tadi malam, momen itu terasa sangat spesial. Apa yang paling kamu ingat?",
+      "options": [
+        {
+          "label": "Cara Dia memandangku — seperti benar-benar melihatku",
+          "weights": { "distress": -3, "hope": 5, "denial": 0, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Langit malamnya yang indah",
+          "weights": { "distress": -2, "hope": 3, "denial": 0 }
+        },
+        {
+          "label": "Kata-kata yang tidak sempat kuucapkan",
+          "weights": { "distress": 3, "hope": 0, "denial": 1, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Rasa takut bahwa ini tidak akan bertahan",
+          "weights": { "distress": 4, "hope": -2, "denial": 2 }
+        }
+      ]
+    },
+    {
+      "id": "pro-06",
+      "chapter": "prologue",
+      "order": 6,
+      "text": "Kamu tahu hubungan ini penting. Seberapa sering kamu khawatir tentang masa depannya?",
+      "options": [
+        {
+          "label": "Jarang — aku hidup di momen sekarang",
+          "weights": { "distress": -2, "hope": 4, "denial": 0, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Kadang-kadang, tapi tidak berlebihan",
+          "weights": { "distress": 1, "hope": 2, "denial": 0 }
+        },
+        {
+          "label": "Cukup sering — aku tidak bisa tidak memikirkannya",
+          "weights": { "distress": 4, "hope": -2, "denial": 2, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Selalu. Aku takut kehilangan dia.",
+          "weights": { "distress": 6, "hope": -4, "denial": 3, "ruminationShift": "brooding" }
+        }
+      ]
+    },
+    {
+      "id": "pro-07",
+      "chapter": "prologue",
+      "order": 7,
+      "text": "Apa yang ingin kamu lakukan besok bersama Dia?",
+      "options": [
+        {
+          "label": "Hal sederhana — makan bersama, jalan-jalan santai",
+          "weights": { "distress": -2, "hope": 4, "denial": 0 }
+        },
+        {
+          "label": "Hal baru yang belum pernah kita coba",
+          "weights": { "distress": -1, "hope": 5, "denial": 0, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Belum memikirkannya — terlalu takut merencanakan",
+          "weights": { "distress": 3, "hope": -1, "denial": 2 }
+        },
+        {
+          "label": "Aku ingin memastikan dia tidak pergi",
+          "weights": { "distress": 5, "hope": -3, "denial": 3, "ruminationShift": "brooding" }
+        }
+      ]
+    },
+    {
+      "id": "pro-08",
+      "chapter": "prologue",
+      "order": 8,
+      "text": "Sebelum tidur, kamu melihat kaktus kecil di meja. Apa yang terlintas?",
+      "options": [
+        {
+          "label": "Senyum — pengingat hari yang baik",
+          "weights": { "distress": -3, "hope": 5, "denial": 0, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Berharap dia juga memikirkan hari ini",
+          "weights": { "distress": 1, "hope": 2, "denial": 1 }
+        },
+        {
+          "label": "Khawatir aku merawatnya salah",
+          "weights": { "distress": 3, "hope": -1, "denial": 1, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Tidak ada — langsung tidur saja",
+          "weights": { "distress": 1, "hope": -2, "denial": 0 }
+        }
+      ]
+    }
+  ]
+}

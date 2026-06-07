@@ -1,0 +1,197 @@
+{
+  "chapter": "acceptance",
+  "questions": [
+    {
+      "id": "acc-01",
+      "chapter": "acceptance",
+      "order": 1,
+      "text": "Hari ini, bagaimana kamu memandang pengalaman yang telah kamu lalui?",
+      "options": [
+        {
+          "label": "Masih menyakitkan, tapi aku mulai bisa melihatnya dari luar.",
+          "weights": { "distress": 2, "hope": 5, "denial": -3, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Seperti pelajaran yang tidak diminta, tapi mungkin perlu.",
+          "weights": { "distress": -1, "hope": 6, "denial": -4, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Campur aduk — kadang sudah oke, kadang masih sakit.",
+          "weights": { "distress": 3, "hope": 3, "denial": -1 }
+        },
+        {
+          "label": "Masih berat untuk dipikirkan. Lebih mudah tidak memikirkannya.",
+          "weights": { "distress": 5, "hope": -2, "denial": 2, "incrementsAvoidance": true }
+        }
+      ]
+    },
+    {
+      "id": "acc-02",
+      "chapter": "acceptance",
+      "order": 2,
+      "text": "Apakah kamu sudah mulai menikmati waktu untuk dirimu sendiri?",
+      "options": [
+        {
+          "label": "Ya — menemukan hal-hal yang sebelumnya kuabaikan.",
+          "weights": { "distress": -4, "hope": 7, "denial": -4, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Perlahan — masih butuh pembiasaan.",
+          "weights": { "distress": 1, "hope": 5, "denial": -2, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Belum sepenuhnya — ada rasa kosong yang aneh.",
+          "weights": { "distress": 4, "hope": 2, "denial": 0 }
+        },
+        {
+          "label": "Tidak — waktu sendiri justru membuat pikiran berkecamuk.",
+          "weights": { "distress": 6, "hope": -3, "denial": 2, "incrementsAvoidance": true, "ruminationShift": "brooding" }
+        }
+      ]
+    },
+    {
+      "id": "acc-03",
+      "chapter": "acceptance",
+      "order": 3,
+      "text": "Bagaimana perasaanmu ketika memikirkan Dia sekarang?",
+      "options": [
+        {
+          "label": "Masih sakit, tapi rasa marah sudah jauh berkurang.",
+          "weights": { "distress": 2, "hope": 5, "denial": -3, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Lebih netral — seperti mengingat orang yang sudah lewat dari hidupku.",
+          "weights": { "distress": -2, "hope": 6, "denial": -5, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Masih berat, terutama kalau muncul tiba-tiba.",
+          "weights": { "distress": 4, "hope": 2, "denial": 1 }
+        },
+        {
+          "label": "Aku sengaja tidak memikirkannya.",
+          "weights": { "distress": 3, "hope": -1, "denial": 2, "incrementsAvoidance": true }
+        }
+      ]
+    },
+    {
+      "id": "acc-04",
+      "chapter": "acceptance",
+      "order": 4,
+      "text": "Apakah ada mimpi atau tujuan yang mulai ingin kamu kejar?",
+      "options": [
+        {
+          "label": "Ya! Ada hal yang ingin kucoba yang sebelumnya kutunda.",
+          "weights": { "distress": -5, "hope": 8, "denial": -5, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Mulai muncul — belum jelas, tapi ada percikan.",
+          "weights": { "distress": -2, "hope": 6, "denial": -3, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Belum. Fokus sehari-hari saja sudah cukup untuk sekarang.",
+          "weights": { "distress": 2, "hope": 3, "denial": 0 }
+        },
+        {
+          "label": "Tidak — semua terasa hampa tanpa adanya dia.",
+          "weights": { "distress": 6, "hope": -4, "denial": 3, "ruminationShift": "brooding" }
+        }
+      ]
+    },
+    {
+      "id": "acc-05",
+      "chapter": "acceptance",
+      "order": 5,
+      "text": "Apakah kamu sudah memaafkan dirimu sendiri atas apa yang terjadi?",
+      "options": [
+        {
+          "label": "Ya — aku melakukan yang terbaik yang bisa kulakukan saat itu.",
+          "weights": { "distress": -4, "hope": 7, "denial": -4, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Sedang berjalan ke sana — tidak mudah, tapi ada upaya.",
+          "weights": { "distress": 1, "hope": 5, "denial": -2, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Masih ada rasa bersalah yang tersisa.",
+          "weights": { "distress": 4, "hope": 1, "denial": 1, "incrementsInternalized": true }
+        },
+        {
+          "label": "Tidak — aku masih merasa ini sebagian besar kesalahanku.",
+          "weights": { "distress": 7, "hope": -3, "denial": 2, "incrementsInternalized": true, "ruminationShift": "brooding" }
+        }
+      ]
+    },
+    {
+      "id": "acc-06",
+      "chapter": "acceptance",
+      "order": 6,
+      "text": "Jika kamu bertemu Dia di jalan hari ini, apa yang akan kamu lakukan?",
+      "options": [
+        {
+          "label": "Menyapa dengan tenang — tanpa harapan lebih, tanpa kebencian.",
+          "weights": { "distress": -3, "hope": 7, "denial": -5, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Menyapa tapi gugup dan canggung.",
+          "weights": { "distress": 3, "hope": 3, "denial": 0 }
+        },
+        {
+          "label": "Menghindari kontak mata dan berlalu.",
+          "weights": { "distress": 4, "hope": -1, "denial": 2, "incrementsAvoidance": true }
+        },
+        {
+          "label": "Tidak tahu — mungkin masih banyak yang belum terselesaikan.",
+          "weights": { "distress": 5, "hope": 1, "denial": 1, "ruminationShift": "brooding" }
+        }
+      ]
+    },
+    {
+      "id": "acc-07",
+      "chapter": "acceptance",
+      "order": 7,
+      "text": "Kamar barumu terasa lebih menjadi dirimu. Apa yang paling berarti dari perubahan itu?",
+      "options": [
+        {
+          "label": "Aku bisa memilih apa yang ingin ada di hidupku, bukan apa yang tersisa.",
+          "weights": { "distress": -5, "hope": 8, "denial": -5, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Ruangku sekarang benar-benar milikku — bukan milik masa lalu.",
+          "weights": { "distress": -3, "hope": 7, "denial": -4, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Sedikit lebih nyaman, meski masih ada ruang yang terasa asing.",
+          "weights": { "distress": 1, "hope": 4, "denial": -1 }
+        },
+        {
+          "label": "Belum terasa signifikan. Tempat tidak mengubah perasaan.",
+          "weights": { "distress": 4, "hope": 0, "denial": 1 }
+        }
+      ]
+    },
+    {
+      "id": "acc-08",
+      "chapter": "acceptance",
+      "order": 8,
+      "text": "Kaktus kini berada di pot kosong. Apa yang ingin kamu tanam selanjutnya?",
+      "options": [
+        {
+          "label": "Sesuatu yang baru dan berbeda — simbol babak baru.",
+          "weights": { "distress": -5, "hope": 8, "denial": -5, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Belum tahu, tapi aku ingin mencari tahu.",
+          "weights": { "distress": -2, "hope": 6, "denial": -3, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Tidak tahu. Pot kosong itu sudah cukup untuk sekarang.",
+          "weights": { "distress": 2, "hope": 3, "denial": -1 }
+        },
+        {
+          "label": "Mungkin tidak ada. Mungkin beberapa hal memang tidak bisa digantikan.",
+          "weights": { "distress": 5, "hope": -2, "denial": 2, "ruminationShift": "brooding" }
+        }
+      ]
+    }
+  ]
+}

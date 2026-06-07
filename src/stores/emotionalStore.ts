@@ -50,31 +50,55 @@ const initialState: EmotionalState = {
 export const useEmotionalStore = create<EmotionalState & EmotionalActions>((set) => ({
   ...initialState,
 
-  setDistress: (value) => { set({ distress: clamp(value) }); },
-  setHope: (value) => { set({ hope: clamp(value) }); },
-  setDenial: (value) => { set({ denial: clamp(value) }); },
-  setRumination: (mode) => { set({ rumination: mode }); },
+  setDistress: (value) => {
+    set({ distress: clamp(value) })
+  },
+  setHope: (value) => {
+    set({ hope: clamp(value) })
+  },
+  setDenial: (value) => {
+    set({ denial: clamp(value) })
+  },
+  setRumination: (mode) => {
+    set({ rumination: mode })
+  },
 
-  adjustDistress: (delta) => { set((s) => ({ distress: clamp(s.distress + delta) })); },
-  adjustHope: (delta) => { set((s) => ({ hope: clamp(s.hope + delta) })); },
-  adjustDenial: (delta) => { set((s) => ({ denial: clamp(s.denial + delta) })); },
+  adjustDistress: (delta) => {
+    set((s) => ({ distress: clamp(s.distress + delta) }))
+  },
+  adjustHope: (delta) => {
+    set((s) => ({ hope: clamp(s.hope + delta) }))
+  },
+  adjustDenial: (delta) => {
+    set((s) => ({ denial: clamp(s.denial + delta) }))
+  },
 
-  incrementAvoidance: () => { set((s) => ({ avoidanceCount: s.avoidanceCount + 1 })); },
-  incrementAggressiveChoice: () =>
-    { set((s) => ({ aggressiveChoiceCount: s.aggressiveChoiceCount + 1 })); },
-  incrementInternalizedAnger: () =>
-    { set((s) => ({ internalizedAngerCount: s.internalizedAngerCount + 1 })); },
-  incrementConsecutiveHardDenial: () =>
-    { set((s) => ({ consecutiveHardDenial: s.consecutiveHardDenial + 1 })); },
-  resetConsecutiveHardDenial: () => { set({ consecutiveHardDenial: 0 }); },
+  incrementAvoidance: () => {
+    set((s) => ({ avoidanceCount: s.avoidanceCount + 1 }))
+  },
+  incrementAggressiveChoice: () => {
+    set((s) => ({ aggressiveChoiceCount: s.aggressiveChoiceCount + 1 }))
+  },
+  incrementInternalizedAnger: () => {
+    set((s) => ({ internalizedAngerCount: s.internalizedAngerCount + 1 }))
+  },
+  incrementConsecutiveHardDenial: () => {
+    set((s) => ({ consecutiveHardDenial: s.consecutiveHardDenial + 1 }))
+  },
+  resetConsecutiveHardDenial: () => {
+    set({ consecutiveHardDenial: 0 })
+  },
 
-  resetSessionCounters: () =>
-    { set({
+  resetSessionCounters: () => {
+    set({
       avoidanceCount: 0,
       aggressiveChoiceCount: 0,
       internalizedAngerCount: 0,
       consecutiveHardDenial: 0,
-    }); },
+    })
+  },
 
-  hydrate: (state) => { set(state); },
+  hydrate: (state) => {
+    set(state)
+  },
 }))

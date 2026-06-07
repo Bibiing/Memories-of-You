@@ -96,8 +96,5 @@ export function applyTheme(theme: ChapterTheme, distress: number): void {
   // Distress affects grayscale and blur
   const grayscale = Math.round(distressFactor * 50) // 0–50%
   const blur = (distressFactor * 2).toFixed(1) // 0–2px
-  root.style.setProperty(
-    '--filter-distress',
-    `grayscale(${String(grayscale)}%) blur(${blur}px)`
-  )
+  root.style.setProperty('--filter-distress', `grayscale(${String(grayscale)}%) blur(${blur}px)`)
 }

@@ -74,45 +74,74 @@ const initialState: GameState = {
 export const useGameStateStore = create<GameState & GameStateActions>((set) => ({
   ...initialState,
 
-  setPlayerName: (name) => { set({ playerName: name }); },
-  setSaveSlotId: (id) => { set({ saveSlotId: id }); },
+  setPlayerName: (name) => {
+    set({ playerName: name })
+  },
+  setSaveSlotId: (id) => {
+    set({ saveSlotId: id })
+  },
 
-  setChapter: (chapter) =>
-    { set({
+  setChapter: (chapter) => {
+    set({
       currentChapter: chapter,
       availableLocations: CHAPTER_LOCATIONS[chapter],
       daysInCurrentChapter: 0,
       currentDay: 1,
       completedMissionsToday: [],
-    }); },
+    })
+  },
 
-  setDay: (day) => { set({ currentDay: day }); },
-  incrementDay: () =>
-    { set((s) => ({
+  setDay: (day) => {
+    set({ currentDay: day })
+  },
+  incrementDay: () => {
+    set((s) => ({
       currentDay: s.currentDay + 1,
       completedMissionsToday: [],
-    })); },
+    }))
+  },
 
-  setScene: (scene) => { set({ currentScene: scene }); },
-  setLocation: (location) => { set({ currentLocation: location }); },
-  setAvailableLocations: (locations) => { set({ availableLocations: locations }); },
+  setScene: (scene) => {
+    set({ currentScene: scene })
+  },
+  setLocation: (location) => {
+    set({ currentLocation: location })
+  },
+  setAvailableLocations: (locations) => {
+    set({ availableLocations: locations })
+  },
 
-  markMissionCompleted: (missionId) =>
-    { set((s) => ({
+  markMissionCompleted: (missionId) => {
+    set((s) => ({
       completedMissionsToday: [...s.completedMissionsToday, missionId],
-    })); },
+    }))
+  },
 
-  clearDailyMissions: () => { set({ completedMissionsToday: [] }); },
+  clearDailyMissions: () => {
+    set({ completedMissionsToday: [] })
+  },
 
-  incrementDaysInChapter: () => { set((s) => ({ daysInCurrentChapter: s.daysInCurrentChapter + 1 })); },
+  incrementDaysInChapter: () => {
+    set((s) => ({ daysInCurrentChapter: s.daysInCurrentChapter + 1 }))
+  },
 
-  resetDaysInChapter: () => { set({ daysInCurrentChapter: 0 }); },
+  resetDaysInChapter: () => {
+    set({ daysInCurrentChapter: 0 })
+  },
 
-  setGameCompleted: () => { set({ isGameCompleted: true }); },
-  setContentWarningSeen: () => { set({ hasSeenContentWarning: true }); },
+  setGameCompleted: () => {
+    set({ isGameCompleted: true })
+  },
+  setContentWarningSeen: () => {
+    set({ hasSeenContentWarning: true })
+  },
 
-  hydrate: (state) => { set(state); },
-  reset: () => { set(initialState); },
+  hydrate: (state) => {
+    set(state)
+  },
+  reset: () => {
+    set(initialState)
+  },
 }))
 
 export { CHAPTER_LOCATIONS }

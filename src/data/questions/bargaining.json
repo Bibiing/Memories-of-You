@@ -1,0 +1,197 @@
+{
+  "chapter": "bargaining",
+  "questions": [
+    {
+      "id": "bar-01",
+      "chapter": "bargaining",
+      "order": 1,
+      "text": "Hari ini, apakah kamu memiliki pikiran 'jika saja... maka semuanya akan berbeda'?",
+      "options": [
+        {
+          "label": "Terus-menerus. Aku terus memutar ulang semua skenario.",
+          "weights": { "distress": 7, "hope": 2, "denial": 3, "incrementsAvoidance": true, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Beberapa kali, tapi aku coba sadari itu tidak membantu.",
+          "weights": { "distress": 4, "hope": 2, "denial": 1, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Sedikit — lebih banyak menerima apa yang sudah terjadi.",
+          "weights": { "distress": 2, "hope": 3, "denial": -2, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Tidak — aku sudah lelah dengan permainan pikiran itu.",
+          "weights": { "distress": 3, "hope": 1, "denial": -3, "incrementsAvoidance": true }
+        }
+      ]
+    },
+    {
+      "id": "bar-02",
+      "chapter": "bargaining",
+      "order": 2,
+      "text": "Apakah kamu masih memiliki harapan untuk rekonsiliasi dengan Dia?",
+      "options": [
+        {
+          "label": "Ya. Aku masih menyusun 'rencana' agar Dia mau kembali.",
+          "weights": { "distress": 5, "hope": 6, "denial": 5, "incrementsHardDenial": true, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Sedikit, tapi aku mulai mempertanyakan apakah itu yang benar-benar aku inginkan.",
+          "weights": { "distress": 4, "hope": 3, "denial": 1, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Tidak lagi — tapi kehilangan harapan itu sendiri terasa menyakitkan.",
+          "weights": { "distress": 6, "hope": -1, "denial": -3, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Tidak. Aku mencoba fokus ke depan.",
+          "weights": { "distress": 2, "hope": 4, "denial": -4, "ruminationShift": "reflection" }
+        }
+      ]
+    },
+    {
+      "id": "bar-03",
+      "chapter": "bargaining",
+      "order": 3,
+      "text": "Pernahkah hari ini kamu berpikir untuk 'bernegosiasi' — menawarkan sesuatu agar hubungan bisa diperbaiki?",
+      "options": [
+        {
+          "label": "Iya — aku sudah memikirkan apa yang bisa kuubah dari diriku.",
+          "weights": { "distress": 5, "hope": 4, "denial": 5, "incrementsHardDenial": true, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Sempat terpikir, tapi kusadari itu bukan caranya.",
+          "weights": { "distress": 3, "hope": 2, "denial": 1, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Tidak — hubungan yang sehat tidak butuh negosiasi sepihak.",
+          "weights": { "distress": 2, "hope": 4, "denial": -3, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Tidak terpikir. Aku sudah terlalu lelah untuk merencanakan apapun.",
+          "weights": { "distress": 5, "hope": -2, "denial": 0, "incrementsAvoidance": true }
+        }
+      ]
+    },
+    {
+      "id": "bar-04",
+      "chapter": "bargaining",
+      "order": 4,
+      "text": "Kamu mendengar kabar bahwa Dia terlihat bahagia akhir-akhir ini. Bagaimana reaksimu?",
+      "options": [
+        {
+          "label": "Cemburu dan menyakitkan — seolah kesedihananku tidak berarti.",
+          "weights": { "distress": 8, "hope": -3, "denial": 3, "incrementsAggression": true, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Sakit, tapi di suatu bagian hatiku, aku lega ia baik-baik saja.",
+          "weights": { "distress": 5, "hope": 2, "denial": -1, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Tidak bereaksi banyak — mungkin sudah mulai terbiasa.",
+          "weights": { "distress": 3, "hope": 1, "denial": -2 }
+        },
+        {
+          "label": "Menghindar dari informasi tentang dia — aku tidak mau tahu.",
+          "weights": { "distress": 4, "hope": -2, "denial": 2, "incrementsAvoidance": true }
+        }
+      ]
+    },
+    {
+      "id": "bar-05",
+      "chapter": "bargaining",
+      "order": 5,
+      "text": "Apakah hari ini kamu melakukan sesuatu untuk dirimu sendiri?",
+      "options": [
+        {
+          "label": "Iya — makan dengan baik, mandi, hal-hal kecil yang merawat diri.",
+          "weights": { "distress": -3, "hope": 5, "denial": -2, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Berusaha, tapi sulit termotivasi.",
+          "weights": { "distress": 3, "hope": 2, "denial": 0 }
+        },
+        {
+          "label": "Tidak terlalu — kelelahan dengan segalanya.",
+          "weights": { "distress": 5, "hope": -3, "denial": 1, "incrementsAvoidance": true }
+        },
+        {
+          "label": "Fokus pada teman dan orang lain, melupakan diri sendiri.",
+          "weights": { "distress": 4, "hope": -1, "denial": 2, "incrementsAvoidance": true }
+        }
+      ]
+    },
+    {
+      "id": "bar-06",
+      "chapter": "bargaining",
+      "order": 6,
+      "text": "Apakah kamu mulai menemukan makna dari apa yang terjadi?",
+      "options": [
+        {
+          "label": "Belum. Sepertinya tidak ada makna apapun dari ini.",
+          "weights": { "distress": 6, "hope": -4, "denial": 1, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Mungkin ada sesuatu yang bisa kupelajari, tapi belum tahu apa.",
+          "weights": { "distress": 3, "hope": 3, "denial": -1, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Ya — mulai melihat sisi diriku yang perlu berkembang.",
+          "weights": { "distress": -2, "hope": 5, "denial": -3, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Aku tidak percaya ada 'pelajaran' dari rasa sakit seperti ini.",
+          "weights": { "distress": 4, "hope": -3, "denial": 2, "ruminationShift": "brooding" }
+        }
+      ]
+    },
+    {
+      "id": "bar-07",
+      "chapter": "bargaining",
+      "order": 7,
+      "text": "Jika kamu bisa berbicara dengan dirimu sendiri 6 bulan yang lalu, apa yang akan kamu katakan?",
+      "options": [
+        {
+          "label": "Jangan menginvestasikan terlalu banyak perasaan.",
+          "weights": { "distress": 4, "hope": -2, "denial": 1, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Nikmati momennya, apa yang terjadi adalah bagian dari perjalanan.",
+          "weights": { "distress": -1, "hope": 5, "denial": -2, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Berjuang lebih keras untuk hubungan itu.",
+          "weights": { "distress": 5, "hope": 3, "denial": 5, "incrementsHardDenial": true, "ruminationShift": "brooding" }
+        },
+        {
+          "label": "Tidak ada yang bisa kuubah — kejadian yang harus terjadi.",
+          "weights": { "distress": 2, "hope": 4, "denial": -3, "ruminationShift": "reflection" }
+        }
+      ]
+    },
+    {
+      "id": "bar-08",
+      "chapter": "bargaining",
+      "order": 8,
+      "text": "Kaktus kini tampak berjuang keras untuk tetap hidup. Bagaimana perasaanmu?",
+      "options": [
+        {
+          "label": "Ikut berjuang — aku akan melakukan apa saja untuk menyelamatkannya.",
+          "weights": { "distress": 5, "hope": 4, "denial": 3, "incrementsHardDenial": true }
+        },
+        {
+          "label": "Haru — melihatnya berjuang membuatku ingin ikut bertahan.",
+          "weights": { "distress": 3, "hope": 4, "denial": 0, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Pasrah — mungkin memang sudah saatnya.",
+          "weights": { "distress": 4, "hope": -2, "denial": -2, "ruminationShift": "reflection" }
+        },
+        {
+          "label": "Tidak banyak merasakan — hanya kelelahan.",
+          "weights": { "distress": 5, "hope": -4, "denial": 0, "incrementsAvoidance": true }
+        }
+      ]
+    }
+  ]
+}
