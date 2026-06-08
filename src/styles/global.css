@@ -7,6 +7,17 @@
   padding: 0;
 }
 
+/* Hidden Object — background pasar bunga untuk prologue */
+[data-step="CACTUS_HUNT"] .ho-scene-placeholder {
+  position: absolute;
+  inset: 0;
+  background-image: url('/src/assets/locations/pasar-bunga.svg');
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+}
+ 
+
 /* ── Adaptive Theme Variables (updated by color.ts applyTheme()) ── */
 :root {
   --color-primary: hsl(270, 60%, 70%);
@@ -103,6 +114,8 @@ body {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
+
+
 
 /* ── Scene Layout ────────────────────────────────────────── */
 .scene-manager {
@@ -262,7 +275,10 @@ body {
   font-size: 1.05rem;
   line-height: 1.85;
   min-height: 3.7em;
+  max-height: 8em;
+  overflow-y: auto;
   white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .dialogue-advance-indicator {

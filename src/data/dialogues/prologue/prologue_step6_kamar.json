@@ -1,0 +1,25 @@
+{
+  "id": "prologue_step6_kamar",
+  "chapter": "prologue",
+  "startNode": "p6_01",
+  "nodes": [
+    {
+      "id": "p6_01",
+      "speaker": "System",
+      "text": "Kamarmu. Meja belajar di sudut jendela. Ada celah sempurna di antara tumpukan buku — cukup untuk satu pot kecil.",
+      "next": "p6_02"
+    },
+    {
+      "id": "p6_02",
+      "speaker": "MC",
+      "text": "Di sini kayaknya pas.",
+      "next": "p6_03"
+    },
+    {
+      "id": "p6_03",
+      "speaker": "System",
+      "text": "Kamu meletakkan kaktus itu di sana. Pas sekali, seperti memang selalu milik tempatnya.",
+      "next": null
+    }
+  ]
+}

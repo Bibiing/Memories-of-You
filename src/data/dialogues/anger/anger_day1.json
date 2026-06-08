@@ -1,0 +1,32 @@
+{
+  "id": "anger_day1",
+  "chapter": "anger",
+  "startNode": "ad1_01",
+  "nodes": [
+    {
+      "id": "ad1_01",
+      "speaker": "System",
+      "text": "Kaktusmu terlihat lebih sakit dari sebelumnya. Kamu tidak memperhatikannya.",
+      "next": "ad1_02"
+    },
+    {
+      "id": "ad1_02",
+      "speaker": "MC",
+      "text": "Aku sudah cukup baik selama ini. Lebih dari cukup.",
+      "next": "ad1_03"
+    },
+    {
+      "id": "ad1_03",
+      "speaker": "System",
+      "text": "Ada kertas kosong di mejamu. Sebuah pena.",
+      "next": "ad1_04"
+    },
+    {
+      "id": "ad1_04",
+      "speaker": "MC",
+      "text": "Baiklah. Kalau tidak bisa diucapkan — mungkin bisa dituliskan.",
+      "next": null,
+      "weights": { "distress": 3, "hope": 2 }
+    }
+  ]
+}

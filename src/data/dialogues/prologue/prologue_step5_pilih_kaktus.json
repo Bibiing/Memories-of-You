@@ -1,0 +1,67 @@
+{
+  "id": "prologue_step5_pilih_kaktus",
+  "chapter": "prologue",
+  "startNode": "p5_01",
+  "nodes": [
+    {
+      "id": "p5_01",
+      "speaker": "System",
+      "text": "Sepuluh kaktus sudah terkumpul di depanmu. Semuanya lucu. Semuanya cocok. Tapi kamu harus pilih satu.",
+      "next": "p5_02"
+    },
+    {
+      "id": "p5_02",
+      "speaker": "Dia",
+      "text": "Kalau aku... milih yang ini.",
+      "next": "p5_03"
+    },
+    {
+      "id": "p5_03",
+      "speaker": "System",
+      "text": "Dia menunjuk kaktus kecil berbentuk bulat, ujungnya seperti bintang. Sederhana. Tapi ada sesuatu yang hangat darinya.",
+      "next": "p5_04"
+    },
+    {
+      "id": "p5_04",
+      "speaker": "MC",
+      "text": "...",
+      "next": "p5_05"
+    },
+    {
+      "id": "p5_05",
+      "speaker": "System",
+      "text": "Kamu menunjuk kaktus yang sama.",
+      "next": "p5_06"
+    },
+    {
+      "id": "p5_06",
+      "speaker": "Dia",
+      "text": "Hah?! Yang sama?! Serius?",
+      "next": "p5_07"
+    },
+    {
+      "id": "p5_07",
+      "speaker": "MC",
+      "text": "Kamu duluan yang nunjuk.",
+      "next": "p5_08"
+    },
+    {
+      "id": "p5_08",
+      "speaker": "Dia",
+      "text": "Iya tapi... kita punya selera yang sama rupanya.",
+      "next": "p5_09"
+    },
+    {
+      "id": "p5_09",
+      "speaker": "System",
+      "text": "Dia tertawa lagi. Kali ini lebih lama.",
+      "next": "p5_10"
+    },
+    {
+      "id": "p5_10",
+      "speaker": "Dia",
+      "text": "Oke deal. Yang itu milik kamu sekarang.",
+      "next": null
+    }
+  ]
+}

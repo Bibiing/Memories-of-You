@@ -1,0 +1,56 @@
+{
+  "id": "anger_day2",
+  "chapter": "anger",
+  "startNode": "ad2_01",
+  "nodes": [
+    {
+      "id": "ad2_01",
+      "speaker": "System",
+      "text": "Surat itu sudah selesai. Semalaman kamu tulis ulang tiga kali.",
+      "next": "ad2_02"
+    },
+    {
+      "id": "ad2_02",
+      "speaker": "MC",
+      "text": "Ini bukan tentang balas dendam. Ini tentang kebenaran.",
+      "next": "ad2_03"
+    },
+    {
+      "id": "ad2_03",
+      "speaker": "System",
+      "text": "Kamu menemukannya di koridor setelah kelas. Sepi. Hanya kalian berdua.",
+      "next": "ad2_04"
+    },
+    {
+      "id": "ad2_04",
+      "speaker": "MC",
+      "text": "Ini untukmu.",
+      "next": "ad2_05"
+    },
+    {
+      "id": "ad2_05",
+      "speaker": "Dia",
+      "text": "...Apa ini?",
+      "next": "ad2_06"
+    },
+    {
+      "id": "ad2_06",
+      "speaker": "MC",
+      "text": "Baca saja. Kalau kamu memang masih peduli — aku tunggu jawabanmu.",
+      "next": "ad2_07"
+    },
+    {
+      "id": "ad2_07",
+      "speaker": "System",
+      "text": "Kamu pergi sebelum melihat ekspresinya.",
+      "next": "ad2_08"
+    },
+    {
+      "id": "ad2_08",
+      "speaker": "MC",
+      "text": "Setidaknya aku sudah jujur.",
+      "next": null,
+      "weights": { "hope": 4, "distress": 5 }
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "prologue_evening",
+  "chapter": "prologue",
+  "speaker": "Kaktus",
+  "intro": "Malam pertama. Kaktusmu diam di meja, disinari remang lampu belajar. Tapi kamu merasa seperti tanaman itu sedang menatap balik.",
+  "questions": [
+    {
+      "id": "pe_q1",
+      "text": "Hari ini terasa...?",
+      "choices": [
+        {
+          "id": "pe_q1_a",
+          "label": "Menyenangkan. Aku senang habiskan waktu bareng Dia.",
+          "weights": { "hope": 10, "distress": -5, "denial": 0, "rumination": "reflection" }
+        },
+        {
+          "id": "pe_q1_b",
+          "label": "Biasa aja. Aku gak terlalu banyak mikir.",
+          "weights": { "hope": 3, "distress": 0, "denial": 5, "rumination": "reflection" }
+        },
+        {
+          "id": "pe_q1_c",
+          "label": "Berat. Ada sesuatu yang gak bisa aku ungkapkan.",
+          "weights": { "hope": -5, "distress": 15, "denial": 0, "rumination": "brooding" }
+        }
+      ]
+    },
+    {
+      "id": "pe_q2",
+      "text": "Waktu Dia bilang 'kita tetap teman'... kamu merasakannya sebagai...?",
+      "choices": [
+        {
+          "id": "pe_q2_a",
+          "label": "Lega. Itu yang aku inginkan juga.",
+          "weights": { "hope": 8, "distress": -5, "denial": 10, "rumination": "reflection" }
+        },
+        {
+          "id": "pe_q2_b",
+          "label": "Sedikit sedih, tapi aku terima.",
+          "weights": { "hope": 5, "distress": 5, "denial": 0, "rumination": "reflection" }
+        },
+        {
+          "id": "pe_q2_c",
+          "label": "Sakit. Tapi aku paksain senyum.",
+          "weights": { "hope": -3, "distress": 20, "denial": 5, "rumination": "brooding" }
+        }
+      ]
+    },
+    {
+      "id": "pe_q3",
+      "text": "Kaktus ini... kamu rasa bakal tahan berapa lama di tanganmu?",
+      "choices": [
+        {
+          "id": "pe_q3_a",
+          "label": "Lama. Aku akan jaga dia baik-baik.",
+          "weights": { "hope": 12, "distress": 0, "denial": 0, "rumination": "reflection" }
+        },
+        {
+          "id": "pe_q3_b",
+          "label": "Entahlah. Semoga saja.",
+          "weights": { "hope": 3, "distress": 5, "denial": 0, "rumination": "reflection" }
+        },
+        {
+          "id": "pe_q3_c",
+          "label": "Gak tau. Semua yang aku pegang akhirnya pergi juga.",
+          "weights": { "hope": -8, "distress": 15, "denial": 0, "rumination": "brooding" }
+        }
+      ]
+    },
+    {
+      "id": "pe_q4",
+      "text": "Kalau ada satu hal yang kamu harapkan dari Dia sekarang, itu...?",
+      "choices": [
+        {
+          "id": "pe_q4_a",
+          "label": "Tidak ada. Aku sudah cukup bahagia hari ini.",
+          "weights": { "hope": 10, "distress": -5, "denial": 5, "rumination": "reflection" }
+        },
+        {
+          "id": "pe_q4_b",
+          "label": "Semoga Dia juga merasa nyaman seperti aku.",
+          "weights": { "hope": 7, "distress": 0, "denial": 0, "rumination": "reflection" }
+        },
+        {
+          "id": "pe_q4_c",
+          "label": "Aku ingin dia tahu betapa pentingnya dia untukku. Benar-benar tahu.",
+          "weights": { "hope": -5, "distress": 10, "denial": 15, "rumination": "brooding" }
+        }
+      ]
+    },
+    {
+      "id": "pe_q5",
+      "text": "Malam ini, sebelum tidur, kamu akan...?",
+      "choices": [
+        {
+          "id": "pe_q5_a",
+          "label": "Tidur tenang. Hari yang baik layak istirahat yang baik.",
+          "weights": { "hope": 8, "distress": -5, "denial": 0, "rumination": "reflection" }
+        },
+        {
+          "id": "pe_q5_b",
+          "label": "Cek HP dulu. Siapa tau ada chat dari Dia.",
+          "weights": { "hope": 5, "distress": 5, "denial": 10, "rumination": "reflection" }
+        },
+        {
+          "id": "pe_q5_c",
+          "label": "Tiduran sambil mikirin tadi. Lagi dan lagi.",
+          "weights": { "hope": -5, "distress": 15, "denial": 0, "rumination": "brooding" }
+        }
+      ]
+    }
+  ],
+  "closing": {
+    "default": "Kaktusmu masih di sana. Diam, tapi terasa hadir. Selamat malam.",
+    "ifHighDistress": "Kaktusmu masih di sana. Kamu menghela napas. Malam ini terasa lebih berat dari yang kamu perkirakan.",
+    "ifHighHope": "Kaktusmu terasa lebih hijau dari biasanya. Atau mungkin itu hanya matamu yang sedang bahagia."
+  }
+}

@@ -1,0 +1,183 @@
+/**
+ * src/scenes/PrologueScene.module.css
+ *
+ * Palet Prologue: ungu lavender (#b388f5) + emas golden hour (#c9a84c).
+ * Semua efek ringan — prologue harus terasa hangat dan aman.
+ *
+ * Class names harus cocok persis dengan styles.xxx yang dipakai di PrologueScene.tsx.
+ */
+
+/* ── Wrapper utama ──────────────────────────────────────── */
+
+.prologueScene {
+  position: absolute;
+  inset: 0;
+  z-index: 10;           /* di atas SceneBackground + CactusRenderer */
+  pointer-events: none;  /* biarkan click tembus ke bawah kecuali elemen interaktif */
+}
+
+/* Fade transition saat ganti step */
+.fading {
+  opacity: 0;
+  transition: opacity 450ms ease;
+}
+
+/* ── Dialogue overlay ───────────────────────────────────── */
+
+.dialogueOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 25;
+  pointer-events: auto;
+}
+
+/* ── Mini-game overlay ──────────────────────────────────── */
+
+.minigameOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 0, 20, 0.75);
+  backdrop-filter: blur(2px);
+}
+
+/* ── Timelapse ──────────────────────────────────────────── */
+
+.timelapse {
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  background: #080012;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 600ms ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.timelapseSun {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffd27a 25%, #ff9d44 65%, transparent 100%);
+  box-shadow: 0 0 60px 24px rgba(255, 175, 60, 0.35);
+  animation: sunCycle 3.5s ease-in-out infinite;
+}
+
+@keyframes sunCycle {
+  0%   { top: 12%; opacity: 1;   filter: brightness(1.1); }
+  40%  { top: 72%; opacity: 0.4; filter: brightness(0.7) hue-rotate(20deg); }
+  50%  { top: 82%; opacity: 0; }
+  51%  { top: 5%;  opacity: 0; }
+  100% { top: 12%; opacity: 1;   filter: brightness(1.1); }
+}
+
+.timelapseClouds {
+  position: absolute;
+  top: 22%;
+  left: -10%;
+  width: 120%;
+  height: 50px;
+  opacity: 0.5;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 50'%3E%3Cellipse cx='90' cy='35' rx='80' ry='16' fill='rgba(255,255,255,0.15)'/%3E%3Cellipse cx='250' cy='30' rx='100' ry='18' fill='rgba(255,255,255,0.10)'/%3E%3Cellipse cx='420' cy='38' rx='70' ry='14' fill='rgba(255,255,255,0.12)'/%3E%3C/svg%3E") repeat-x;
+  animation: cloudDrift 3.5s linear infinite;
+}
+
+@keyframes cloudDrift {
+  from { transform: translateX(0);   }
+  to   { transform: translateX(15%); }
+}
+
+.timelapseOverlay {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+}
+
+.timelapseText {
+  font-family: 'Playfair Display', 'Palatino Linotype', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: rgba(232, 213, 245, 0.65);
+  letter-spacing: 0.12em;
+  animation: textPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+  0%, 100% { opacity: 0.45; }
+  50%       { opacity: 1;   }
+}
+
+/* ── Chat notification ──────────────────────────────────── */
+
+.chatNotifWrapper {
+  position: absolute;
+  top: 10%;
+  right: 4%;
+  z-index: 20;
+  cursor: pointer;
+  pointer-events: auto;
+  animation: notifSlide 400ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes notifSlide {
+  from { transform: translateY(-110%); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}
+
+.chatNotifBubble {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 12px 18px;
+  min-width: 200px;
+  max-width: 260px;
+  background: rgba(18, 6, 36, 0.92);
+  border: 1px solid rgba(179, 136, 245, 0.35);
+  border-radius: 14px;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(179, 136, 245, 0.12);
+  backdrop-filter: blur(10px);
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.chatNotifWrapper:hover .chatNotifBubble {
+  box-shadow:
+    0 4px 28px rgba(179, 136, 245, 0.28),
+    0 0 0 1px rgba(179, 136, 245, 0.3);
+  transform: scale(1.025);
+}
+
+.notifSender {
+  font-size: 0.7rem;
+  font-family: 'IM Fell English', Georgia, serif;
+  color: #c9a84c;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.notifPreview {
+  font-size: 0.92rem;
+  color: #e8d5f5;
+  line-height: 1.4;
+}
+
+.notifTap {
+  margin-top: 3px;
+  font-size: 0.68rem;
+  color: rgba(179, 136, 245, 0.55);
+  letter-spacing: 0.05em;
+}

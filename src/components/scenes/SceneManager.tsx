@@ -5,16 +5,20 @@ import { useGameStateStore } from '@stores/gameStateStore'
 import { useDialogueStore } from '@stores/dialogueStore'
 import { getDialogueScript } from '@data/dialogues/index'
 import { getTriggersForLocation, consumeTrigger } from '@systems/triggerSystem/triggerManager'
-import { SceneBackground } from './SceneBackground'
+import { SceneBackground } from '@components/scenes/SceneBackground'
 import { CactusRenderer } from '@components/cactus/CactusRenderer'
-import { InteractionObject } from './InteractionObject'
-import { EveningReflection } from './EveningReflection'
+import { InteractionObject } from '@components/scenes/InteractionObject'
+import { EveningReflection } from '@components/scenes/EveningReflection'
 import { DialogueBox } from '@components/ui/DialogueBox'
 import { FlashbackPlayer } from '@components/flashback/FlashbackPlayer'
 import { SmartphoneFrame } from '@components/smartphone/SmartphoneFrame'
 import { currentNode } from '@systems/dialogueEngine/runner'
+// ── Fase 6 ────────────────────────────────────────────────────────────────────
+import { PrologueScene } from '@scenes/PrologueScene'
+// ── Fase 7 ────────────────────────────────────────────────────────────────────
+import { ChapterScene } from '@scenes/ChapterScene'
 
-// ── Placeholder scene views ────────────────────────────────────────────────
+// ── Placeholder scene views ────────────────────────────────────────────────────
 function MainMenuView() {
   const chapter = useGameStateStore((s) => s.currentChapter)
   const setScene = useGameStateStore((s) => s.setScene)
@@ -29,13 +33,13 @@ function MainMenuView() {
         <span>✓ Phase 3 — Dialogue &amp; Narrative Engine</span>
         <span>✓ Phase 4 — Smartphone UI</span>
         <span>✓ Phase 5 — Mini-Game Systems</span>
+        <span>✓ Phase 6 — Konten: Prologue</span>
+        <span>✓ Phase 7 — Konten: Denial + Anger</span>
       </div>
       <button
         className="choice-btn"
         style={{ marginTop: '1.5rem', width: 'auto', padding: '0.75rem 2rem' }}
-        onClick={() => {
-          setScene('gameplay')
-        }}
+        onClick={() => setScene('prologue')}
       >
         Mulai Game ▶
       </button>
@@ -44,12 +48,11 @@ function MainMenuView() {
 }
 
 function GameplayView() {
-  const chapter = useGameStateStore((s) => s.currentChapter)
+  const chapter  = useGameStateStore((s) => s.currentChapter)
   const location = useGameStateStore((s) => s.currentLocation)
   const setScene = useGameStateStore((s) => s.setScene)
   const startDialogue = useDialogueStore((s) => s.startDialogue)
 
-  // Active flashback state
   const [activeFlashback, setActiveFlashback] = useState<FlashbackId | null>(null)
 
   const triggers = getTriggersForLocation(location, chapter)
@@ -74,9 +77,7 @@ function GameplayView() {
       {activeFlashback && (
         <FlashbackPlayer
           flashbackId={activeFlashback}
-          onClose={() => {
-            setActiveFlashback(null)
-          }}
+          onClose={() => setActiveFlashback(null)}
         />
       )}
 
@@ -90,9 +91,7 @@ function GameplayView() {
         <button
           className="choice-btn"
           style={{ pointerEvents: 'auto', opacity: 1, marginTop: '0.5rem', fontSize: '0.75rem' }}
-          onClick={() => {
-            setScene('evening-reflection')
-          }}
+          onClick={() => setScene('evening-reflection')}
         >
           Akhiri Hari →
         </button>
@@ -111,118 +110,118 @@ function GenericView({ scene }: { scene: GameScene }) {
   )
 }
 
-function resolveView(scene: GameScene) {
+// ── Chapters yang pakai ChapterScene ──────────────────────────────────────────
+const CHAPTER_SCENE_CHAPTERS = new Set(['denial', 'anger'])
+
+function resolveView(scene: GameScene, chapter: string) {
   switch (scene) {
     case 'main-menu':
       return <MainMenuView />
+
     case 'gameplay':
+      // Denial & Anger: gunakan ChapterScene
+      if (CHAPTER_SCENE_CHAPTERS.has(chapter)) return null
       return <GameplayView />
+
+    // Prologue & ChapterScene di-render di luar scene-overlay
+    case 'prologue':
+      return null
+
     default:
       return <GenericView scene={scene} />
   }
 }
 
-// ── SceneManager ───────────────────────────────────────────────────────────
+// ── SceneManager ───────────────────────────────────────────────────────────────
 export function SceneManager() {
-  const scene = useGameStateStore((s) => s.currentScene)
+  const scene   = useGameStateStore((s) => s.currentScene)
   const setScene = useGameStateStore((s) => s.setScene)
   const location = useGameStateStore((s) => s.currentLocation)
-  const chapter = useGameStateStore((s) => s.currentChapter)
+  const chapter  = useGameStateStore((s) => s.currentChapter)
 
-  // Dialogue overlay
   const isDialogueActive = useDialogueStore((s) => s.isActive)
-  const runnerState = useDialogueStore((s) => s.runnerState)
-  const advance = useDialogueStore((s) => s.advance)
-  const choose = useDialogueStore((s) => s.choose)
+  const runnerState      = useDialogueStore((s) => s.runnerState)
+  const advance          = useDialogueStore((s) => s.advance)
+  const choose           = useDialogueStore((s) => s.choose)
 
-  // Fade transition
   const [visibleScene, setVisibleScene] = useState(scene)
-  const [fading, setFading] = useState(false)
-  const pendingScene = useRef(scene)
+  const [fading, setFading]             = useState(false)
+  const pendingScene                    = useRef(scene)
 
-  // Smartphone state
-  const [phoneOpen, setPhoneOpen] = useState(false)
+  const [phoneOpen, setPhoneOpen]           = useState(false)
   const [phoneFlashback, setPhoneFlashback] = useState<FlashbackId | null>(null)
 
   useEffect(() => {
     if (scene === visibleScene) return
     pendingScene.current = scene
-    const fadeIn = setTimeout(() => {
-      setFading(true)
-    }, 0)
-    const swap = setTimeout(() => {
+    const fadeIn = setTimeout(() => setFading(true), 0)
+    const swap   = setTimeout(() => {
       setVisibleScene(pendingScene.current)
       setFading(false)
     }, 320)
-    return () => {
-      clearTimeout(fadeIn)
-      clearTimeout(swap)
-    }
+    return () => { clearTimeout(fadeIn); clearTimeout(swap) }
   }, [scene, visibleScene])
 
   const dialogueNode = runnerState ? currentNode(runnerState) : null
-  const isGameplay = visibleScene === 'gameplay'
+  const isPrologue   = visibleScene === 'prologue'
+  const isChapterScene = visibleScene === 'gameplay' && CHAPTER_SCENE_CHAPTERS.has(chapter)
+  const isGameplay   = visibleScene === 'gameplay' && !isChapterScene
 
   return (
     <div className={`scene-manager ${fading ? 'scene-fading' : ''}`}>
+
       <SceneBackground location={location} chapter={chapter} />
       <CactusRenderer chapter={chapter} />
 
-      <div className="scene-overlay">
-        {visibleScene === 'evening-reflection' ? (
-          <EveningReflection
-            onComplete={() => {
-              setScene('gameplay')
-            }}
-          />
-        ) : (
-          resolveView(visibleScene)
-        )}
-      </div>
+      {/* ── Prologue — full takeover ── */}
+      {isPrologue && <PrologueScene />}
 
-      {/* Smartphone toggle — only in gameplay */}
+      {/* ── Chapter scenes (Denial, Anger, dst.) — full takeover ── */}
+      {isChapterScene && <ChapterScene />}
+
+      {/* ── Scene overlay — untuk semua scene lain ── */}
+      {!isPrologue && !isChapterScene && (
+        <div className="scene-overlay">
+          {visibleScene === 'evening-reflection' ? (
+            <EveningReflection onComplete={() => setScene('gameplay')} />
+          ) : (
+            resolveView(visibleScene, chapter)
+          )}
+        </div>
+      )}
+
+      {/* ── Smartphone — hanya di gameplay biasa ── */}
       {isGameplay && !phoneOpen && !phoneFlashback && (
         <button
           className="smartphone-btn-open"
-          onClick={() => {
-            setPhoneOpen(true)
-          }}
+          onClick={() => setPhoneOpen(true)}
           aria-label="Buka smartphone"
         >
           📱
         </button>
       )}
 
-      {/* Smartphone frame */}
       {phoneOpen && (
         <SmartphoneFrame
-          onClose={() => {
-            setPhoneOpen(false)
-          }}
-          onOpenFlashback={(id) => {
-            setPhoneFlashback(id)
-            setPhoneOpen(false)
-          }}
+          onClose={() => setPhoneOpen(false)}
+          onOpenFlashback={(id) => { setPhoneFlashback(id); setPhoneOpen(false) }}
         />
       )}
 
-      {/* Flashback triggered from gallery */}
       {phoneFlashback && (
         <FlashbackPlayer
           flashbackId={phoneFlashback}
-          onClose={() => {
-            setPhoneFlashback(null)
-            setPhoneOpen(true)
-          }}
+          onClose={() => { setPhoneFlashback(null); setPhoneOpen(true) }}
         />
       )}
 
-      {/* Dialogue overlay — rendered above scene content */}
-      {isDialogueActive && dialogueNode && (
+      {/* ── Dialogue overlay — untuk gameplay biasa ── */}
+      {isGameplay && isDialogueActive && dialogueNode && (
         <div style={{ position: 'absolute', inset: 0, zIndex: 25 }}>
           <DialogueBox node={dialogueNode} onAdvance={advance} onChoose={choose} />
         </div>
       )}
+
     </div>
   )
 }

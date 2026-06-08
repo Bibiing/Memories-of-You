@@ -1,0 +1,257 @@
+/**
+ * src/scenes/ChapterScene.module.css
+ *
+ * Styling untuk gameplay harian Chapter Denial & Anger.
+ * Warna disesuaikan via data-chapter attribute.
+ */
+
+/* ── Wrapper ─────────────────────────────────────────────── */
+
+.chapterScene {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.fading {
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+/* ── Overlays ────────────────────────────────────────────── */
+
+.dialogueOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 25;
+  pointer-events: auto;
+}
+
+.minigameOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 4, 20, 0.8);
+  backdrop-filter: blur(3px);
+}
+
+/* ── Mission Select ──────────────────────────────────────── */
+
+.missionSelect {
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 2rem;
+  background: rgba(8, 4, 20, 0.72);
+  backdrop-filter: blur(4px);
+}
+
+.dayHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.dayLabel {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  opacity: 0.5;
+}
+
+.chapterLabel {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--color-primary);
+}
+
+[data-chapter="anger"] .chapterLabel {
+  color: #e05030;
+}
+
+.missionPrompt {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  opacity: 0.7;
+}
+
+.missionList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
+  max-width: 540px;
+}
+
+.missionCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.85rem 1.2rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+  font-family: var(--font-body);
+}
+
+.missionCard:hover:not(:disabled) {
+  background: rgba(120, 60, 200, 0.16);
+  border-color: var(--color-primary);
+  transform: translateX(4px);
+}
+
+[data-chapter="anger"] .missionCard:hover:not(:disabled) {
+  background: rgba(200, 60, 30, 0.16);
+  border-color: #e05030;
+}
+
+.missionCard:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.missionTitle {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.missionDesc {
+  font-size: 0.78rem;
+  color: var(--color-text);
+  opacity: 0.55;
+  line-height: 1.4;
+}
+
+.missionDoneTag {
+  font-size: 0.7rem;
+  color: var(--color-accent);
+  margin-top: 0.15rem;
+}
+
+.missionCardDone {
+  opacity: 0.45;
+}
+
+.skipBtn {
+  margin-top: 0.5rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1.5rem;
+  color: var(--color-text);
+  opacity: 0.55;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: opacity var(--transition-fast), border-color var(--transition-fast);
+}
+
+.skipBtn:hover {
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* ── Mission Result ──────────────────────────────────────── */
+
+.missionResult {
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: rgba(8, 4, 20, 0.82);
+  backdrop-filter: blur(4px);
+}
+
+.resultIcon {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.resultTitle {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--color-text);
+  text-align: center;
+  font-weight: 400;
+}
+
+.resultDesc {
+  font-size: 0.88rem;
+  color: var(--color-text);
+  opacity: 0.6;
+  text-align: center;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.resultActions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.resultBtnPrimary {
+  padding: 0.65rem 1.75rem;
+  background: rgba(120, 60, 200, 0.2);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-size: 0.88rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: background var(--transition-fast);
+}
+
+.resultBtnPrimary:hover {
+  background: rgba(120, 60, 200, 0.35);
+}
+
+[data-chapter="anger"] .resultBtnPrimary {
+  background: rgba(200, 60, 30, 0.2);
+  border-color: #e05030;
+}
+
+.resultBtnSecondary {
+  padding: 0.65rem 1.25rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  opacity: 0.7;
+  font-size: 0.88rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: opacity var(--transition-fast);
+}
+
+.resultBtnSecondary:hover {
+  opacity: 1;
+}

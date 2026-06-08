@@ -1,0 +1,31 @@
+{
+  "id": "denial_day1",
+  "chapter": "denial",
+  "startNode": "dd1_01",
+  "nodes": [
+    {
+      "id": "dd1_01",
+      "speaker": "System",
+      "text": "Pagi. Kamarmu. Kaktus di meja tampak sedikit layu di ujungnya.",
+      "next": "dd1_02"
+    },
+    {
+      "id": "dd1_02",
+      "speaker": "MC",
+      "text": "Pasti aku kurang nyiram kemarin.",
+      "next": "dd1_03"
+    },
+    {
+      "id": "dd1_03",
+      "speaker": "System",
+      "text": "HP-mu menyala. Bukan dari Dia.",
+      "next": "dd1_04"
+    },
+    {
+      "id": "dd1_04",
+      "speaker": "MC",
+      "text": "...Tidak apa-apa. Dia pasti lagi sibuk.",
+      "next": null
+    }
+  ]
+}

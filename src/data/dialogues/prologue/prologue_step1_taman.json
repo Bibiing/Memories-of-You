@@ -1,0 +1,55 @@
+{
+  "id": "prologue_step1_taman",
+  "chapter": "prologue",
+  "startNode": "p1_01",
+  "nodes": [
+    {
+      "id": "p1_01",
+      "speaker": "System",
+      "text": "Hari ini terasa istimewa. Cuaca cerah, angin menyibak daun, dan ada seseorang yang sudah menunggumu.",
+      "next": "p1_02"
+    },
+    {
+      "id": "p1_02",
+      "speaker": "Dia",
+      "text": "Eh, akhirnya! Aku udah nunggu sepuluh menit, tau.",
+      "next": "p1_03"
+    },
+    {
+      "id": "p1_03",
+      "speaker": "MC",
+      "text": "Sepuluh menit doang lebay. Kan aku bilang setengah jam.",
+      "next": "p1_04"
+    },
+    {
+      "id": "p1_04",
+      "speaker": "Dia",
+      "text": "Ya tapi aku excited! Kamu kan yang nge-propose ide beli tanaman bareng.",
+      "next": "p1_05"
+    },
+    {
+      "id": "p1_05",
+      "speaker": "MC",
+      "text": "Iya iya. Kamu gak pernah berubah ya.",
+      "next": "p1_06"
+    },
+    {
+      "id": "p1_06",
+      "speaker": "Dia",
+      "text": "Itu pujian kan? Yuk, pasar bunganya jauh dikit. Aku udah nyari rutenya.",
+      "next": "p1_07"
+    },
+    {
+      "id": "p1_07",
+      "speaker": "System",
+      "text": "Dia mengeluarkan HP dan membuka aplikasi peta.",
+      "next": "p1_08"
+    },
+    {
+      "id": "p1_08",
+      "speaker": "Dia",
+      "text": "Hmm, banyak jalan. Bantuin aku milih rute yang paling efisien dong.",
+      "next": null
+    }
+  ]
+}

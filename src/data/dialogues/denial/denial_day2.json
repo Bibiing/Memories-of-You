@@ -1,0 +1,54 @@
+{
+  "id": "denial_day2",
+  "chapter": "denial",
+  "startNode": "dd2_01",
+  "nodes": [
+    {
+      "id": "dd2_01",
+      "speaker": "System",
+      "text": "Sudah dua hari. Chat-mu tercentang dua, tapi tidak dibalas.",
+      "next": "dd2_02"
+    },
+    {
+      "id": "dd2_02",
+      "speaker": "MC",
+      "text": "Mungkin HP-nya rusak. Atau dia sedang sibuk ujian.",
+      "next": "dd2_03"
+    },
+    {
+      "id": "dd2_03",
+      "speaker": "System",
+      "text": "Di story-nya terlihat foto di kantin bersama teman-teman. Dia tampak tertawa.",
+      "next": "dd2_04"
+    },
+    {
+      "id": "dd2_04",
+      "speaker": "MC",
+      "text": "...",
+      "choices": [
+        {
+          "label": "Pasti ada alasan. Dia hanya butuh ruang.",
+          "next": "dd2_05a",
+          "weights": { "denial": 6, "hope": 3 }
+        },
+        {
+          "label": "Ini mulai terasa aneh.",
+          "next": "dd2_05b",
+          "weights": { "distress": 4, "denial": -2 }
+        }
+      ]
+    },
+    {
+      "id": "dd2_05a",
+      "speaker": "MC",
+      "text": "Iya. Pasti begitu.",
+      "next": null
+    },
+    {
+      "id": "dd2_05b",
+      "speaker": "MC",
+      "text": "Tapi aku tidak mau berasumsi yang bukan-bukan.",
+      "next": null
+    }
+  ]
+}

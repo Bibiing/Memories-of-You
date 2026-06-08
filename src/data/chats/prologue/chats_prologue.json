@@ -1,0 +1,91 @@
+[
+  {
+    "id": "chat_prologue_pre",
+    "contact": "Dia",
+    "visibleFromDay": 0,
+    "messages": [
+      {
+        "sender": "Dia",
+        "text": "eh jadi jadi? kita jadi beli tanaman besok?",
+        "time": "20:14"
+      },
+      {
+        "sender": "MC",
+        "text": "jadi dong. udah lama pengen beli kaktus",
+        "time": "20:17"
+      },
+      {
+        "sender": "Dia",
+        "text": "kaktus kenapa harus kaktus 😭",
+        "time": "20:18"
+      },
+      {
+        "sender": "MC",
+        "text": "karna gak mati walaupun gak disiram. sesuai kemampuanku",
+        "time": "20:19"
+      },
+      {
+        "sender": "Dia",
+        "text": "ya ampun itu sedih banget hahaha",
+        "time": "20:19"
+      },
+      {
+        "sender": "Dia",
+        "text": "oke oke kaktus. besok jam berapa?",
+        "time": "20:20"
+      },
+      {
+        "sender": "MC",
+        "text": "jam 10 di taman deket kos?",
+        "time": "20:21"
+      },
+      {
+        "sender": "Dia",
+        "text": "oke! jangan telat ya",
+        "time": "20:21"
+      },
+      {
+        "sender": "MC",
+        "text": "kamu yang selalu dateng kepagian",
+        "time": "20:22"
+      },
+      {
+        "sender": "Dia",
+        "text": "itu namanya antusias 😤",
+        "time": "20:22"
+      }
+    ]
+  },
+  {
+    "id": "chat_prologue_rooftop",
+    "contact": "Dia",
+    "visibleFromDay": 1,
+    "messages": [
+      {
+        "sender": "Dia",
+        "text": "Hei. Lagi sibuk gak?",
+        "time": "21:03"
+      },
+      {
+        "sender": "MC",
+        "text": "Gak. Kenapa?",
+        "time": "21:05"
+      },
+      {
+        "sender": "Dia",
+        "text": "Mau ngobrol sebentar? Di rooftop. Sekarang boleh gak?",
+        "time": "21:06"
+      },
+      {
+        "sender": "MC",
+        "text": "Oke. Lima menit lagi.",
+        "time": "21:07"
+      },
+      {
+        "sender": "Dia",
+        "text": "oke makasih",
+        "time": "21:07"
+      }
+    ]
+  }
+]

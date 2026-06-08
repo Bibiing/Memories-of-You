@@ -1,0 +1,68 @@
+{
+  "id": "denial_day3_canon",
+  "chapter": "denial",
+  "startNode": "dd3_01",
+  "nodes": [
+    {
+      "id": "dd3_01",
+      "speaker": "System",
+      "text": "Hari ketiga. Kamu memutuskan untuk mencarinya langsung di kampus.",
+      "next": "dd3_02"
+    },
+    {
+      "id": "dd3_02",
+      "speaker": "MC",
+      "text": "Dia — aku mau nanya sesuatu.",
+      "next": "dd3_03"
+    },
+    {
+      "id": "dd3_03",
+      "speaker": "Dia",
+      "text": "Oh. Hei. Aku lagi buru-buru sebenernya.",
+      "next": "dd3_04"
+    },
+    {
+      "id": "dd3_04",
+      "speaker": "MC",
+      "text": "Sebentar aja. Kamu baik-baik saja?",
+      "next": "dd3_05"
+    },
+    {
+      "id": "dd3_05",
+      "speaker": "Dia",
+      "text": "Baik kok. Kenapa?",
+      "next": "dd3_06"
+    },
+    {
+      "id": "dd3_06",
+      "speaker": "MC",
+      "text": "Kamu... belum bales chat-ku beberapa hari ini.",
+      "next": "dd3_07"
+    },
+    {
+      "id": "dd3_07",
+      "speaker": "Dia",
+      "text": "Oh iya maaf, lagi sibuk banget. Udah ya, aku ada kelas.",
+      "next": "dd3_08"
+    },
+    {
+      "id": "dd3_08",
+      "speaker": "System",
+      "text": "Dia pergi. Cepat. Tanpa menoleh.",
+      "next": "dd3_09"
+    },
+    {
+      "id": "dd3_09",
+      "speaker": "MC",
+      "text": "...Sibuk. Ya. Pasti memang sibuk.",
+      "next": "dd3_10",
+      "weights": { "denial": 5, "distress": 8 }
+    },
+    {
+      "id": "dd3_10",
+      "speaker": "System",
+      "text": "Tapi ada sesuatu dalam cara Dia melihat ke arah lain saat bicara denganmu yang tidak bisa kamu abaikan.",
+      "next": null
+    }
+  ]
+}

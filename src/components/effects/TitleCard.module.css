@@ -1,0 +1,105 @@
+/**
+ * components/effects/TitleCard.module.css
+ *
+ * Aesthetic: Prologue — ungu lavender + emas golden hour.
+ * Font: serif italik dramatis untuk judul.
+ * Background: hitam solid → teks muncul seperti mimpi.
+ */
+
+.titleCard {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: #0a0010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1000ms ease;
+}
+
+.titleWrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* Faint decorative line above and below title */
+.titleWrapper::before,
+.titleWrapper::after {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #c9a84c,
+    transparent
+  );
+  opacity: 0.7;
+}
+
+.title {
+  font-family: 'Playfair Display', 'Palatino Linotype', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  letter-spacing: 0.06em;
+  color: #e8d5f5;
+  text-shadow:
+    0 0 40px rgba(180, 120, 255, 0.35),
+    0 0 80px rgba(180, 120, 255, 0.15);
+  margin: 0;
+  line-height: 1.15;
+}
+
+.subtitle {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(0.85rem, 2vw, 1.05rem);
+  color: #c9a84c;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0;
+  opacity: 0.85;
+}
+
+/* ── Phase transitions ───────────────────────────────── */
+
+.fade-in {
+  opacity: 0;
+  animation: titleFadeIn 1200ms ease forwards;
+}
+
+.hold {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: titleFadeOut 1000ms ease forwards;
+}
+
+@keyframes titleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes titleFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}

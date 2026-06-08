@@ -1,0 +1,124 @@
+{
+  "id": "prologue_step9_rooftop",
+  "chapter": "prologue",
+  "startNode": "p9_01",
+  "nodes": [
+    {
+      "id": "p9_01",
+      "speaker": "System",
+      "text": "Rooftop. Angin malam menerpa. Kota membentang di bawah — lampu-lampu kecil berkedip seperti bintang yang jatuh.",
+      "next": "p9_02"
+    },
+    {
+      "id": "p9_02",
+      "speaker": "Dia",
+      "text": "Eh, cepet juga. Aku kira kamu bakal mepet waktu kayak biasanya.",
+      "next": "p9_03"
+    },
+    {
+      "id": "p9_03",
+      "speaker": "MC",
+      "text": "Kamu yang minta ketemu dadakan.",
+      "next": "p9_04"
+    },
+    {
+      "id": "p9_04",
+      "speaker": "Dia",
+      "text": "Iya, maaf. Aku... ada yang mau aku bilang.",
+      "next": "p9_05"
+    },
+    {
+      "id": "p9_05",
+      "speaker": "System",
+      "text": "Dia diam sebentar. Matanya ke langit, bukan ke kamu.",
+      "next": "p9_06"
+    },
+    {
+      "id": "p9_06",
+      "speaker": "Dia",
+      "text": "Belakangan ini... kamu sering banget ada buat aku. Dan aku sadar itu bukan sesuatu yang harusnya aku anggap biasa.",
+      "next": "p9_07"
+    },
+    {
+      "id": "p9_07",
+      "speaker": "MC",
+      "text": "Kamu kenapa ngomong ini sekarang?",
+      "next": "p9_08"
+    },
+    {
+      "id": "p9_08",
+      "speaker": "Dia",
+      "text": "Karena aku mau jujur. Sebelum semuanya keburu jadi terlalu rumit.",
+      "next": "p9_09"
+    },
+    {
+      "id": "p9_09",
+      "speaker": "System",
+      "text": "Kamu menarik napas. Ini saat yang sudah lama kamu tahan.",
+      "next": "p9_10"
+    },
+    {
+      "id": "p9_10",
+      "speaker": "MC",
+      "text": "Aku... kamu penting banget buat aku. Aku percaya kamu lebih dari siapapun. Dan itu, itu bukan hal kecil.",
+      "next": "p9_11",
+      "weights": {
+        "hope": 5
+      }
+    },
+    {
+      "id": "p9_11",
+      "speaker": "Dia",
+      "text": "Aku tau.",
+      "next": "p9_12"
+    },
+    {
+      "id": "p9_12",
+      "speaker": "System",
+      "text": "Bukan kata-kata besar. Tapi cara Dia mengatakannya — pelan, tulus — membuatmu yakin bahwa semuanya akan baik-baik saja.",
+      "next": "p9_13"
+    },
+    {
+      "id": "p9_13",
+      "speaker": "Dia",
+      "text": "Kita tetap teman. Kamu gak perlu khawatir soal itu.",
+      "next": "p9_14"
+    },
+    {
+      "id": "p9_14",
+      "speaker": "MC",
+      "text": "Iya. Aku tau.",
+      "next": "p9_15"
+    },
+    {
+      "id": "p9_15",
+      "speaker": "System",
+      "text": "Diam yang nyaman. Kota masih menyala di bawah kalian berdua.",
+      "next": "p9_16"
+    },
+    {
+      "id": "p9_16",
+      "speaker": "MC",
+      "text": "Semoga hubungan kita tetap abadi kayak kaktus itu. Tetap hidup walaupun mungkin jarang disiram.",
+      "next": "p9_17"
+    },
+    {
+      "id": "p9_17",
+      "speaker": "Dia",
+      "text": "... Itu analogi paling aneh yang pernah aku denger.",
+      "next": "p9_18"
+    },
+    {
+      "id": "p9_18",
+      "speaker": "Dia",
+      "text": "Tapi aku suka.",
+      "next": "p9_19"
+    },
+    {
+      "id": "p9_19",
+      "speaker": "System",
+      "text": "Kalian berdua tertawa. Angin malam ikut bergerak, mengusap rambut kalian perlahan.",
+      "next": null
+    }
+  ]
+}

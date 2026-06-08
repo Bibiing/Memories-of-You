@@ -1,0 +1,43 @@
+{
+  "id": "prologue_step3_pasar",
+  "chapter": "prologue",
+  "startNode": "p3_01",
+  "nodes": [
+    {
+      "id": "p3_01",
+      "speaker": "System",
+      "text": "Pasar bunga. Ratusan tanaman berdesakan di lapak-lapak kecil. Aroma tanah basah dan bunga bercampur jadi satu.",
+      "next": "p3_02"
+    },
+    {
+      "id": "p3_02",
+      "speaker": "Dia",
+      "text": "Wah. Banyak banget pilihannya. Kamu mau kaktus yang kayak gimana?",
+      "next": "p3_03"
+    },
+    {
+      "id": "p3_03",
+      "speaker": "MC",
+      "text": "Yang lucu. Yang bisa tahan meski aku lupa nyiram.",
+      "next": "p3_04"
+    },
+    {
+      "id": "p3_04",
+      "speaker": "Dia",
+      "text": "Berarti kaktus memang paling cocok buat kamu.",
+      "next": "p3_05"
+    },
+    {
+      "id": "p3_05",
+      "speaker": "System",
+      "text": "Dia terkekeh. Matanya menyipit, mulutnya lebar. Kamu ikut tersenyum tanpa sadar.",
+      "next": "p3_06"
+    },
+    {
+      "id": "p3_06",
+      "speaker": "Dia",
+      "text": "Oke, ada sekitar sepuluh kaktus yang kayaknya worth it. Tapi mereka nyebar di mana-mana. Coba cari bareng yuk!",
+      "next": null
+    }
+  ]
+}

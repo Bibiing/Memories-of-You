@@ -15,6 +15,7 @@ export type GameScene =
   | 'main-menu'
   | 'name-input'
   | 'load-screen'
+  | 'prologue'           // ← Fase 6
   | 'gameplay'
   | 'evening-reflection'
   | 'flashback'
@@ -47,23 +48,23 @@ export type FlashbackId =
   | 'fb_curhat'
 
 export type CactusState =
-  | 'healthy' // Prologue
-  | 'sick' // Denial
-  | 'very-sick' // Anger
-  | 'dead-trying' // Bargaining
-  | 'dead' // Depression
-  | 'empty-pot' // Acceptance
-  | 'sprouting' // Epilogue
+  | 'healthy'      // Prologue
+  | 'sick'         // Denial
+  | 'very-sick'    // Anger
+  | 'dead-trying'  // Bargaining
+  | 'dead'         // Depression
+  | 'empty-pot'    // Acceptance
+  | 'sprouting'    // Epilogue
 
 // Map chapter to cactus state
 export const CHAPTER_CACTUS_STATE: Record<Chapter, CactusState> = {
-  prologue: 'healthy',
-  denial: 'sick',
-  anger: 'very-sick',
-  bargaining: 'dead-trying',
-  depression: 'dead',
-  acceptance: 'empty-pot',
-  epilogue: 'sprouting',
+  prologue:    'healthy',
+  denial:      'sick',
+  anger:       'very-sick',
+  bargaining:  'dead-trying',
+  depression:  'dead',
+  acceptance:  'empty-pot',
+  epilogue:    'sprouting',
 }
 
 export interface SaveSlotInfo {

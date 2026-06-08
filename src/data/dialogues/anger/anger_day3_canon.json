@@ -1,0 +1,50 @@
+{
+  "id": "anger_day3_canon",
+  "chapter": "anger",
+  "startNode": "ad3_01",
+  "nodes": [
+    {
+      "id": "ad3_01",
+      "speaker": "System",
+      "text": "Tiga hari. Tidak ada balasan. Tidak ada tanda-tanda.",
+      "next": "ad3_02"
+    },
+    {
+      "id": "ad3_02",
+      "speaker": "MC",
+      "text": "Aku sudah memberikan kesempatan.",
+      "next": "ad3_03"
+    },
+    {
+      "id": "ad3_03",
+      "speaker": "System",
+      "text": "Kamu membuka chat Dia. Jarimu berhenti di atas nama-nya.",
+      "next": "ad3_04"
+    },
+    {
+      "id": "ad3_04",
+      "speaker": "MC",
+      "text": "Ini bukan tentang aku yang menyerah. Ini tentang aku yang berhenti membuang waktuku.",
+      "next": "ad3_05",
+      "weights": { "distress": 10, "denial": -5, "hope": -5 }
+    },
+    {
+      "id": "ad3_05",
+      "speaker": "System",
+      "text": "Block. Unfollow. Selesai.",
+      "next": "ad3_06"
+    },
+    {
+      "id": "ad3_06",
+      "speaker": "MC",
+      "text": "Orang seperti itu tidak pantas ada di hidupku.",
+      "next": "ad3_07"
+    },
+    {
+      "id": "ad3_07",
+      "speaker": "System",
+      "text": "Di dalam lubuk hatimu yang paling dalam — ada sesuatu yang pecah.",
+      "next": null
+    }
+  ]
+}
