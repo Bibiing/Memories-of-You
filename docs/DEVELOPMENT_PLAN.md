@@ -184,7 +184,7 @@
 ## FASE 4 — Smartphone UI (Minggu 8) ✅ SELESAI
 
 **Tujuan:** Virtual smartphone berfungsi penuh dengan semua apps.
-**Commit:** (lihat Phase 4+5 combined commit)
+**Commit:** `a19a845` — feat: Phase 4 & 5 — Smartphone UI and Mini-Game Systems
 
 - [x] **Smartphone Frame (`components/smartphone/`):**
   - `SmartphoneFrame.tsx` — overlay UI berbentuk smartphone dengan slide-up animation
@@ -220,7 +220,7 @@
 ## FASE 5 — Mini-Game Systems (Minggu 9–11) ✅ SELESAI
 
 **Tujuan:** Semua 11 tipe mekanik mini-game berfungsi dan dapat dikonfigurasi via data.
-**Commit:** (lihat Phase 4+5 combined commit)
+**Commit:** `a19a845` — feat: Phase 4 & 5 — Smartphone UI and Mini-Game Systems
 
 ### Semua 11 Mini-Games Implemented
 
