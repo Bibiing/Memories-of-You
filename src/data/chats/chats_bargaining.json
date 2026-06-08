@@ -1,0 +1,28 @@
+{
+  "chapter": "bargaining",
+  "threads": [
+    {
+      "id": "thread_dia",
+      "participantName": "Dia",
+      "accentColor": "#c9a0dc",
+      "messages": [
+        { "id": "b_d1", "sender": "mc",  "senderName": "Aku", "text": "Aku tau aku banyak salah. Dan aku nggak minta balik.", "timestamp": "01:22", "day": 1 },
+        { "id": "b_d2", "sender": "mc",  "senderName": "Aku", "text": "Tapi kalau kita bisa ngobrol sekali lagi... aku mau dengerin. Apapun.", "timestamp": "01:23", "day": 1 },
+        { "id": "b_d3", "sender": "mc",  "senderName": "Aku", "text": "Aku cuma mau ngerti.", "timestamp": "01:24", "day": 1 },
+        { "id": "b_d4", "sender": "mc",  "senderName": "Aku", "text": "Please.", "timestamp": "01:25", "day": 1 }
+      ]
+    },
+    {
+      "id": "thread_reza",
+      "participantName": "Reza",
+      "accentColor": "#7ec8a0",
+      "messages": [
+        { "id": "b_r1", "sender": "npc", "senderName": "Reza", "text": "Bro, lo udah makan hari ini?", "timestamp": "19:00", "day": 2 },
+        { "id": "b_r2", "sender": "mc",  "senderName": "Aku", "text": "Nanti.", "timestamp": "19:45", "day": 2 },
+        { "id": "b_r3", "sender": "npc", "senderName": "Reza", "text": "Ini udah jam 7 malem. Jawabnya 'nanti' dari tadi siang.", "timestamp": "19:46", "day": 2 },
+        { "id": "b_r4", "sender": "mc",  "senderName": "Aku", "text": "Oke oke, aku keluar makan.", "timestamp": "19:48", "day": 2 },
+        { "id": "b_r5", "sender": "npc", "senderName": "Reza", "text": "Aku tungguin di kantin bawah ya.", "timestamp": "19:49", "day": 2 }
+      ]
+    }
+  ]
+}

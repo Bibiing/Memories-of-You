@@ -1,0 +1,24 @@
+{
+  "chapter": "epilogue",
+  "threads": [
+    {
+      "id": "thread_dia",
+      "participantName": "Dia",
+      "accentColor": "#c9a0dc",
+      "messages": [
+        { "id": "epi_d1", "sender": "dia", "senderName": "Dia", "text": "Selamat untuk pamerannya. Karyanya bagus sekali.", "timestamp": "20:15", "day": 1 },
+        { "id": "epi_d2", "sender": "mc",  "senderName": "Aku", "text": "Makasih sudah datang.", "timestamp": "20:32", "day": 1 }
+      ]
+    },
+    {
+      "id": "thread_reza",
+      "participantName": "Reza",
+      "accentColor": "#7ec8a0",
+      "messages": [
+        { "id": "epi_r1", "sender": "npc", "senderName": "Reza", "text": "Bro, lo udah jauh banget dari orang yang aku kenal setahun lalu.", "timestamp": "22:00", "day": 1 },
+        { "id": "epi_r2", "sender": "mc",  "senderName": "Aku", "text": "Dalam arti baik atau buruk?", "timestamp": "22:02", "day": 1 },
+        { "id": "epi_r3", "sender": "npc", "senderName": "Reza", "text": "Baik. Jelas banget baik.", "timestamp": "22:03", "day": 1 }
+      ]
+    }
+  ]
+}

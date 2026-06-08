@@ -1,0 +1,19 @@
+{
+  "chapter": "depression",
+  "threads": [
+    {
+      "id": "thread_reza",
+      "participantName": "Reza",
+      "accentColor": "#7ec8a0",
+      "messages": [
+        { "id": "dep_r1", "sender": "npc", "senderName": "Reza", "text": "Bro.", "timestamp": "10:00", "day": 1 },
+        { "id": "dep_r2", "sender": "npc", "senderName": "Reza", "text": "Bro??", "timestamp": "14:00", "day": 1 },
+        { "id": "dep_r3", "sender": "npc", "senderName": "Reza", "text": "Lo masih hidup kan?", "timestamp": "20:00", "day": 1 },
+        { "id": "dep_r4", "sender": "mc",  "senderName": "Aku", "text": "Masih.", "timestamp": "21:30", "day": 1 },
+        { "id": "dep_r5", "sender": "npc", "senderName": "Reza", "text": "Syukurlah. Besok aku ke kosan lo ya.", "timestamp": "21:31", "day": 1 },
+        { "id": "dep_r6", "sender": "mc",  "senderName": "Aku", "text": "Nggak usah.", "timestamp": "21:33", "day": 1 },
+        { "id": "dep_r7", "sender": "npc", "senderName": "Reza", "text": "Oke. Kalau lo butuh apa-apa, kabarin ya.", "timestamp": "21:34", "day": 1 }
+      ]
+    }
+  ]
+}

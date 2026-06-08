@@ -1,0 +1,32 @@
+{
+  "chapter": "denial",
+  "threads": [
+    {
+      "id": "thread_dia",
+      "participantName": "Dia",
+      "accentColor": "#c9a0dc",
+      "messages": [
+        { "id": "d_d1", "sender": "mc",  "senderName": "Aku", "text": "Kita bisa ngobrol?", "timestamp": "19:42", "day": 1 },
+        { "id": "d_d2", "sender": "mc",  "senderName": "Aku", "text": "Dia?", "timestamp": "20:15", "day": 1 },
+        { "id": "d_d3", "sender": "dia", "senderName": "Dia", "text": "Maaf, lagi sibuk.", "timestamp": "22:01", "day": 1 },
+        { "id": "d_d4", "sender": "mc",  "senderName": "Aku", "text": "Oh oke. Nanti aja.", "timestamp": "22:03", "day": 1 },
+        { "id": "d_d5", "sender": "mc",  "senderName": "Aku", "text": "Besok ketemu? Ada yang mau aku bilang.", "timestamp": "09:30", "day": 2 },
+        { "id": "d_d6", "sender": "mc",  "senderName": "Aku", "text": "Aku di koridor depan lab kalau mau mampir.", "timestamp": "13:45", "day": 2 },
+        { "id": "d_d7", "sender": "dia", "senderName": "Dia", "text": "Aku nggak bisa njelasin sekarang. Maaf.", "timestamp": "16:20", "day": 2 },
+        { "id": "d_d8", "sender": "mc",  "senderName": "Aku", "text": "Pasti ada yang salah paham. Kita bisa fiksin ini.", "timestamp": "16:22", "day": 2 },
+        { "id": "d_d9", "sender": "mc",  "senderName": "Aku", "text": "Kan? Pasti bisa.", "timestamp": "16:23", "day": 2 }
+      ]
+    },
+    {
+      "id": "thread_reza",
+      "participantName": "Reza",
+      "accentColor": "#7ec8a0",
+      "messages": [
+        { "id": "d_r1", "sender": "npc", "senderName": "Reza", "text": "Bro lo baik-baik aja? Kelihatan beda akhir-akhir ini.", "timestamp": "12:05", "day": 2 },
+        { "id": "d_r2", "sender": "mc",  "senderName": "Aku", "text": "Baik. Cuma capek.", "timestamp": "12:10", "day": 2 },
+        { "id": "d_r3", "sender": "npc", "senderName": "Reza", "text": "Yakin? Cerita dong kalau ada apa-apa.", "timestamp": "12:11", "day": 2 },
+        { "id": "d_r4", "sender": "mc",  "senderName": "Aku", "text": "Nggak ada apa-apa kok. Serius.", "timestamp": "12:13", "day": 2 }
+      ]
+    }
+  ]
+}

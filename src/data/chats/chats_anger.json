@@ -1,0 +1,27 @@
+{
+  "chapter": "anger",
+  "threads": [
+    {
+      "id": "thread_dia",
+      "participantName": "Dia",
+      "accentColor": "#c9a0dc",
+      "messages": [
+        { "id": "a_d1", "sender": "mc",  "senderName": "Aku", "text": "Kenapa lo lakuin ini.", "timestamp": "23:11", "day": 1 },
+        { "id": "a_d2", "sender": "mc",  "senderName": "Aku", "text": "Lo tau ini nggak adil.", "timestamp": "23:12", "day": 1 },
+        { "id": "a_d3", "sender": "mc",  "senderName": "Aku", "text": "Jawab dong.", "timestamp": "23:14", "day": 1 },
+        { "id": "a_d4", "sender": "mc",  "senderName": "Aku", "text": "Fine. Jangan.", "timestamp": "23:45", "day": 1 }
+      ]
+    },
+    {
+      "id": "thread_reza",
+      "participantName": "Reza",
+      "accentColor": "#7ec8a0",
+      "messages": [
+        { "id": "a_r1", "sender": "mc",  "senderName": "Aku", "text": "Rez, gue pengen keluar. Mana aja.", "timestamp": "14:30", "day": 1 },
+        { "id": "a_r2", "sender": "npc", "senderName": "Reza", "text": "Lo? Yang biasanya nolak ajakan? Mau kemana?", "timestamp": "14:32", "day": 1 },
+        { "id": "a_r3", "sender": "mc",  "senderName": "Aku", "text": "Mana aja. Yang rame. Yang berisik.", "timestamp": "14:33", "day": 1 },
+        { "id": "a_r4", "sender": "npc", "senderName": "Reza", "text": "Oke. Gue jemput jam 7. Lo cerita di jalan.", "timestamp": "14:34", "day": 1 }
+      ]
+    }
+  ]
+}

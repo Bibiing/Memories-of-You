@@ -1,0 +1,33 @@
+{
+  "chapter": "prologue",
+  "threads": [
+    {
+      "id": "thread_dia",
+      "participantName": "Dia",
+      "accentColor": "#c9a0dc",
+      "messages": [
+        { "id": "p_d1", "sender": "dia", "senderName": "Dia", "text": "Eh, lo yang tadi nyaris nabrak aku di depan Gedung C kan?", "timestamp": "11:32", "day": 1 },
+        { "id": "p_d2", "sender": "mc",  "senderName": "Aku", "text": "Hahaha itu bukan nabrak, itu reuni mendadak.", "timestamp": "11:34", "day": 1 },
+        { "id": "p_d3", "sender": "dia", "senderName": "Dia", "text": "Reuni apaan, kita baru kenal 3 hari 😂", "timestamp": "11:35", "day": 1 },
+        { "id": "p_d4", "sender": "mc",  "senderName": "Aku", "text": "3 hari yang berkesan.", "timestamp": "11:36", "day": 1 },
+        { "id": "p_d5", "sender": "dia", "senderName": "Dia", "text": "Dramatis banget sih lo.", "timestamp": "11:37", "day": 1 },
+        { "id": "p_d6", "sender": "dia", "senderName": "Dia", "text": "Nanti sore ke taman? Mau nemenin aku beli tanaman.", "timestamp": "14:02", "day": 2 },
+        { "id": "p_d7", "sender": "mc",  "senderName": "Aku", "text": "Beli tanaman apa?", "timestamp": "14:04", "day": 2 },
+        { "id": "p_d8", "sender": "dia", "senderName": "Dia", "text": "Kaktus kecil! Udah lama mau beli. Katanya gampang dirawat.", "timestamp": "14:05", "day": 2 },
+        { "id": "p_d9", "sender": "mc",  "senderName": "Aku", "text": "Oke, jam 4 ya.", "timestamp": "14:06", "day": 2 }
+      ]
+    },
+    {
+      "id": "thread_reza",
+      "participantName": "Reza",
+      "accentColor": "#7ec8a0",
+      "messages": [
+        { "id": "p_r1", "sender": "npc", "senderName": "Reza", "text": "Bro, tugas PBO udah dikerjain?", "timestamp": "09:15", "day": 1 },
+        { "id": "p_r2", "sender": "mc",  "senderName": "Aku", "text": "Setengah doang. Lo?", "timestamp": "09:22", "day": 1 },
+        { "id": "p_r3", "sender": "npc", "senderName": "Reza", "text": "Belum mulai hiks. Kerjain bareng dong ntar siang.", "timestamp": "09:23", "day": 1 },
+        { "id": "p_r4", "sender": "mc",  "senderName": "Aku", "text": "Gabisa, ada acara.", "timestamp": "09:25", "day": 1 },
+        { "id": "p_r5", "sender": "npc", "senderName": "Reza", "text": "ACARA APA. lo sama orang baru itu ya??", "timestamp": "09:26", "day": 1 }
+      ]
+    }
+  ]
+}

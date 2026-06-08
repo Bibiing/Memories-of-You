@@ -11,6 +11,7 @@ import { InteractionObject } from './InteractionObject'
 import { EveningReflection } from './EveningReflection'
 import { DialogueBox } from '@components/ui/DialogueBox'
 import { FlashbackPlayer } from '@components/flashback/FlashbackPlayer'
+import { SmartphoneFrame } from '@components/smartphone/SmartphoneFrame'
 import { currentNode } from '@systems/dialogueEngine/runner'
 
 // ── Placeholder scene views ────────────────────────────────────────────────
@@ -26,6 +27,8 @@ function MainMenuView() {
         <span>✓ Phase 1 — Systems &amp; Data</span>
         <span>✓ Phase 2 — Visual Engine</span>
         <span>✓ Phase 3 — Dialogue &amp; Narrative Engine</span>
+        <span>✓ Phase 4 — Smartphone UI</span>
+        <span>✓ Phase 5 — Mini-Game Systems</span>
       </div>
       <button
         className="choice-btn"
@@ -128,6 +131,10 @@ export function SceneManager() {
   const [fading, setFading] = useState(false)
   const pendingScene = useRef(scene)
 
+  // Smartphone state
+  const [phoneOpen, setPhoneOpen] = useState(false)
+  const [phoneFlashback, setPhoneFlashback] = useState<FlashbackId | null>(null)
+
   useEffect(() => {
     if (scene === visibleScene) return
     pendingScene.current = scene
@@ -140,6 +147,7 @@ export function SceneManager() {
   }, [scene, visibleScene])
 
   const dialogueNode = runnerState ? currentNode(runnerState) : null
+  const isGameplay = visibleScene === 'gameplay'
 
   return (
     <div className={`scene-manager ${fading ? 'scene-fading' : ''}`}>
@@ -153,6 +161,39 @@ export function SceneManager() {
           resolveView(visibleScene)
         )}
       </div>
+
+      {/* Smartphone toggle — only in gameplay */}
+      {isGameplay && !phoneOpen && !phoneFlashback && (
+        <button
+          className="smartphone-btn-open"
+          onClick={() => { setPhoneOpen(true) }}
+          aria-label="Buka smartphone"
+        >
+          📱
+        </button>
+      )}
+
+      {/* Smartphone frame */}
+      {phoneOpen && (
+        <SmartphoneFrame
+          onClose={() => { setPhoneOpen(false) }}
+          onOpenFlashback={(id) => {
+            setPhoneFlashback(id)
+            setPhoneOpen(false)
+          }}
+        />
+      )}
+
+      {/* Flashback triggered from gallery */}
+      {phoneFlashback && (
+        <FlashbackPlayer
+          flashbackId={phoneFlashback}
+          onClose={() => {
+            setPhoneFlashback(null)
+            setPhoneOpen(true)
+          }}
+        />
+      )}
 
       {/* Dialogue overlay — rendered above scene content */}
       {isDialogueActive && dialogueNode && (

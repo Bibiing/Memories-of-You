@@ -1,0 +1,29 @@
+{
+  "chapter": "acceptance",
+  "threads": [
+    {
+      "id": "thread_dia",
+      "participantName": "Dia",
+      "accentColor": "#c9a0dc",
+      "messages": [
+        { "id": "acc_d1", "sender": "dia", "senderName": "Dia", "text": "Hai. Aku denger lo ikut pameran seni akhir semester.", "timestamp": "15:20", "day": 3 },
+        { "id": "acc_d2", "sender": "mc",  "senderName": "Aku", "text": "Iya.", "timestamp": "15:45", "day": 3 },
+        { "id": "acc_d3", "sender": "dia", "senderName": "Dia", "text": "Selamat ya. Aku tau lo pasti bisa.", "timestamp": "15:46", "day": 3 },
+        { "id": "acc_d4", "sender": "mc",  "senderName": "Aku", "text": "Makasih.", "timestamp": "16:02", "day": 3 }
+      ]
+    },
+    {
+      "id": "thread_reza",
+      "participantName": "Reza",
+      "accentColor": "#7ec8a0",
+      "messages": [
+        { "id": "acc_r1", "sender": "npc", "senderName": "Reza", "text": "WOOOO AKHIRNYA LO KELUAR DARI KAMAR", "timestamp": "09:00", "day": 1 },
+        { "id": "acc_r2", "sender": "mc",  "senderName": "Aku", "text": "Lebay.", "timestamp": "09:05", "day": 1 },
+        { "id": "acc_r3", "sender": "npc", "senderName": "Reza", "text": "Mau ikut futsal sore ini nggak? Kurang orang satu.", "timestamp": "09:06", "day": 1 },
+        { "id": "acc_r4", "sender": "mc",  "senderName": "Aku", "text": "Oke lah.", "timestamp": "09:10", "day": 1 },
+        { "id": "acc_r5", "sender": "npc", "senderName": "Reza", "text": "SERIUS?? Gue kangen bro gue yang lama.", "timestamp": "09:11", "day": 1 },
+        { "id": "acc_r6", "sender": "mc",  "senderName": "Aku", "text": "Berisik. Jam berapa?", "timestamp": "09:12", "day": 1 }
+      ]
+    }
+  ]
+}
