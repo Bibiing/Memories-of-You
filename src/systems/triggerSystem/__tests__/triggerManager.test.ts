@@ -1,9 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest'
-import {
-  getTriggersForLocation,
-  consumeTrigger,
-  getTriggerById,
-} from '../triggerManager'
+import { getTriggersForLocation, consumeTrigger, getTriggerById } from '../triggerManager'
 import { ALL_TRIGGERS } from '../triggerData'
 import { useInventoryStore } from '@stores/inventoryStore'
 
@@ -105,7 +101,15 @@ describe('flashback action triggers', () => {
   })
 
   it('flashback trigger references a valid FlashbackId', () => {
-    const VALID_IDS = ['fb_telponan','fb_makan','fb_ngeprank','fb_bola','fb_main','fb_snack','fb_curhat']
+    const VALID_IDS = [
+      'fb_telponan',
+      'fb_makan',
+      'fb_ngeprank',
+      'fb_bola',
+      'fb_main',
+      'fb_snack',
+      'fb_curhat',
+    ]
     const flashbackTriggers = ALL_TRIGGERS.filter((t) => t.action.type === 'flashback')
     for (const t of flashbackTriggers) {
       if (t.action.type === 'flashback') {

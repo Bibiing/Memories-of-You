@@ -4,7 +4,10 @@ import type { MiniGameProps, SliderPuzzleConfig } from '@/types/minigame'
 const CELL_WALL = 1
 const CELL_GOAL = 3
 
-interface Pos { row: number; col: number }
+interface Pos {
+  row: number
+  col: number
+}
 
 function findStart(grid: number[][]): Pos {
   for (let r = 0; r < grid.length; r++) {
@@ -15,40 +18,53 @@ function findStart(grid: number[][]): Pos {
   return { row: 0, col: 0 }
 }
 
-export function SliderPuzzle({
-  config,
-  onComplete,
-  onAbandon,
-}: MiniGameProps<SliderPuzzleConfig>) {
+export function SliderPuzzle({ config, onComplete, onAbandon }: MiniGameProps<SliderPuzzleConfig>) {
   const { grid, rows, cols } = config
   const [playerPos, setPlayerPos] = useState<Pos>(() => findStart(grid))
-  const [steps,     setSteps]     = useState(0)
+  const [steps, setSteps] = useState(0)
 
-  const move = useCallback((dr: number, dc: number) => {
-    setPlayerPos((pos) => {
-      const nr = pos.row + dr
-      const nc = pos.col + dc
-      if (nr < 0 || nr >= rows || nc < 0 || nc >= cols) return pos
-      const cell = grid[nr]?.[nc]
-      if (cell === CELL_WALL) return pos
+  const move = useCallback(
+    (dr: number, dc: number) => {
+      setPlayerPos((pos) => {
+        const nr = pos.row + dr
+        const nc = pos.col + dc
+        if (nr < 0 || nr >= rows || nc < 0 || nc >= cols) return pos
+        const cell = grid[nr]?.[nc]
+        if (cell === CELL_WALL) return pos
 
-      setSteps((s) => {
-        const next = s + 1
-        if (cell === CELL_GOAL) {
-          setTimeout(() => { onComplete({ success: true, score: next }) }, 200)
-        }
-        return next
+        setSteps((s) => {
+          const next = s + 1
+          if (cell === CELL_GOAL) {
+            setTimeout(() => {
+              onComplete({ success: true, score: next })
+            }, 200)
+          }
+          return next
+        })
+        return { row: nr, col: nc }
       })
-      return { row: nr, col: nc }
-    })
-  }, [grid, rows, cols, onComplete])
+    },
+    [grid, rows, cols, onComplete]
+  )
 
   const handleKey = (e: React.KeyboardEvent) => {
     switch (e.key) {
-      case 'ArrowUp':    e.preventDefault(); move(-1, 0); break
-      case 'ArrowDown':  e.preventDefault(); move(1, 0);  break
-      case 'ArrowLeft':  e.preventDefault(); move(0, -1); break
-      case 'ArrowRight': e.preventDefault(); move(0, 1);  break
+      case 'ArrowUp':
+        e.preventDefault()
+        move(-1, 0)
+        break
+      case 'ArrowDown':
+        e.preventDefault()
+        move(1, 0)
+        break
+      case 'ArrowLeft':
+        e.preventDefault()
+        move(0, -1)
+        break
+      case 'ArrowRight':
+        e.preventDefault()
+        move(0, 1)
+        break
     }
   }
 
@@ -68,7 +84,7 @@ export function SliderPuzzle({
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(' + String(cols) + ', ' + String(cellSize) + 'px)',
-          gridTemplateRows:    'repeat(' + String(rows) + ', ' + String(cellSize) + 'px)',
+          gridTemplateRows: 'repeat(' + String(rows) + ', ' + String(cellSize) + 'px)',
           gap: 2,
         }}
         aria-label="Grid puzzle"
@@ -80,8 +96,8 @@ export function SliderPuzzle({
               'slider-cell',
               cell === CELL_WALL ? 'slider-cell--wall' : '',
               cell === CELL_GOAL ? 'slider-cell--goal' : '',
-              cell === 0         ? 'slider-cell--empty' : '',
-              isPlayer           ? 'slider-cell--player' : '',
+              cell === 0 ? 'slider-cell--empty' : '',
+              isPlayer ? 'slider-cell--player' : '',
             ].join(' ')
             return (
               <div
@@ -93,20 +109,54 @@ export function SliderPuzzle({
                 {cell === CELL_GOAL && !isPlayer && <span className="slider-goal-marker">★</span>}
               </div>
             )
-          }),
+          })
         )}
       </div>
 
       <div className="slider-dpad">
-        <button className="dpad-btn dpad-up"    onClick={() => { move(-1, 0) }} aria-label="Atas">▲</button>
+        <button
+          className="dpad-btn dpad-up"
+          onClick={() => {
+            move(-1, 0)
+          }}
+          aria-label="Atas"
+        >
+          ▲
+        </button>
         <div className="dpad-row">
-          <button className="dpad-btn dpad-left"  onClick={() => { move(0, -1) }} aria-label="Kiri">◄</button>
-          <button className="dpad-btn dpad-down"  onClick={() => { move(1, 0) }}  aria-label="Bawah">▼</button>
-          <button className="dpad-btn dpad-right" onClick={() => { move(0, 1) }}  aria-label="Kanan">►</button>
+          <button
+            className="dpad-btn dpad-left"
+            onClick={() => {
+              move(0, -1)
+            }}
+            aria-label="Kiri"
+          >
+            ◄
+          </button>
+          <button
+            className="dpad-btn dpad-down"
+            onClick={() => {
+              move(1, 0)
+            }}
+            aria-label="Bawah"
+          >
+            ▼
+          </button>
+          <button
+            className="dpad-btn dpad-right"
+            onClick={() => {
+              move(0, 1)
+            }}
+            aria-label="Kanan"
+          >
+            ►
+          </button>
         </div>
       </div>
 
-      <button className="mg-abandon-btn" onClick={onAbandon}>Lewati</button>
+      <button className="mg-abandon-btn" onClick={onAbandon}>
+        Lewati
+      </button>
     </div>
   )
 }

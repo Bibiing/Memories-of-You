@@ -21,7 +21,7 @@ export interface SliderPuzzleConfig {
 // ── Hidden Object ─────────────────────────────────────────────
 export interface HiddenTarget {
   id: string
-  x: number   // percentage 0–100
+  x: number // percentage 0–100
   y: number
   radius: number
   label: string
@@ -48,8 +48,8 @@ export interface QTETarget {
 }
 
 export interface QuickTimeEventConfig {
-  duration: number        // total seconds
-  spawnInterval: number   // seconds between new targets
+  duration: number // total seconds
+  spawnInterval: number // seconds between new targets
   targets: QTETarget[]
 }
 
@@ -62,26 +62,26 @@ export interface HoldElement {
 
 export interface HoldToDeleteConfig {
   elements: HoldElement[]
-  holdDuration: number  // ms to hold
+  holdDuration: number // ms to hold
 }
 
 // ── Drag Drop Scheduler ───────────────────────────────────────
 export interface SchedulerTask {
   id: string
   label: string
-  duration: number  // time slots it occupies
+  duration: number // time slots it occupies
   color: string
 }
 
 export interface DragDropSchedulerConfig {
   tasks: SchedulerTask[]
-  slots: string[]  // slot labels e.g. ["08:00","09:00","10:00"]
-  correctMapping: Record<string, string>  // taskId → slotId
+  slots: string[] // slot labels e.g. ["08:00","09:00","10:00"]
+  correctMapping: Record<string, string> // taskId → slotId
 }
 
 // ── Struggle Button ───────────────────────────────────────────
 export interface StruggleButtonConfig {
-  target: number   // number of clicks to succeed
+  target: number // number of clicks to succeed
   label: string
   timeLimit: number
 }
@@ -111,7 +111,7 @@ export interface DecoSlot {
   label: string
   x: number
   y: number
-  accepts: string  // item id
+  accepts: string // item id
 }
 
 export interface RoomDecorationConfig {
@@ -128,7 +128,7 @@ export interface PlantStep {
 
 export interface PlantingGameConfig {
   steps: PlantStep[]
-  correctOrder: string[]  // step ids in correct sequence
+  correctOrder: string[] // step ids in correct sequence
 }
 
 // ── Breathing Rhythm ──────────────────────────────────────────

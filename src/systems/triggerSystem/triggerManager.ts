@@ -5,10 +5,7 @@ import { useInventoryStore } from '@stores/inventoryStore'
 
 // Returns triggers visible in the given location + chapter combo.
 // One-time triggers that have been used are filtered out.
-export function getTriggersForLocation(
-  location: Location,
-  chapter: Chapter
-): InteractionTrigger[] {
+export function getTriggersForLocation(location: Location, chapter: Chapter): InteractionTrigger[] {
   const used = useInventoryStore.getState().actionHistory
 
   return ALL_TRIGGERS.filter((t) => {

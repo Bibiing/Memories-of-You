@@ -8,8 +8,8 @@ export function DragDropScheduler({
 }: MiniGameProps<DragDropSchedulerConfig>) {
   const { tasks, slots, correctMapping } = config
   // mapping: slotId → taskId | null
-  const [placed, setPlaced] = useState<Record<string, string | null>>(
-    () => Object.fromEntries(slots.map((s) => [s, null])),
+  const [placed, setPlaced] = useState<Record<string, string | null>>(() =>
+    Object.fromEntries(slots.map((s) => [s, null]))
   )
   const [unplaced, setUnplaced] = useState(tasks.map((t) => t.id))
   const dragTaskId = useRef<string | null>(null)
@@ -74,7 +74,9 @@ export function DragDropScheduler({
                 className="scheduler-task"
                 style={{ borderColor: task?.color ?? '#888' }}
                 draggable
-                onDragStart={() => { handleDragStart(id) }}
+                onDragStart={() => {
+                  handleDragStart(id)
+                }}
                 aria-label={task?.label}
               >
                 {task?.label}
@@ -92,8 +94,12 @@ export function DragDropScheduler({
               <div
                 key={slot}
                 className={`scheduler-slot${task ? ' scheduler-slot--filled' : ''}`}
-                onDragOver={(e) => { e.preventDefault() }}
-                onDrop={() => { handleDrop(slot) }}
+                onDragOver={(e) => {
+                  e.preventDefault()
+                }}
+                onDrop={() => {
+                  handleDrop(slot)
+                }}
                 aria-label={`Slot ${slot}`}
               >
                 <span className="scheduler-slot-label">{slot}</span>
@@ -111,14 +117,12 @@ export function DragDropScheduler({
         </div>
       </div>
 
-      <button
-        className="mg-submit-btn"
-        onClick={handleSubmit}
-        disabled={!allPlaced}
-      >
+      <button className="mg-submit-btn" onClick={handleSubmit} disabled={!allPlaced}>
         Periksa
       </button>
-      <button className="mg-abandon-btn" onClick={onAbandon}>Lewati</button>
+      <button className="mg-abandon-btn" onClick={onAbandon}>
+        Lewati
+      </button>
     </div>
   )
 }

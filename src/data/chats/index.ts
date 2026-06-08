@@ -24,8 +24,10 @@ export function getChapterChats(chapter: Chapter): ChapterChats {
 }
 
 export function getVisibleThreads(chapter: Chapter, currentDay: number): ChatThread[] {
-  return getChapterChats(chapter).threads.map((t) => ({
-    ...t,
-    messages: t.messages.filter((m) => m.day <= currentDay),
-  })).filter((t) => t.messages.length > 0)
+  return getChapterChats(chapter)
+    .threads.map((t) => ({
+      ...t,
+      messages: t.messages.filter((m) => m.day <= currentDay),
+    }))
+    .filter((t) => t.messages.length > 0)
 }

@@ -7,9 +7,9 @@ export function StruggleButton({
   onAbandon,
 }: MiniGameProps<StruggleButtonConfig>) {
   const { target, label, timeLimit } = config
-  const [count,    setCount]    = useState(0)
+  const [count, setCount] = useState(0)
   const [timeLeft, setTimeLeft] = useState(timeLimit)
-  const [done,     setDone]     = useState(false)
+  const [done, setDone] = useState(false)
   const doneRef = useRef(false)
 
   // Countdown — state update inside setInterval callback
@@ -29,7 +29,9 @@ export function StruggleButton({
         return next
       })
     }, 100)
-    return () => { clearInterval(interval) }
+    return () => {
+      clearInterval(interval)
+    }
   }, [done])
 
   useEffect(() => {
@@ -64,19 +66,18 @@ export function StruggleButton({
             style={{ width: (progress * 100).toFixed(1) + '%' }}
           />
         </div>
-        <p className="struggle-count">{String(count)} / {String(target)}</p>
+        <p className="struggle-count">
+          {String(count)} / {String(target)}
+        </p>
 
-        <button
-          className="struggle-btn"
-          onClick={handlePress}
-          disabled={done}
-          aria-label="Tekan"
-        >
+        <button className="struggle-btn" onClick={handlePress} disabled={done} aria-label="Tekan">
           TEKAN
         </button>
       </div>
 
-      <button className="mg-abandon-btn" onClick={onAbandon}>Lewati</button>
+      <button className="mg-abandon-btn" onClick={onAbandon}>
+        Lewati
+      </button>
     </div>
   )
 }

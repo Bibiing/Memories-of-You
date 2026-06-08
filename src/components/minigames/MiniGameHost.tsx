@@ -23,16 +23,27 @@ export function MiniGameHost({ type, config, onComplete, onAbandon }: MiniGameHo
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const shared = { config, onComplete, onAbandon }
   switch (type) {
-    case 'breathing-rhythm':     return <BreathingRhythm {...shared} />
-    case 'drag-drop-scheduler':  return <DragDropScheduler {...shared} />
-    case 'find-the-difference':  return <FindTheDifference {...shared} />
-    case 'hidden-object':        return <HiddenObject {...shared} />
-    case 'hold-to-delete':       return <HoldToDelete {...shared} />
-    case 'planting-game':        return <PlantingGame {...shared} />
-    case 'quick-time-event':     return <QuickTimeEvent {...shared} />
-    case 'room-decoration':      return <RoomDecoration {...shared} />
-    case 'slider-puzzle':        return <SliderPuzzle {...shared} />
-    case 'struggle-button':      return <StruggleButton {...shared} />
-    case 'word-puzzle':          return <WordPuzzle {...shared} />
+    case 'breathing-rhythm':
+      return <BreathingRhythm {...shared} />
+    case 'drag-drop-scheduler':
+      return <DragDropScheduler {...shared} />
+    case 'find-the-difference':
+      return <FindTheDifference {...shared} />
+    case 'hidden-object':
+      return <HiddenObject {...shared} />
+    case 'hold-to-delete':
+      return <HoldToDelete {...shared} />
+    case 'planting-game':
+      return <PlantingGame {...shared} />
+    case 'quick-time-event':
+      return <QuickTimeEvent {...shared} />
+    case 'room-decoration':
+      return <RoomDecoration {...shared} />
+    case 'slider-puzzle':
+      return <SliderPuzzle {...shared} />
+    case 'struggle-button':
+      return <StruggleButton {...shared} />
+    case 'word-puzzle':
+      return <WordPuzzle {...shared} />
   }
 }

@@ -31,7 +31,9 @@ export function TimedChoiceList({ choices, timedSeconds, onChoose, onTimeout }: 
         return +(prev - 0.1).toFixed(2)
       })
     }, 100)
-    return () => { clearInterval(interval) }
+    return () => {
+      clearInterval(interval)
+    }
   }, []) // mount-once; parent remounts this component for each new timed node
 
   const pct = Math.round((remaining / timedSeconds) * 100)

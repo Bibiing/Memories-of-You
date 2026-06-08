@@ -1,10 +1,5 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest'
-import {
-  createRunner,
-  currentNode,
-  advance,
-  choose,
-} from '../runner'
+import { createRunner, currentNode, advance, choose } from '../runner'
 import type { DialogueScript } from '@/types/dialogue'
 
 // Mock the emotional store so applyNodeWeights doesn't fail
@@ -124,7 +119,9 @@ describe('advance — linear script', () => {
 
 describe('choose — branching script', () => {
   let state: ReturnType<typeof createRunner>
-  beforeEach(() => { state = createRunner(BRANCHING_SCRIPT) })
+  beforeEach(() => {
+    state = createRunner(BRANCHING_SCRIPT)
+  })
 
   it('choose(0) takes Path A', () => {
     const next = choose(state, 0)
@@ -139,7 +136,7 @@ describe('choose — branching script', () => {
 
   it('advance after choosing path A finishes dialogue', () => {
     let s = choose(state, 0) // → b2a
-    s = advance(s)           // b2a.next = null → finished
+    s = advance(s) // b2a.next = null → finished
     expect(s.isFinished).toBe(true)
   })
 

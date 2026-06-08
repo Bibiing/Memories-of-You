@@ -27,8 +27,12 @@ export function InteractionObject({ trigger, onActivate }: Props) {
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') onActivate(trigger)
       }}
-      onMouseEnter={() => { setHovered(true) }}
-      onMouseLeave={() => { setHovered(false) }}
+      onMouseEnter={() => {
+        setHovered(true)
+      }}
+      onMouseLeave={() => {
+        setHovered(false)
+      }}
     >
       <div className={`interaction-pulse ${hovered ? 'interaction-pulse--hover' : ''}`} />
       <span className="interaction-label" aria-hidden="true">

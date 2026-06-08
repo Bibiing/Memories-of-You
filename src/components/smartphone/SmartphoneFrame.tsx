@@ -17,11 +17,11 @@ interface Props {
 }
 
 const APP_DEFS: { id: AppId; label: string; icon: string }[] = [
-  { id: 'map',     label: 'Map',    icon: '◎' },
-  { id: 'chat',    label: 'Chat',   icon: '◻' },
+  { id: 'map', label: 'Map', icon: '◎' },
+  { id: 'chat', label: 'Chat', icon: '◻' },
   { id: 'gallery', label: 'Galeri', icon: '◈' },
-  { id: 'music',   label: 'Musik',  icon: '♪' },
-  { id: 'notes',   label: 'Catatan',icon: '≡' },
+  { id: 'music', label: 'Musik', icon: '♪' },
+  { id: 'notes', label: 'Catatan', icon: '≡' },
 ]
 
 function HomeScreen({
@@ -41,7 +41,9 @@ function HomeScreen({
             <button
               key={app.id}
               className="app-icon-btn"
-              onClick={() => { onOpen(app.id) }}
+              onClick={() => {
+                onOpen(app.id)
+              }}
               aria-label={app.label}
             >
               <span className="app-icon-symbol">{app.icon}</span>
@@ -78,48 +80,81 @@ export function SmartphoneFrame({ onClose, onOpenFlashback }: Props) {
   const badge = (id: AppId): number => {
     if (readApps.has(id)) return 0
     switch (id) {
-      case 'chat':    return chatThreadCount > 0 ? chatThreadCount : 0
-      case 'gallery': return flashbackUnlocked.length
-      case 'notes':   return visibleNoteCount
-      default:        return 0
+      case 'chat':
+        return chatThreadCount > 0 ? chatThreadCount : 0
+      case 'gallery':
+        return flashbackUnlocked.length
+      case 'notes':
+        return visibleNoteCount
+      default:
+        return 0
     }
   }
 
   const renderApp = () => {
     switch (activeApp) {
-      case 'map':     return <MapApp onBack={() => { setActiveApp(null) }} />
-      case 'chat':    return <ChatApp onBack={() => { setActiveApp(null) }} />
-      case 'gallery': return (
-        <GalleryApp
-          onBack={() => { setActiveApp(null) }}
-          onOpenFlashback={(id) => { onOpenFlashback(id); onClose() }}
-        />
-      )
-      case 'music':   return <MusicApp onBack={() => { setActiveApp(null) }} />
-      case 'notes':   return <NotesApp onBack={() => { setActiveApp(null) }} />
-      default:        return null
+      case 'map':
+        return (
+          <MapApp
+            onBack={() => {
+              setActiveApp(null)
+            }}
+          />
+        )
+      case 'chat':
+        return (
+          <ChatApp
+            onBack={() => {
+              setActiveApp(null)
+            }}
+          />
+        )
+      case 'gallery':
+        return (
+          <GalleryApp
+            onBack={() => {
+              setActiveApp(null)
+            }}
+            onOpenFlashback={(id) => {
+              onOpenFlashback(id)
+              onClose()
+            }}
+          />
+        )
+      case 'music':
+        return (
+          <MusicApp
+            onBack={() => {
+              setActiveApp(null)
+            }}
+          />
+        )
+      case 'notes':
+        return (
+          <NotesApp
+            onBack={() => {
+              setActiveApp(null)
+            }}
+          />
+        )
+      default:
+        return null
     }
   }
 
   return (
     <div className="smartphone-frame" role="dialog" aria-label="Smartphone">
       <div className="smartphone-status">
-        <span className="smartphone-time" aria-hidden="true">●●●</span>
-        <button
-          className="smartphone-close-btn"
-          onClick={onClose}
-          aria-label="Tutup smartphone"
-        >
+        <span className="smartphone-time" aria-hidden="true">
+          ●●●
+        </span>
+        <button className="smartphone-close-btn" onClick={onClose} aria-label="Tutup smartphone">
           ✕
         </button>
       </div>
 
       <div className="smartphone-screen">
-        {activeApp === null ? (
-          <HomeScreen onOpen={openApp} badge={badge} />
-        ) : (
-          renderApp()
-        )}
+        {activeApp === null ? <HomeScreen onOpen={openApp} badge={badge} /> : renderApp()}
       </div>
     </div>
   )

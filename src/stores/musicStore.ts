@@ -17,7 +17,13 @@ export const useMusicStore = create<MusicState & MusicActions>((set) => ({
   isPlaying: false,
   volume: 0.7,
 
-  setCurrentTrack: (id) => { set({ currentTrackId: id }) },
-  setPlaying: (playing) => { set({ isPlaying: playing }) },
-  setVolume: (vol) => { set({ volume: vol }) },
+  setCurrentTrack: (id) => {
+    set({ currentTrackId: id })
+  },
+  setPlaying: (playing) => {
+    set({ isPlaying: playing })
+  },
+  setVolume: (vol) => {
+    set({ volume: vol })
+  },
 }))

@@ -68,7 +68,10 @@ export function EveningReflection({ onComplete }: Props) {
     if (startedRef.current) return
     startedRef.current = true
     const script = getEveningScript(chapter)
-    if (!script) { onComplete(); return }
+    if (!script) {
+      onComplete()
+      return
+    }
     startDialogue(script)
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -76,7 +79,7 @@ export function EveningReflection({ onComplete }: Props) {
   useEffect(() => {
     if (completedRef.current) return
     if (!startedRef.current) return
-    if (isActive) return        // still running
+    if (isActive) return // still running
     if (runnerState !== null) return // still has state (initial render)
 
     completedRef.current = true
@@ -88,16 +91,10 @@ export function EveningReflection({ onComplete }: Props) {
   return (
     <div className="evening-overlay">
       <span className="evening-day-label">
-        Malam · Hari {currentDay} · {chapter.charAt(0).toUpperCase() + chapter.slice(1)} Hari ke-{daysInChapter + 1}
+        Malam · Hari {currentDay} · {chapter.charAt(0).toUpperCase() + chapter.slice(1)} Hari ke-
+        {daysInChapter + 1}
       </span>
-      {node && (
-        <DialogueBox
-          key={node.id}
-          node={node}
-          onAdvance={advance}
-          onChoose={choose}
-        />
-      )}
+      {node && <DialogueBox key={node.id} node={node} onAdvance={advance} onChoose={choose} />}
     </div>
   )
 }

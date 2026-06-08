@@ -74,11 +74,21 @@ describe('unlockFlashback / isUnlocked', () => {
   it('unlocking twice does not duplicate', () => {
     unlockFlashback('fb_bola')
     unlockFlashback('fb_bola')
-    expect(useInventoryStore.getState().flashbackUnlocked.filter((f) => f === 'fb_bola')).toHaveLength(1)
+    expect(
+      useInventoryStore.getState().flashbackUnlocked.filter((f) => f === 'fb_bola')
+    ).toHaveLength(1)
   })
 
   it('can unlock all 7 flashbacks', () => {
-    const all = ['fb_telponan','fb_makan','fb_ngeprank','fb_bola','fb_main','fb_snack','fb_curhat'] as const
+    const all = [
+      'fb_telponan',
+      'fb_makan',
+      'fb_ngeprank',
+      'fb_bola',
+      'fb_main',
+      'fb_snack',
+      'fb_curhat',
+    ] as const
     for (const id of all) unlockFlashback(id)
     for (const id of all) expect(isUnlocked(id)).toBe(true)
   })

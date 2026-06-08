@@ -7,8 +7,8 @@ export function RoomDecoration({
   onAbandon,
 }: MiniGameProps<RoomDecorationConfig>) {
   const { items, slots } = config
-  const [placed,   setPlaced]   = useState<Record<string, string | null>>(
-    () => Object.fromEntries(slots.map((s) => [s.id, null])),
+  const [placed, setPlaced] = useState<Record<string, string | null>>(() =>
+    Object.fromEntries(slots.map((s) => [s.id, null]))
   )
   const [unplaced, setUnplaced] = useState(items.map((i) => i.id))
   const dragId = useRef<string | null>(null)
@@ -52,14 +52,21 @@ export function RoomDecoration({
               key={slot.id}
               className={'room-slot' + (item ? ' room-slot--filled' : '')}
               style={{ left: slot.x.toFixed(1) + '%', top: slot.y.toFixed(1) + '%' }}
-              onDragOver={(e) => { e.preventDefault() }}
-              onDrop={() => { handleDrop(slot.id) }}
+              onDragOver={(e) => {
+                e.preventDefault()
+              }}
+              onDrop={() => {
+                handleDrop(slot.id)
+              }}
               aria-label={'Slot: ' + slot.label}
             >
-              {item
-                ? <span className="room-slot-item" style={{ color: item.color }}>{item.label}</span>
-                : <span className="room-slot-empty">{slot.label}</span>
-              }
+              {item ? (
+                <span className="room-slot-item" style={{ color: item.color }}>
+                  {item.label}
+                </span>
+              ) : (
+                <span className="room-slot-empty">{slot.label}</span>
+              )}
             </div>
           )
         })}
@@ -74,7 +81,9 @@ export function RoomDecoration({
               className="room-item"
               style={{ borderColor: item?.color ?? '#888' }}
               draggable
-              onDragStart={() => { dragId.current = id }}
+              onDragStart={() => {
+                dragId.current = id
+              }}
               aria-label={item?.label}
             >
               {item?.label}
@@ -83,7 +92,9 @@ export function RoomDecoration({
         })}
       </div>
 
-      <button className="mg-abandon-btn" onClick={onAbandon}>Lewati</button>
+      <button className="mg-abandon-btn" onClick={onAbandon}>
+        Lewati
+      </button>
     </div>
   )
 }

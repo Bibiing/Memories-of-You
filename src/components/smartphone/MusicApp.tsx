@@ -1,6 +1,11 @@
 import { useGameStateStore } from '@stores/gameStateStore'
 import { useMusicStore } from '@stores/musicStore'
-import { playTrack, pauseTrack, resumeTrack, setHowlerVolume } from '@systems/audioSystem/musicPlayer'
+import {
+  playTrack,
+  pauseTrack,
+  resumeTrack,
+  setHowlerVolume,
+} from '@systems/audioSystem/musicPlayer'
 import { CHAPTER_PLAYLISTS } from '@data/playlists'
 import { AppBar } from './AppBar'
 
@@ -41,7 +46,9 @@ export function MusicApp({ onBack }: Props) {
             <button
               key={track.id}
               className={`music-track-item${isActive ? ' music-track-item--active' : ''}`}
-              onClick={() => { handleTrackClick(track.id, track.src) }}
+              onClick={() => {
+                handleTrackClick(track.id, track.src)
+              }}
               aria-pressed={isActive}
             >
               <span className="music-track-icon" aria-hidden="true">
@@ -49,7 +56,9 @@ export function MusicApp({ onBack }: Props) {
               </span>
               <div className="music-track-info">
                 <span className="music-track-title">{track.title}</span>
-                <span className="music-track-meta">{track.artist} · {track.duration}</span>
+                <span className="music-track-meta">
+                  {track.artist} · {track.duration}
+                </span>
               </div>
             </button>
           )
@@ -67,7 +76,9 @@ export function MusicApp({ onBack }: Props) {
           step={0.05}
           value={volume}
           className="music-volume-slider"
-          onChange={(e) => { handleVolume(parseFloat(e.target.value)) }}
+          onChange={(e) => {
+            handleVolume(parseFloat(e.target.value))
+          }}
           aria-label="Volume musik"
         />
       </div>

@@ -36,7 +36,12 @@ export function FlashbackPlayer({ flashbackId, onClose }: Props) {
   if (!node) return null
 
   return (
-    <div className="flashback-overlay" onClick={(e) => { e.stopPropagation() }}>
+    <div
+      className="flashback-overlay"
+      onClick={(e) => {
+        e.stopPropagation()
+      }}
+    >
       <div className="flashback-inner">
         <div className="flashback-header">
           <span className="flashback-label">Kenangan</span>
@@ -46,8 +51,12 @@ export function FlashbackPlayer({ flashbackId, onClose }: Props) {
         <DialogueBox
           key={node.id}
           node={node}
-          onAdvance={() => { setRunner((s) => advance(s)) }}
-          onChoose={(i) => { setRunner((s) => choose(s, i)) }}
+          onAdvance={() => {
+            setRunner((s) => advance(s))
+          }}
+          onChoose={(i) => {
+            setRunner((s) => choose(s, i))
+          }}
         />
       </div>
     </div>

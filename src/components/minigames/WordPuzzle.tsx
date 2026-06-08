@@ -1,19 +1,15 @@
 import { useState, useEffect } from 'react'
 import type { MiniGameProps, WordPuzzleConfig } from '@/types/minigame'
 
-export function WordPuzzle({
-  config,
-  onComplete,
-  onAbandon,
-}: MiniGameProps<WordPuzzleConfig>) {
+export function WordPuzzle({ config, onComplete, onAbandon }: MiniGameProps<WordPuzzleConfig>) {
   const { target, letters, timeLimit } = config
   const [assembled, setAssembled] = useState<string[]>([])
-  const [available, setAvailable] = useState<{ ch: string; idx: number }[]>(
-    () => letters.map((ch, idx) => ({ ch, idx })),
+  const [available, setAvailable] = useState<{ ch: string; idx: number }[]>(() =>
+    letters.map((ch, idx) => ({ ch, idx }))
   )
   const [timeLeft, setTimeLeft] = useState(timeLimit)
-  const [shake,    setShake]    = useState(false)
-  const [expired,  setExpired]  = useState(false)
+  const [shake, setShake] = useState(false)
+  const [expired, setExpired] = useState(false)
 
   // Countdown timer — state update inside callback only
   useEffect(() => {
@@ -29,7 +25,9 @@ export function WordPuzzle({
         return next
       })
     }, 100)
-    return () => { clearInterval(interval) }
+    return () => {
+      clearInterval(interval)
+    }
   }, [expired])
 
   useEffect(() => {
@@ -60,7 +58,7 @@ export function WordPuzzle({
     const last = assembled[assembled.length - 1]
     if (last === undefined) return
     const removedIdx = letters.findIndex(
-      (ch, i) => ch === last && !available.some((a) => a.idx === i),
+      (ch, i) => ch === last && !available.some((a) => a.idx === i)
     )
     setAssembled((prev) => prev.slice(0, -1))
     if (removedIdx !== -1) {
@@ -82,12 +80,15 @@ export function WordPuzzle({
       </div>
 
       <div className={'wp-assembled' + (shake ? ' wp-assembled--shake' : '')} aria-live="polite">
-        {assembled.length === 0
-          ? <span className="wp-placeholder">_ _ _</span>
-          : assembled.map((ch, i) => (
-            <span key={i} className="wp-letter wp-letter--placed">{ch}</span>
+        {assembled.length === 0 ? (
+          <span className="wp-placeholder">_ _ _</span>
+        ) : (
+          assembled.map((ch, i) => (
+            <span key={i} className="wp-letter wp-letter--placed">
+              {ch}
+            </span>
           ))
-        }
+        )}
       </div>
 
       <button className="wp-backspace" onClick={removeLast} disabled={assembled.length === 0}>
@@ -99,14 +100,18 @@ export function WordPuzzle({
           <button
             key={idx}
             className="wp-letter wp-letter--bank"
-            onClick={() => { pickLetter(idx, ch) }}
+            onClick={() => {
+              pickLetter(idx, ch)
+            }}
           >
             {ch}
           </button>
         ))}
       </div>
 
-      <button className="mg-abandon-btn" onClick={onAbandon}>Lewati</button>
+      <button className="mg-abandon-btn" onClick={onAbandon}>
+        Lewati
+      </button>
     </div>
   )
 }

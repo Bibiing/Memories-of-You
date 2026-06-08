@@ -20,9 +20,15 @@ export function playTrack(src: string, trackId: string): void {
       useMusicStore.getState().setPlaying(false)
       useMusicStore.getState().setCurrentTrack(null)
     },
-    onplay: () => { useMusicStore.getState().setPlaying(true) },
-    onpause: () => { useMusicStore.getState().setPlaying(false) },
-    onstop: () => { useMusicStore.getState().setPlaying(false) },
+    onplay: () => {
+      useMusicStore.getState().setPlaying(true)
+    },
+    onpause: () => {
+      useMusicStore.getState().setPlaying(false)
+    },
+    onstop: () => {
+      useMusicStore.getState().setPlaying(false)
+    },
   })
   currentHowl.play()
   useMusicStore.getState().setCurrentTrack(trackId)

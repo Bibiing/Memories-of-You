@@ -55,12 +55,7 @@ export function SceneBackground({ location, chapter }: Props) {
 
   return (
     <div className="scene-background" aria-hidden="true">
-      <img
-        src={url}
-        alt=""
-        className="scene-bg-img"
-        draggable={false}
-      />
+      <img src={url} alt="" className="scene-bg-img" draggable={false} />
       <div className="scene-tint" style={{ background: tint }} />
     </div>
   )

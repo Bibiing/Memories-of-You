@@ -40,8 +40,14 @@ describe('GameStateStore scene routing', () => {
 
   it('all scene values are settable', () => {
     const scenes = [
-      'main-menu', 'name-input', 'load-screen', 'gameplay',
-      'evening-reflection', 'flashback', 'chapter-transition', 'credits',
+      'main-menu',
+      'name-input',
+      'load-screen',
+      'gameplay',
+      'evening-reflection',
+      'flashback',
+      'chapter-transition',
+      'credits',
     ] as const
     for (const scene of scenes) {
       useGameStateStore.getState().setScene(scene)

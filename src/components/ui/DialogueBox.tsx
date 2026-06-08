@@ -62,12 +62,16 @@ export function DialogueBox({ node, onAdvance, onChoose, onTimeout }: Props) {
         onClick={skipOrAdvance}
         role="button"
         tabIndex={0}
-        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') skipOrAdvance() }}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') skipOrAdvance()
+        }}
       >
         {speakerName && <div className="dialogue-speaker">{speakerName}</div>}
         <div className="dialogue-text">{displayed}</div>
         {done && !hasChoices && (
-          <span className="dialogue-advance-indicator" aria-hidden="true">▶</span>
+          <span className="dialogue-advance-indicator" aria-hidden="true">
+            ▶
+          </span>
         )}
       </div>
 

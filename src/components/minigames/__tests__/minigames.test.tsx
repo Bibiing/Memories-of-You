@@ -16,7 +16,7 @@ describe('BreathingRhythm', () => {
         config={{ inhaleSeconds: 4, holdSeconds: 2, exhaleSeconds: 4, cycles: 3 }}
         onComplete={vi.fn()}
         onAbandon={vi.fn()}
-      />,
+      />
     )
     expect(screen.getByText('Tarik Napas')).toBeInTheDocument()
     expect(screen.getByText('Latihan Pernapasan')).toBeInTheDocument()
@@ -28,7 +28,7 @@ describe('BreathingRhythm', () => {
         config={{ inhaleSeconds: 4, holdSeconds: 2, exhaleSeconds: 4, cycles: 3 }}
         onComplete={vi.fn()}
         onAbandon={vi.fn()}
-      />,
+      />
     )
     expect(screen.getByText('1 / 3 siklus')).toBeInTheDocument()
   })
@@ -40,7 +40,7 @@ describe('BreathingRhythm', () => {
         config={{ inhaleSeconds: 4, holdSeconds: 2, exhaleSeconds: 4, cycles: 3 }}
         onComplete={vi.fn()}
         onAbandon={onAbandon}
-      />,
+      />
     )
     fireEvent.click(screen.getByText('Lewati'))
     expect(onAbandon).toHaveBeenCalledOnce()
@@ -55,7 +55,7 @@ describe('StruggleButton', () => {
         config={{ target: 10, label: 'Test!', timeLimit: 15 }}
         onComplete={vi.fn()}
         onAbandon={vi.fn()}
-      />,
+      />
     )
     expect(screen.getByText('0 / 10')).toBeInTheDocument()
   })
@@ -66,7 +66,7 @@ describe('StruggleButton', () => {
         config={{ target: 10, label: 'Test!', timeLimit: 15 }}
         onComplete={vi.fn()}
         onAbandon={vi.fn()}
-      />,
+      />
     )
     fireEvent.click(screen.getByText('TEKAN'))
     expect(screen.getByText('1 / 10')).toBeInTheDocument()
@@ -79,7 +79,7 @@ describe('StruggleButton', () => {
         config={{ target: 3, label: 'Test!', timeLimit: 15 }}
         onComplete={onComplete}
         onAbandon={vi.fn()}
-      />,
+      />
     )
     const btn = screen.getByText('TEKAN')
     fireEvent.click(btn)
@@ -103,7 +103,7 @@ describe('HoldToDelete', () => {
         }}
         onComplete={vi.fn()}
         onAbandon={vi.fn()}
-      />,
+      />
     )
     expect(screen.getByText('Foto')).toBeInTheDocument()
     expect(screen.getByText('Chat')).toBeInTheDocument()
@@ -117,7 +117,7 @@ describe('HoldToDelete', () => {
         config={{ holdDuration: 1000, elements: [{ id: 'a', label: 'Item', color: '#fff' }] }}
         onComplete={vi.fn()}
         onAbandon={onAbandon}
-      />,
+      />
     )
     fireEvent.click(screen.getByText('Lewati'))
     expect(onAbandon).toHaveBeenCalledOnce()
@@ -132,7 +132,7 @@ describe('WordPuzzle', () => {
         config={{ target: 'HI', letters: ['H', 'I', 'A'], timeLimit: 30 }}
         onComplete={vi.fn()}
         onAbandon={vi.fn()}
-      />,
+      />
     )
     expect(screen.getByText('H')).toBeInTheDocument()
     expect(screen.getByText('I')).toBeInTheDocument()
@@ -145,7 +145,7 @@ describe('WordPuzzle', () => {
         config={{ target: 'HI', letters: ['H', 'I', 'A'], timeLimit: 30 }}
         onComplete={vi.fn()}
         onAbandon={vi.fn()}
-      />,
+      />
     )
     // Click H from the bank
     const bankLetters = screen.getAllByRole('button', { name: 'H' })
@@ -163,11 +163,15 @@ describe('WordPuzzle', () => {
         config={{ target: 'HI', letters: ['H', 'I', 'A'], timeLimit: 30 }}
         onComplete={onComplete}
         onAbandon={vi.fn()}
-      />,
+      />
     )
     const allBtns = screen.getAllByRole('button')
-    const bankH = allBtns.find((b) => b.textContent === 'H' && b.classList.contains('wp-letter--bank'))
-    const bankI = allBtns.find((b) => b.textContent === 'I' && b.classList.contains('wp-letter--bank'))
+    const bankH = allBtns.find(
+      (b) => b.textContent === 'H' && b.classList.contains('wp-letter--bank')
+    )
+    const bankI = allBtns.find(
+      (b) => b.textContent === 'I' && b.classList.contains('wp-letter--bank')
+    )
     if (bankH) fireEvent.click(bankH)
     if (bankI) fireEvent.click(bankI)
     expect(onComplete).toHaveBeenCalledWith(expect.objectContaining({ success: true }))
@@ -268,7 +272,7 @@ describe('MiniGameHost', () => {
         config={{ inhaleSeconds: 4, holdSeconds: 2, exhaleSeconds: 4, cycles: 2 }}
         onComplete={vi.fn()}
         onAbandon={vi.fn()}
-      />,
+      />
     )
     expect(screen.getByText('Latihan Pernapasan')).toBeInTheDocument()
   })
@@ -280,7 +284,7 @@ describe('MiniGameHost', () => {
         config={{ target: 'HI', letters: ['H', 'I'], timeLimit: 30 }}
         onComplete={vi.fn()}
         onAbandon={vi.fn()}
-      />,
+      />
     )
     expect(screen.getByText('Susun Kata')).toBeInTheDocument()
   })
@@ -289,10 +293,18 @@ describe('MiniGameHost', () => {
     render(
       <MiniGameHost
         type="slider-puzzle"
-        config={{ rows: 3, cols: 3, grid: [[0,0,0],[0,2,0],[0,0,3]] }}
+        config={{
+          rows: 3,
+          cols: 3,
+          grid: [
+            [0, 0, 0],
+            [0, 2, 0],
+            [0, 0, 3],
+          ],
+        }}
         onComplete={vi.fn()}
         onAbandon={vi.fn()}
-      />,
+      />
     )
     expect(screen.getByText('Cari Jalan')).toBeInTheDocument()
   })

@@ -26,13 +26,17 @@ describe('useAdaptiveTheme', () => {
   })
 
   it('calls applyTheme on mount with initial chapter and distress', () => {
-    renderHook(() => { useAdaptiveTheme() })
+    renderHook(() => {
+      useAdaptiveTheme()
+    })
     expect(mockApplyTheme).toHaveBeenCalledOnce()
     expect(mockApplyTheme).toHaveBeenCalledWith(CHAPTER_THEMES.prologue, 20)
   })
 
   it('re-applies theme when chapter changes', () => {
-    renderHook(() => { useAdaptiveTheme() })
+    renderHook(() => {
+      useAdaptiveTheme()
+    })
     act(() => {
       useGameStateStore.getState().setChapter('anger')
     })
@@ -40,7 +44,9 @@ describe('useAdaptiveTheme', () => {
   })
 
   it('re-applies theme when distress changes', () => {
-    renderHook(() => { useAdaptiveTheme() })
+    renderHook(() => {
+      useAdaptiveTheme()
+    })
     act(() => {
       useEmotionalStore.getState().setDistress(80)
     })
@@ -49,11 +55,21 @@ describe('useAdaptiveTheme', () => {
 
   it('applies all 7 chapter themes without throwing', () => {
     const chapters = [
-      'prologue', 'denial', 'anger', 'bargaining', 'depression', 'acceptance', 'epilogue',
+      'prologue',
+      'denial',
+      'anger',
+      'bargaining',
+      'depression',
+      'acceptance',
+      'epilogue',
     ] as const
-    renderHook(() => { useAdaptiveTheme() })
+    renderHook(() => {
+      useAdaptiveTheme()
+    })
     for (const chapter of chapters) {
-      act(() => { useGameStateStore.getState().setChapter(chapter) })
+      act(() => {
+        useGameStateStore.getState().setChapter(chapter)
+      })
     }
     expect(mockApplyTheme).not.toThrow()
   })

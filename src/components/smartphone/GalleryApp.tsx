@@ -21,10 +21,16 @@ export function GalleryApp({ onBack, onOpenFlashback }: Props) {
             <button
               key={photo.flashbackId}
               className={`gallery-photo${isUnlocked ? '' : ' gallery-photo--locked'}`}
-              onClick={() => { if (isUnlocked) onOpenFlashback(photo.flashbackId) }}
+              onClick={() => {
+                if (isUnlocked) onOpenFlashback(photo.flashbackId)
+              }}
               disabled={!isUnlocked}
               aria-label={isUnlocked ? photo.title : 'Kenangan terkunci'}
-              style={isUnlocked ? { '--photo-accent': photo.accentColor } as React.CSSProperties : undefined}
+              style={
+                isUnlocked
+                  ? ({ '--photo-accent': photo.accentColor } as React.CSSProperties)
+                  : undefined
+              }
             >
               <div className="gallery-photo-inner" />
               <span className="gallery-photo-title">{isUnlocked ? photo.title : '???'}</span>

@@ -8,7 +8,13 @@ interface Props {
   onBack: () => void
 }
 
-function ThreadList({ threads, onSelect }: { threads: ChatThread[]; onSelect: (id: string) => void }) {
+function ThreadList({
+  threads,
+  onSelect,
+}: {
+  threads: ChatThread[]
+  onSelect: (id: string) => void
+}) {
   const currentDay = useGameStateStore((s) => s.currentDay)
 
   if (threads.length === 0) {
@@ -21,7 +27,13 @@ function ThreadList({ threads, onSelect }: { threads: ChatThread[]; onSelect: (i
         const lastMsg = t.messages.filter((m) => m.day <= currentDay).at(-1)
         if (!lastMsg) return null
         return (
-          <button key={t.id} className="chat-thread-item" onClick={() => { onSelect(t.id) }}>
+          <button
+            key={t.id}
+            className="chat-thread-item"
+            onClick={() => {
+              onSelect(t.id)
+            }}
+          >
             <div className="chat-thread-avatar" style={{ background: t.accentColor }}>
               {t.participantName.charAt(0)}
             </div>
@@ -63,7 +75,14 @@ export function ChatApp({ onBack }: Props) {
   const activeThread = threads.find((t) => t.id === activeThreadId)
 
   if (activeThread) {
-    return <MessageView thread={activeThread} onBack={() => { setActiveThreadId(null) }} />
+    return (
+      <MessageView
+        thread={activeThread}
+        onBack={() => {
+          setActiveThreadId(null)
+        }}
+      />
+    )
   }
 
   return (

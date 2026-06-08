@@ -1,16 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
 import type { MiniGameProps, HiddenObjectConfig } from '@/types/minigame'
 
-export function HiddenObject({
-  config,
-  onComplete,
-  onAbandon,
-}: MiniGameProps<HiddenObjectConfig>) {
+export function HiddenObject({ config, onComplete, onAbandon }: MiniGameProps<HiddenObjectConfig>) {
   const { targets, timeLimit } = config
-  const [found,     setFound]     = useState<Set<string>>(new Set())
-  const [timeLeft,  setTimeLeft]  = useState(timeLimit)
+  const [found, setFound] = useState<Set<string>>(new Set())
+  const [timeLeft, setTimeLeft] = useState(timeLimit)
   const [lastClick, setLastClick] = useState<{ x: number; y: number; k: number } | null>(null)
-  const [expired,   setExpired]   = useState(false)
+  const [expired, setExpired] = useState(false)
   const stageRef = useRef<HTMLDivElement>(null)
   const clickKey = useRef(0)
 
@@ -31,7 +27,9 @@ export function HiddenObject({
         return next
       })
     }, 100)
-    return () => { clearInterval(interval) }
+    return () => {
+      clearInterval(interval)
+    }
   }, [found, expired, targets.length]) // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
@@ -91,7 +89,7 @@ export function HiddenObject({
             >
               ✓
             </div>
-          ) : null,
+          ) : null
         )}
 
         {lastClick && (
@@ -103,7 +101,9 @@ export function HiddenObject({
         )}
       </div>
 
-      <button className="mg-abandon-btn" onClick={onAbandon}>Lewati</button>
+      <button className="mg-abandon-btn" onClick={onAbandon}>
+        Lewati
+      </button>
     </div>
   )
 }

@@ -33,7 +33,9 @@ function MainMenuView() {
       <button
         className="choice-btn"
         style={{ marginTop: '1.5rem', width: 'auto', padding: '0.75rem 2rem' }}
-        onClick={() => { setScene('gameplay') }}
+        onClick={() => {
+          setScene('gameplay')
+        }}
       >
         Mulai Game ▶
       </button>
@@ -72,7 +74,9 @@ function GameplayView() {
       {activeFlashback && (
         <FlashbackPlayer
           flashbackId={activeFlashback}
-          onClose={() => { setActiveFlashback(null) }}
+          onClose={() => {
+            setActiveFlashback(null)
+          }}
         />
       )}
 
@@ -86,7 +90,9 @@ function GameplayView() {
         <button
           className="choice-btn"
           style={{ pointerEvents: 'auto', opacity: 1, marginTop: '0.5rem', fontSize: '0.75rem' }}
-          onClick={() => { setScene('evening-reflection') }}
+          onClick={() => {
+            setScene('evening-reflection')
+          }}
         >
           Akhiri Hari →
         </button>
@@ -107,9 +113,12 @@ function GenericView({ scene }: { scene: GameScene }) {
 
 function resolveView(scene: GameScene) {
   switch (scene) {
-    case 'main-menu': return <MainMenuView />
-    case 'gameplay': return <GameplayView />
-    default: return <GenericView scene={scene} />
+    case 'main-menu':
+      return <MainMenuView />
+    case 'gameplay':
+      return <GameplayView />
+    default:
+      return <GenericView scene={scene} />
   }
 }
 
@@ -138,12 +147,17 @@ export function SceneManager() {
   useEffect(() => {
     if (scene === visibleScene) return
     pendingScene.current = scene
-    const fadeIn = setTimeout(() => { setFading(true) }, 0)
+    const fadeIn = setTimeout(() => {
+      setFading(true)
+    }, 0)
     const swap = setTimeout(() => {
       setVisibleScene(pendingScene.current)
       setFading(false)
     }, 320)
-    return () => { clearTimeout(fadeIn); clearTimeout(swap) }
+    return () => {
+      clearTimeout(fadeIn)
+      clearTimeout(swap)
+    }
   }, [scene, visibleScene])
 
   const dialogueNode = runnerState ? currentNode(runnerState) : null
@@ -156,7 +170,11 @@ export function SceneManager() {
 
       <div className="scene-overlay">
         {visibleScene === 'evening-reflection' ? (
-          <EveningReflection onComplete={() => { setScene('gameplay') }} />
+          <EveningReflection
+            onComplete={() => {
+              setScene('gameplay')
+            }}
+          />
         ) : (
           resolveView(visibleScene)
         )}
@@ -166,7 +184,9 @@ export function SceneManager() {
       {isGameplay && !phoneOpen && !phoneFlashback && (
         <button
           className="smartphone-btn-open"
-          onClick={() => { setPhoneOpen(true) }}
+          onClick={() => {
+            setPhoneOpen(true)
+          }}
           aria-label="Buka smartphone"
         >
           📱
@@ -176,7 +196,9 @@ export function SceneManager() {
       {/* Smartphone frame */}
       {phoneOpen && (
         <SmartphoneFrame
-          onClose={() => { setPhoneOpen(false) }}
+          onClose={() => {
+            setPhoneOpen(false)
+          }}
           onOpenFlashback={(id) => {
             setPhoneFlashback(id)
             setPhoneOpen(false)

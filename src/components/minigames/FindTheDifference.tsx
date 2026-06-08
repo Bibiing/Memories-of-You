@@ -7,9 +7,9 @@ export function FindTheDifference({
   onAbandon,
 }: MiniGameProps<FindTheDifferenceConfig>) {
   const { differences, timeLimit } = config
-  const [found,    setFound]    = useState<Set<string>>(new Set())
+  const [found, setFound] = useState<Set<string>>(new Set())
   const [timeLeft, setTimeLeft] = useState(timeLimit)
-  const [expired,  setExpired]  = useState(false)
+  const [expired, setExpired] = useState(false)
 
   useEffect(() => {
     if (found.size === differences.length) {
@@ -28,7 +28,9 @@ export function FindTheDifference({
         return next
       })
     }, 100)
-    return () => { clearInterval(interval) }
+    return () => {
+      clearInterval(interval)
+    }
   }, [found, expired, differences.length]) // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
@@ -84,13 +86,14 @@ export function FindTheDifference({
                   className="ftd-found-marker"
                   style={{ left: d.x.toFixed(1) + '%', top: d.y.toFixed(1) + '%' }}
                 />
-              ))
-            }
+              ))}
           </div>
         ))}
       </div>
 
-      <button className="mg-abandon-btn" onClick={onAbandon}>Lewati</button>
+      <button className="mg-abandon-btn" onClick={onAbandon}>
+        Lewati
+      </button>
     </div>
   )
 }
