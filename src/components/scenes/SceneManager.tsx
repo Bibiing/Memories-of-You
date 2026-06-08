@@ -111,7 +111,7 @@ function GenericView({ scene }: { scene: GameScene }) {
 }
 
 // ── Chapters yang pakai ChapterScene ──────────────────────────────────────────
-const CHAPTER_SCENE_CHAPTERS = new Set(['denial', 'anger'])
+const CHAPTER_SCENE_CHAPTERS = new Set(['denial', 'anger', 'bargaining', 'depression', 'acceptance'])
 
 function resolveView(scene: GameScene, chapter: string) {
   switch (scene) {

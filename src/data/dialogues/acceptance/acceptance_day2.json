@@ -1,0 +1,54 @@
+{
+  "id": "acceptance_day2",
+  "chapter": "acceptance",
+  "startNode": "acd2_01",
+  "nodes": [
+    {
+      "id": "acd2_01",
+      "speaker": "System",
+      "text": "Tanpa sengaja, kamu melihat unggahan lama Dia saat scroll. Dulu, ini akan langsung merusak harimu.",
+      "next": "acd2_02"
+    },
+    {
+      "id": "acd2_02",
+      "speaker": "MC",
+      "text": "...Itu bagian dari hidupku yang sudah lewat. Dan tidak apa-apa kalau begitu.",
+      "next": "acd2_03"
+    },
+    {
+      "id": "acd2_03",
+      "speaker": "System",
+      "text": "Kamu menutup aplikasinya — bukan karena lari, tapi karena ada hal lain yang lebih ingin kamu kerjakan hari ini.",
+      "next": "acd2_04"
+    },
+    {
+      "id": "acd2_04",
+      "speaker": "MC",
+      "text": "...",
+      "choices": [
+        {
+          "label": "Aku ingin coba sesuatu yang benar-benar baru hari ini.",
+          "next": "acd2_05a",
+          "weights": { "hope": 5, "distress": -2 }
+        },
+        {
+          "label": "Cukup hari ini aku menjalani semuanya pelan-pelan.",
+          "next": "acd2_05b",
+          "weights": { "hope": 3, "distress": -1 }
+        }
+      ]
+    },
+    {
+      "id": "acd2_05a",
+      "speaker": "System",
+      "text": "Kamu melangkah keluar kamar dengan semangat yang sudah lama tidak kamu rasakan.",
+      "next": null
+    },
+    {
+      "id": "acd2_05b",
+      "speaker": "System",
+      "text": "Tidak semua hal harus terburu-buru. Pelan-pelan pun, kamu tetap melangkah maju.",
+      "next": null
+    }
+  ]
+}

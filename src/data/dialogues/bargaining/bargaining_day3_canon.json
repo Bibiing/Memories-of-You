@@ -1,0 +1,50 @@
+{
+  "id": "bargaining_day3_canon",
+  "chapter": "bargaining",
+  "startNode": "bd3_01",
+  "nodes": [
+    {
+      "id": "bd3_01",
+      "speaker": "System",
+      "text": "Hari ketiga. Kamu memberanikan diri menemui Dia — bukan untuk bertengkar, tapi untuk menawarkan sesuatu.",
+      "next": "bd3_02"
+    },
+    {
+      "id": "bd3_02",
+      "speaker": "MC",
+      "text": "Aku sudah pikirkan ini matang-matang. Kita nggak harus seperti dulu — tapi setidaknya, bisa nggak kita coba jadi teman lagi?",
+      "next": "bd3_03"
+    },
+    {
+      "id": "bd3_03",
+      "speaker": "Dia",
+      "text": "...Aku menghargai kamu mau ngomong langsung. Tapi aku rasa, untuk sekarang, lebih baik kita nggak usah memaksakan apa pun.",
+      "next": "bd3_04"
+    },
+    {
+      "id": "bd3_04",
+      "speaker": "MC",
+      "text": "Kalau begitu... berapa lama? Sampai kapan 'sekarang' ini berakhir?",
+      "next": "bd3_05"
+    },
+    {
+      "id": "bd3_05",
+      "speaker": "Dia",
+      "text": "Aku nggak tahu. Mungkin... memang nggak akan pernah ada waktu yang tepat untuk itu.",
+      "next": "bd3_06",
+      "weights": { "distress": 10, "denial": -6 }
+    },
+    {
+      "id": "bd3_06",
+      "speaker": "System",
+      "text": "Tidak ada lagi yang bisa ditawar. Tidak ada syarat yang bisa dipenuhi, tidak ada versi dirimu yang bisa mengubah jawaban itu.",
+      "next": "bd3_07"
+    },
+    {
+      "id": "bd3_07",
+      "speaker": "MC",
+      "text": "...Oh.",
+      "next": null
+    }
+  ]
+}

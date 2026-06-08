@@ -1,0 +1,32 @@
+{
+  "id": "acceptance_day1",
+  "chapter": "acceptance",
+  "startNode": "acd1_01",
+  "nodes": [
+    {
+      "id": "acd1_01",
+      "speaker": "System",
+      "text": "Pagi ini terasa berbeda — bukan ringan sepenuhnya, tapi lebih lapang. Kaktus di meja menunjukkan tunas kecil yang mulai mengeras.",
+      "next": "acd1_02"
+    },
+    {
+      "id": "acd1_02",
+      "speaker": "MC",
+      "text": "Aku masih ingat semuanya. Tapi entah kenapa, hari ini aku ingin melakukan sesuatu — bukan untuk dia, untuk diriku sendiri.",
+      "next": "acd1_03"
+    },
+    {
+      "id": "acd1_03",
+      "speaker": "System",
+      "text": "Untuk pertama kalinya dalam waktu yang lama, kamu bangun bukan karena terpaksa.",
+      "next": "acd1_04"
+    },
+    {
+      "id": "acd1_04",
+      "speaker": "MC",
+      "text": "Mari kita lihat apa yang bisa kubangun dari sini.",
+      "next": null,
+      "weights": { "hope": 5, "distress": -3 }
+    }
+  ]
+}

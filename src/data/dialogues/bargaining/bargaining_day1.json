@@ -1,0 +1,32 @@
+{
+  "id": "bargaining_day1",
+  "chapter": "bargaining",
+  "startNode": "bd1_01",
+  "nodes": [
+    {
+      "id": "bd1_01",
+      "speaker": "System",
+      "text": "Pagi yang aneh. Kamarmu terasa lebih sunyi dari biasanya — dan kaktus di meja mulai kehilangan warnanya.",
+      "next": "bd1_02"
+    },
+    {
+      "id": "bd1_02",
+      "speaker": "MC",
+      "text": "Mungkin kalau aku berubah... kalau aku jadi lebih baik, semuanya bisa kembali seperti dulu.",
+      "next": "bd1_03"
+    },
+    {
+      "id": "bd1_03",
+      "speaker": "System",
+      "text": "Kamu mulai menyusun daftar — semua hal yang akan kamu ubah, andai diberi satu kesempatan lagi.",
+      "next": "bd1_04"
+    },
+    {
+      "id": "bd1_04",
+      "speaker": "MC",
+      "text": "Aku cuma butuh satu kesempatan untuk membuktikan itu. Itu saja.",
+      "next": null,
+      "weights": { "denial": 3, "hope": 4 }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "bargaining_day2",
+  "chapter": "bargaining",
+  "startNode": "bd2_01",
+  "nodes": [
+    {
+      "id": "bd2_01",
+      "speaker": "System",
+      "text": "Layar ponselmu menyala. Jarimu mengetik, menghapus, lalu mengetik lagi.",
+      "next": "bd2_02"
+    },
+    {
+      "id": "bd2_02",
+      "speaker": "MC",
+      "text": "Kalau aku kirim ini... mungkin dia akan mengerti. Mungkin kita bisa coba lagi, dengan caraku yang baru.",
+      "next": "bd2_03"
+    },
+    {
+      "id": "bd2_03",
+      "speaker": "System",
+      "text": "Pesan itu sudah jadi. Tinggal satu sentuhan untuk mengirimnya.",
+      "next": "bd2_04"
+    },
+    {
+      "id": "bd2_04",
+      "speaker": "MC",
+      "text": "...",
+      "choices": [
+        {
+          "label": "Kirim. Aku harus coba — siapa tahu kali ini berbeda.",
+          "next": "bd2_05a",
+          "weights": { "denial": 4, "hope": 3 }
+        },
+        {
+          "label": "Hapus saja. Aku tidak boleh memaksa keadaan untuk berubah.",
+          "next": "bd2_05b",
+          "weights": { "distress": 3, "denial": -3 }
+        }
+      ]
+    },
+    {
+      "id": "bd2_05a",
+      "speaker": "System",
+      "text": "Pesan terkirim. Centang abu-abu. Kamu menatap layar, menunggu sesuatu yang mungkin tidak akan datang.",
+      "next": null
+    },
+    {
+      "id": "bd2_05b",
+      "speaker": "System",
+      "text": "Kotak pesan kembali kosong. Tapi sesuatu di dadamu terasa sedikit lebih ringan — dan sedikit lebih sakit, secara bersamaan.",
+      "next": null
+    }
+  ]
+}

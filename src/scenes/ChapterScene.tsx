@@ -30,6 +30,9 @@ import { getDialogueScript } from '@data/dialogues/index'
 
 import { denialMissionPool } from '@data/missions/denial_missions'
 import { angerMissionPool } from '@data/missions/anger_missions'
+import { bargainingMissionPool } from '@data/missions/bargaining_missions'
+import { depressionMissionPool } from '@data/missions/depression_missions'
+import { acceptanceMissionPool } from '@data/missions/acceptance_missions'
 import type { DailyMission } from '@data/missions/denial_missions'
 import type { MiniGameResult } from '@/types/minigame'
 import type { Chapter } from '@/types/game'
@@ -49,8 +52,11 @@ type DayPhase =
 // ─── Helpers ────────────────────────────────────────────────────────────────────
 
 function getMissionPool(chapter: Chapter): DailyMission[] {
-  if (chapter === 'denial') return denialMissionPool
-  if (chapter === 'anger')  return angerMissionPool
+  if (chapter === 'denial')     return denialMissionPool
+  if (chapter === 'anger')      return angerMissionPool
+  if (chapter === 'bargaining') return bargainingMissionPool
+  if (chapter === 'depression') return depressionMissionPool
+  if (chapter === 'acceptance') return acceptanceMissionPool
   return []
 }
 
@@ -75,6 +81,15 @@ function getDayStartScriptId(chapter: Chapter, day: number): string {
 /** Canon event terjadi di hari ke-3 */
 function isCanonEventDay(day: number): boolean {
   return day === 3
+}
+
+/** Label chapter yang ditampilkan di header Mission Select */
+const CHAPTER_LABELS: Partial<Record<Chapter, string>> = {
+  denial:     'Penyangkalan',
+  anger:      'Kemarahan',
+  bargaining: 'Tawar-menawar',
+  depression: 'Depresi',
+  acceptance: 'Penerimaan',
 }
 
 // ─── Component ──────────────────────────────────────────────────────────────────
@@ -318,7 +333,7 @@ interface MissionSelectProps {
 function MissionSelectView({
   missions, playedToday, day, chapter, onSelect, onSkipToEvening
 }: MissionSelectProps) {
-  const chapterLabel = chapter === 'denial' ? 'Penyangkalan' : 'Kemarahan'
+  const chapterLabel = CHAPTER_LABELS[chapter] ?? chapter
 
   return (
     <div className={styles.missionSelect}>

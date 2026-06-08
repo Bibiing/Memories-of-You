@@ -1,0 +1,44 @@
+{
+  "id": "acceptance_day3_canon",
+  "chapter": "acceptance",
+  "startNode": "acd3_01",
+  "nodes": [
+    {
+      "id": "acd3_01",
+      "speaker": "System",
+      "text": "Malam ini kamu duduk di meja, menatap pot kaktus lama dan satu pot baru yang masih kosong di sebelahnya.",
+      "next": "acd3_02"
+    },
+    {
+      "id": "acd3_02",
+      "speaker": "MC",
+      "text": "Aku nggak akan membuang yang lama. Tapi aku juga nggak harus berhenti di situ.",
+      "next": "acd3_03"
+    },
+    {
+      "id": "acd3_03",
+      "speaker": "System",
+      "text": "Kamu mengingat semuanya — tawa, pertengkaran, harapan yang dulu terasa begitu nyata. Untuk pertama kalinya, kenangan itu tidak terasa seperti luka.",
+      "next": "acd3_04"
+    },
+    {
+      "id": "acd3_04",
+      "speaker": "MC",
+      "text": "Terima kasih. Untuk semua yang pernah kita lewati — dan untuk pelajaran yang kamu tinggalkan, sengaja atau tidak.",
+      "next": "acd3_05",
+      "weights": { "hope": 10, "distress": -8, "denial": -3 }
+    },
+    {
+      "id": "acd3_05",
+      "speaker": "System",
+      "text": "Kamu mengambil pot baru itu, dan tanah segar di sampingnya. Sudah waktunya menanam sesuatu yang lain.",
+      "next": "acd3_06"
+    },
+    {
+      "id": "acd3_06",
+      "speaker": "MC",
+      "text": "Mari kita lihat apa yang akan tumbuh kali ini.",
+      "next": null
+    }
+  ]
+}

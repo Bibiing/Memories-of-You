@@ -27,6 +27,21 @@ import angerDay1Data            from './anger/anger_day1.json'
 import angerDay2Data            from './anger/anger_day2.json'
 import angerDay3CanonData       from './anger/anger_day3_canon.json'
 
+// ── Bargaining daily dialogues ────────────────────────────────────────────────
+import bargainingDay1Data       from './bargaining/bargaining_day1.json'
+import bargainingDay2Data       from './bargaining/bargaining_day2.json'
+import bargainingDay3CanonData  from './bargaining/bargaining_day3_canon.json'
+
+// ── Depression daily dialogues ────────────────────────────────────────────────
+import depressionDay1Data       from './depression/depression_day1.json'
+import depressionDay2Data       from './depression/depression_day2.json'
+import depressionDay3CanonData  from './depression/depression_day3_canon.json'
+
+// ── Acceptance daily dialogues ────────────────────────────────────────────────
+import acceptanceDay1Data       from './acceptance/acceptance_day1.json'
+import acceptanceDay2Data       from './acceptance/acceptance_day2.json'
+import acceptanceDay3CanonData  from './acceptance/acceptance_day3_canon.json'
+
 export const DIALOGUE_SCRIPTS: Record<string, DialogueScript> = {
   // Prologue
   prologue_kamar:               prologueKamarData        as DialogueScript,
@@ -53,6 +68,21 @@ export const DIALOGUE_SCRIPTS: Record<string, DialogueScript> = {
   anger_day1:                   angerDay1Data            as DialogueScript,
   anger_day2:                   angerDay2Data            as DialogueScript,
   anger_day3_canon:             angerDay3CanonData       as DialogueScript,
+
+  // Bargaining
+  bargaining_day1:              bargainingDay1Data       as DialogueScript,
+  bargaining_day2:              bargainingDay2Data       as DialogueScript,
+  bargaining_day3_canon:        bargainingDay3CanonData  as DialogueScript,
+
+  // Depression
+  depression_day1:              depressionDay1Data       as DialogueScript,
+  depression_day2:              depressionDay2Data       as DialogueScript,
+  depression_day3_canon:        depressionDay3CanonData  as DialogueScript,
+
+  // Acceptance
+  acceptance_day1:              acceptanceDay1Data       as DialogueScript,
+  acceptance_day2:              acceptanceDay2Data       as DialogueScript,
+  acceptance_day3_canon:        acceptanceDay3CanonData  as DialogueScript,
 }
 
 export function getEveningScript(chapter: Chapter): DialogueScript | null {

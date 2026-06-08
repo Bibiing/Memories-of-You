@@ -1,0 +1,50 @@
+{
+  "id": "depression_day3_canon",
+  "chapter": "depression",
+  "startNode": "dpd3_01",
+  "nodes": [
+    {
+      "id": "dpd3_01",
+      "speaker": "System",
+      "text": "Larut malam. Jarimu sudah berhenti tepat di atas nama Dia di layar ponsel — untuk yang kesekian kali minggu ini.",
+      "next": "dpd3_02"
+    },
+    {
+      "id": "dpd3_02",
+      "speaker": "MC",
+      "text": "Satu pesan saja. Cuma untuk tahu dia baik-baik saja. Itu... nggak apa-apa, kan?",
+      "next": "dpd3_03"
+    },
+    {
+      "id": "dpd3_03",
+      "speaker": "System",
+      "text": "Matamu jatuh ke pot di sudut meja. Kaktus yang sudah lama kamu anggap mati ternyata punya satu titik hijau kecil, nyaris tak terlihat, di pangkal batangnya.",
+      "next": "dpd3_04"
+    },
+    {
+      "id": "dpd3_04",
+      "speaker": "MC",
+      "text": "...Kapan itu mulai tumbuh?",
+      "next": "dpd3_05"
+    },
+    {
+      "id": "dpd3_05",
+      "speaker": "System",
+      "text": "Kamu menatapnya lama. Sesuatu yang kamu kira sudah selesai, ternyata diam-diam masih mencoba.",
+      "next": "dpd3_06",
+      "weights": { "hope": 8, "distress": -5 }
+    },
+    {
+      "id": "dpd3_06",
+      "speaker": "MC",
+      "text": "Mungkin... aku juga begitu. Masih di sini. Masih mencoba, tanpa benar-benar sadar.",
+      "next": "dpd3_07"
+    },
+    {
+      "id": "dpd3_07",
+      "speaker": "System",
+      "text": "Kamu meletakkan ponsel. Untuk pertama kalinya dalam waktu yang lama, kamu memilih untuk tidak menunggu jawaban dari siapa pun selain dirimu sendiri.",
+      "next": null
+    }
+  ]
+}

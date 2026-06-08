@@ -1,0 +1,54 @@
+{
+  "id": "depression_day2",
+  "chapter": "depression",
+  "startNode": "dpd2_01",
+  "nodes": [
+    {
+      "id": "dpd2_01",
+      "speaker": "System",
+      "text": "Temanmu mengirim pesan, mengajak keluar. Layar ponsel menyala, lalu meredup lagi.",
+      "next": "dpd2_02"
+    },
+    {
+      "id": "dpd2_02",
+      "speaker": "MC",
+      "text": "Aku nggak tahu harus jadi versi diriku yang mana kalau ketemu orang sekarang.",
+      "next": "dpd2_03"
+    },
+    {
+      "id": "dpd2_03",
+      "speaker": "System",
+      "text": "Cermin di sudut kamar memantulkan seseorang yang familiar — tapi tatapannya terasa seperti milik orang lain.",
+      "next": "dpd2_04"
+    },
+    {
+      "id": "dpd2_04",
+      "speaker": "MC",
+      "text": "...",
+      "choices": [
+        {
+          "label": "Balas pesannya. Mungkin keluar sebentar bisa membantu.",
+          "next": "dpd2_05a",
+          "weights": { "distress": -4, "hope": 3 }
+        },
+        {
+          "label": "Taruh lagi ponselnya. Tidak hari ini.",
+          "next": "dpd2_05b",
+          "weights": { "distress": 3, "hope": -2 }
+        }
+      ]
+    },
+    {
+      "id": "dpd2_05a",
+      "speaker": "System",
+      "text": "Butuh waktu lama untuk mengetik empat kata. Tapi kamu mengirimnya juga.",
+      "next": null
+    },
+    {
+      "id": "dpd2_05b",
+      "speaker": "System",
+      "text": "Layar meredup lagi. Kamarmu kembali sunyi — persis seperti yang kamu kira kamu inginkan.",
+      "next": null
+    }
+  ]
+}

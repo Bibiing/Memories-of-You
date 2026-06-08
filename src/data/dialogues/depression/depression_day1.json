@@ -1,0 +1,32 @@
+{
+  "id": "depression_day1",
+  "chapter": "depression",
+  "startNode": "dpd1_01",
+  "nodes": [
+    {
+      "id": "dpd1_01",
+      "speaker": "System",
+      "text": "Kamarmu gelap, meski matahari sudah tinggi. Kaktus di meja sudah benar-benar layu — tapi kamu tidak punya tenaga untuk peduli.",
+      "next": "dpd1_02"
+    },
+    {
+      "id": "dpd1_02",
+      "speaker": "MC",
+      "text": "Untuk apa bangun. Untuk apa semuanya.",
+      "next": "dpd1_03"
+    },
+    {
+      "id": "dpd1_03",
+      "speaker": "System",
+      "text": "Tidak ada air mata. Tidak ada amarah. Hanya ruang kosong yang berat, yang menempel di dadamu sejak kamu membuka mata.",
+      "next": "dpd1_04"
+    },
+    {
+      "id": "dpd1_04",
+      "speaker": "MC",
+      "text": "Mungkin kalau aku diam saja di sini, semuanya akan berhenti terasa seperti ini.",
+      "next": null,
+      "weights": { "distress": 6, "hope": -3 }
+    }
+  ]
+}
