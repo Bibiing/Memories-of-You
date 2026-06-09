@@ -5,10 +5,10 @@ export const CHAPTER_PLAYLISTS: Record<Chapter, Track[]> = {
   prologue: [
     {
       id: 'pro_1',
-      title: 'Perkenalan',
+      title: 'Prologue',
       artist: 'OST: Memories of You',
       duration: '3:12',
-      src: '/audio/bgm/prologue_01.mp3',
+      src: '/audio/bgm/prologue.mp3',
     },
     {
       id: 'pro_2',
@@ -21,10 +21,10 @@ export const CHAPTER_PLAYLISTS: Record<Chapter, Track[]> = {
   denial: [
     {
       id: 'den_1',
-      title: 'Bukan Akhir',
+      title: 'Something Seems Off About You',
       artist: 'OST: Memories of You',
       duration: '3:40',
-      src: '/audio/bgm/denial_01.mp3',
+      src: '/audio/bgm/denial%20-%20something%20seems%20off%20about%20you.wav',
     },
     {
       id: 'den_2',
@@ -69,10 +69,10 @@ export const CHAPTER_PLAYLISTS: Record<Chapter, Track[]> = {
   depression: [
     {
       id: 'dep_1',
-      title: 'Sunyi',
+      title: 'I Feel It Coming to an End',
       artist: 'OST: Memories of You',
       duration: '5:10',
-      src: '/audio/bgm/depression_01.mp3',
+      src: '/audio/bgm/depression%20-%20i%20feel%20it%20coming%20to%20an%20end.wav',
     },
     {
       id: 'dep_2',
@@ -85,10 +85,10 @@ export const CHAPTER_PLAYLISTS: Record<Chapter, Track[]> = {
   acceptance: [
     {
       id: 'acc_1',
-      title: 'Ikhlas',
+      title: 'Finally I Can Let You Go',
       artist: 'OST: Memories of You',
       duration: '3:28',
-      src: '/audio/bgm/acceptance_01.mp3',
+      src: '/audio/bgm/acceptance%20-%20finally%20i%20can%20let%20you%20go.wav',
     },
     {
       id: 'acc_2',
@@ -101,10 +101,10 @@ export const CHAPTER_PLAYLISTS: Record<Chapter, Track[]> = {
   epilogue: [
     {
       id: 'epi_1',
-      title: 'Cerita Kita',
+      title: 'Epilogue',
       artist: 'OST: Memories of You',
       duration: '4:15',
-      src: '/audio/bgm/epilogue_01.mp3',
+      src: '/audio/bgm/epilogue.mp3',
     },
     {
       id: 'epi_2',

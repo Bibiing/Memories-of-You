@@ -82,7 +82,7 @@ export function MusicApp({ onBack }: Props) {
           aria-label="Volume musik"
         />
       </div>
-      <p className="music-note">Audio tersedia setelah aset OST diunggah.</p>
+      <p className="music-note">Beberapa track belum tersedia.</p>
     </div>
   )
 }
