@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from 'react'
 import type { MiniGameProps, HiddenObjectConfig } from '@/types/minigame'
 
 export function HiddenObject({ config, onComplete, onAbandon }: MiniGameProps<HiddenObjectConfig>) {
-  const { targets, timeLimit } = config
+  const { targets, timeLimit, requiredCount } = config
+  const required = requiredCount ?? targets.length
   const [found, setFound] = useState<Set<string>>(new Set())
   const [timeLeft, setTimeLeft] = useState(timeLimit)
   const [lastClick, setLastClick] = useState<{ x: number; y: number; k: number } | null>(null)
@@ -11,7 +12,7 @@ export function HiddenObject({ config, onComplete, onAbandon }: MiniGameProps<Hi
   const clickKey = useRef(0)
 
   useEffect(() => {
-    if (found.size === targets.length) {
+    if (found.size >= required) {
       onComplete({ success: true, score: found.size })
       return
     }
@@ -62,7 +63,7 @@ export function HiddenObject({ config, onComplete, onAbandon }: MiniGameProps<Hi
       <div className="mg-header">
         <span className="mg-title">Cari Objek</span>
         <span className="mg-counter">
-          {String(found.size)}/{String(targets.length)} · {String(Math.ceil(timeLeft))}s
+          {String(found.size)}/{String(required)} · {String(Math.ceil(timeLeft))}s
         </span>
       </div>
 

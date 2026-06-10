@@ -135,8 +135,12 @@ describe('Prologue — Mini-Game Configurations', () => {
   })
 
   describe('Hidden Object (Cari Kaktus)', () => {
-    it('ada tepat 10 target kaktus', () => {
+    it('ada 10 target kaktus di background', () => {
       expect(prologueCactusHuntConfig.targets.length).toBe(10)
+    })
+
+    it('requiredCount adalah 5 (cukup temukan 5 dari 10)', () => {
+      expect(prologueCactusHuntConfig.requiredCount).toBe(5)
     })
 
     it('semua target punya koordinat dalam range 0–100%', () => {

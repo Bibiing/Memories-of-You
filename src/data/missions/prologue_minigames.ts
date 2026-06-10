@@ -25,8 +25,8 @@ export const prologueMapPuzzleConfig: SliderPuzzleConfig = {
   // Satu jalur optimal: turun kolom 1, lalu kanan ke kolom 3, lalu turun ke goal
 }
 
-// ─── Step 4: Hidden Object (Cari 10 Kaktus di Pasar) ─────────────────────────
-// HiddenObjectConfig: { timeLimit, targets: HiddenTarget[] }
+// ─── Step 4: Hidden Object (Cari 5 dari 10 Kaktus di Pasar) ──────────────────
+// HiddenObjectConfig: { timeLimit, requiredCount, targets: HiddenTarget[] }
 // HiddenTarget: { id, x, y, radius, label }
 
 // Target positions are calculated for the pasar-bunga.svg background.
@@ -37,6 +37,7 @@ export const prologueMapPuzzleConfig: SliderPuzzleConfig = {
 //   y_c%  = svg_cy / 720 * 100
 export const prologueCactusHuntConfig: HiddenObjectConfig = {
   timeLimit: 90,
+  requiredCount: 5,
   targets: [
     { id: 'cactus_1', x: 18, y: 49, radius: 5, label: 'Kaktus Lapak Kiri' },
     { id: 'cactus_2', x: 23, y: 56, radius: 5, label: 'Kaktus Silinder' },

@@ -30,6 +30,7 @@ export interface HiddenTarget {
 export interface HiddenObjectConfig {
   timeLimit: number
   targets: HiddenTarget[]
+  requiredCount?: number // berapa yang harus ditemukan; default = semua target
 }
 
 // ── Word Puzzle ───────────────────────────────────────────────
