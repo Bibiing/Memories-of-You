@@ -5,11 +5,7 @@
  * Field names disesuaikan dengan types/minigame.ts yang ada di repo.
  */
 
-import type {
-  SliderPuzzleConfig,
-  HiddenObjectConfig,
-  PlantingGameConfig,
-} from '@/types/minigame'
+import type { SliderPuzzleConfig, HiddenObjectConfig, PlantingGameConfig } from '@/types/minigame'
 
 // ─── Step 2: Slider Puzzle (Rute ke Pasar Bunga) ──────────────────────────────
 // SliderPuzzleConfig: { rows, cols, grid }
@@ -33,19 +29,25 @@ export const prologueMapPuzzleConfig: SliderPuzzleConfig = {
 // HiddenObjectConfig: { timeLimit, targets: HiddenTarget[] }
 // HiddenTarget: { id, x, y, radius, label }
 
+// Target positions are calculated for the pasar-bunga.svg background.
+// The ho-stage uses aspect-ratio:4/3 with background-size:cover.
+// At stage width ~354px: cover scale=0.407 (height-limited), offset_x=65.4px.
+// Visible SVG x range: 12.5%–87.5%.  Formula:
+//   x_c% = (svg_cx * 0.407 - 65.4) / 354 * 100
+//   y_c%  = svg_cy / 720 * 100
 export const prologueCactusHuntConfig: HiddenObjectConfig = {
   timeLimit: 90,
   targets: [
-    { id: 'cactus_1',  x: 12, y: 55, radius: 4, label: 'Kaktus Bintang' },
-    { id: 'cactus_2',  x: 24, y: 70, radius: 4, label: 'Kaktus Silinder' },
-    { id: 'cactus_3',  x: 33, y: 40, radius: 3, label: 'Kaktus Ular Kecil' },
-    { id: 'cactus_4',  x: 41, y: 62, radius: 4, label: 'Kaktus Bakung' },
-    { id: 'cactus_5',  x: 51, y: 30, radius: 3, label: 'Kaktus Kipas' },
-    { id: 'cactus_6',  x: 58, y: 75, radius: 4, label: 'Kaktus Koral' },
-    { id: 'cactus_7',  x: 65, y: 48, radius: 3, label: 'Kaktus Kandelabra' },
-    { id: 'cactus_8',  x: 73, y: 35, radius: 3, label: 'Kaktus Landak' },
-    { id: 'cactus_9',  x: 81, y: 60, radius: 4, label: 'Kaktus Bola' },
-    { id: 'cactus_10', x: 90, y: 25, radius: 3, label: 'Kaktus Kolom' },
+    { id: 'cactus_1', x: 18, y: 49, radius: 5, label: 'Kaktus Lapak Kiri' },
+    { id: 'cactus_2', x: 23, y: 56, radius: 5, label: 'Kaktus Silinder' },
+    { id: 'cactus_3', x: 30, y: 51, radius: 5, label: 'Kaktus Kipas' },
+    { id: 'cactus_4', x: 36, y: 47, radius: 5, label: 'Kaktus Kolom' },
+    { id: 'cactus_5', x: 41, y: 51, radius: 5, label: 'Kaktus Ungu' },
+    { id: 'cactus_6', x: 53, y: 55, radius: 5, label: 'Kaktus Tengah' },
+    { id: 'cactus_7', x: 59, y: 50, radius: 5, label: 'Kaktus Kandelabra' },
+    { id: 'cactus_8', x: 71, y: 51, radius: 5, label: 'Kaktus Oranye' },
+    { id: 'cactus_9', x: 77, y: 52, radius: 5, label: 'Kaktus Daun' },
+    { id: 'cactus_10', x: 88, y: 53, radius: 5, label: 'Kaktus Lapak Kanan' },
   ],
 }
 
@@ -55,9 +57,9 @@ export const prologueCactusHuntConfig: HiddenObjectConfig = {
 
 export const prologueWaterCactusConfig: PlantingGameConfig = {
   steps: [
-    { id: 'fill_glass',   label: 'Ambil & isi gelas ukur',      icon: '🥛' },
-    { id: 'carry_to_pot', label: 'Bawa ke pot kaktus',          icon: '🚶' },
-    { id: 'water_cactus', label: 'Siram kaktus perlahan',       icon: '💧' },
+    { id: 'fill_glass', label: 'Ambil & isi gelas ukur', icon: '🥛' },
+    { id: 'carry_to_pot', label: 'Bawa ke pot kaktus', icon: '🚶' },
+    { id: 'water_cactus', label: 'Siram kaktus perlahan', icon: '💧' },
   ],
   correctOrder: ['fill_glass', 'carry_to_pot', 'water_cactus'],
 }

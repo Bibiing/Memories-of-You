@@ -52,8 +52,8 @@ type DayPhase =
 // ─── Helpers ────────────────────────────────────────────────────────────────────
 
 function getMissionPool(chapter: Chapter): DailyMission[] {
-  if (chapter === 'denial')     return denialMissionPool
-  if (chapter === 'anger')      return angerMissionPool
+  if (chapter === 'denial') return denialMissionPool
+  if (chapter === 'anger') return angerMissionPool
   if (chapter === 'bargaining') return bargainingMissionPool
   if (chapter === 'depression') return depressionMissionPool
   if (chapter === 'acceptance') return acceptanceMissionPool
@@ -73,9 +73,9 @@ function getDayStartScriptId(chapter: Chapter, day: number): string {
   // Hari 3 = canon event → pakai script canon
   const canonDay = 3
   if (day >= canonDay) {
-    return `${chapter}_day${canonDay}_canon`
+    return `${chapter}_day${String(canonDay)}_canon`
   }
-  return `${chapter}_day${Math.min(day, 2)}`
+  return `${chapter}_day${String(Math.min(day, 2))}`
 }
 
 /** Canon event terjadi di hari ke-3 */
@@ -85,8 +85,8 @@ function isCanonEventDay(day: number): boolean {
 
 /** Label chapter yang ditampilkan di header Mission Select */
 const CHAPTER_LABELS: Partial<Record<Chapter, string>> = {
-  denial:     'Penyangkalan',
-  anger:      'Kemarahan',
+  denial: 'Penyangkalan',
+  anger: 'Kemarahan',
   bargaining: 'Tawar-menawar',
   depression: 'Depresi',
   acceptance: 'Penerimaan',
@@ -95,31 +95,33 @@ const CHAPTER_LABELS: Partial<Record<Chapter, string>> = {
 // ─── Component ──────────────────────────────────────────────────────────────────
 
 export function ChapterScene() {
-  const chapter   = useGameStateStore((s) => s.currentChapter) as Chapter
-  const day       = useGameStateStore((s) => s.currentDay)
+  const chapter = useGameStateStore((s) => s.currentChapter)
+  const day = useGameStateStore((s) => s.currentDay)
 
-  const startDialogue    = useDialogueStore((s) => s.startDialogue)
-  const endDialogue      = useDialogueStore((s) => s.endDialogue)
+  const startDialogue = useDialogueStore((s) => s.startDialogue)
+  const endDialogue = useDialogueStore((s) => s.endDialogue)
   const isDialogueActive = useDialogueStore((s) => s.isActive)
-  const runnerState      = useDialogueStore((s) => s.runnerState)
-  const advance          = useDialogueStore((s) => s.advance)
-  const choose           = useDialogueStore((s) => s.choose)
+  const runnerState = useDialogueStore((s) => s.runnerState)
+  const advance = useDialogueStore((s) => s.advance)
+  const choose = useDialogueStore((s) => s.choose)
 
   const adjustDistress = useEmotionalStore((s) => s.adjustDistress)
-  const adjustHope     = useEmotionalStore((s) => s.adjustHope)
-  const adjustDenial   = useEmotionalStore((s) => s.adjustDenial)
+  const adjustHope = useEmotionalStore((s) => s.adjustHope)
+  const adjustDenial = useEmotionalStore((s) => s.adjustDenial)
 
-  const [phase, setPhase]               = useState<DayPhase>('DAY_START')
-  const [fading, setFading]             = useState(false)
+  const [phase, setPhase] = useState<DayPhase>('DAY_START')
+  const [fading, setFading] = useState(false)
   const [todayMissions, setTodayMissions] = useState<DailyMission[]>([])
   const [activeMission, setActiveMission] = useState<DailyMission | null>(null)
-  const [playedToday, setPlayedToday]   = useState<Set<string>>(new Set())
-  const [lastResult, setLastResult]     = useState<MiniGameResult | null>(null)
+  const [playedToday, setPlayedToday] = useState<Set<string>>(new Set())
+  const [lastResult, setLastResult] = useState<MiniGameResult | null>(null)
   const [missionsDone, setMissionsDone] = useState(0)
 
-  const phaseRef         = useRef(phase)
+  const phaseRef = useRef(phase)
 
-  useEffect(() => { phaseRef.current = phase }, [phase])
+  useEffect(() => {
+    phaseRef.current = phase
+  }, [phase])
 
   // ── Transition helper ────────────────────────────────────────────────────────
 
@@ -140,13 +142,18 @@ export function ChapterScene() {
       startDialogue(script)
     } else {
       // Tidak ada script untuk hari ini → langsung ke mission select
-      setPhase('MISSION_SELECT')
+      queueMicrotask(() => {
+        setPhase('MISSION_SELECT')
+      })
     }
     // Setup misi hari ini
     const pool = getMissionPool(chapter)
-    setTodayMissions(pickDailyMissions(pool, new Set()))
-    setPlayedToday(new Set())
-    setMissionsDone(0)
+    const missions = pickDailyMissions(pool, new Set())
+    queueMicrotask(() => {
+      setTodayMissions(missions)
+      setPlayedToday(new Set())
+      setMissionsDone(0)
+    })
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Deteksi dialogue selesai via runnerState.isFinished ─────────────────────
@@ -164,13 +171,19 @@ export function ChapterScene() {
 
       if (current === 'DAY_START') {
         if (isCanonEventDay(day)) {
-          transitionTo('CANON_EVENT')
+          queueMicrotask(() => {
+            transitionTo('CANON_EVENT')
+          })
         } else {
-          transitionTo('MISSION_SELECT')
+          queueMicrotask(() => {
+            transitionTo('MISSION_SELECT')
+          })
         }
       } else if (current === 'CANON_EVENT') {
         endDialogue()
-        transitionTo('EVENING_REFLECTION')
+        queueMicrotask(() => {
+          transitionTo('EVENING_REFLECTION')
+        })
       }
     }
 
@@ -182,32 +195,38 @@ export function ChapterScene() {
 
   // ── Pilih misi ───────────────────────────────────────────────────────────────
 
-  const handleMissionSelect = useCallback((mission: DailyMission) => {
-    setActiveMission(mission)
-    transitionTo('MISSION_PLAY')
-  }, [transitionTo])
+  const handleMissionSelect = useCallback(
+    (mission: DailyMission) => {
+      setActiveMission(mission)
+      transitionTo('MISSION_PLAY')
+    },
+    [transitionTo]
+  )
 
   // ── Mini-game selesai ────────────────────────────────────────────────────────
 
-  const handleMissionComplete = useCallback((result: MiniGameResult) => {
-    if (!activeMission) return
-    setLastResult(result)
+  const handleMissionComplete = useCallback(
+    (result: MiniGameResult) => {
+      if (!activeMission) return
+      setLastResult(result)
 
-    // Apply emotional weights
-    const weights = result.success
-      ? activeMission.onCompleteWeights
-      : activeMission.onAbandonWeights
+      // Apply emotional weights
+      const weights = result.success
+        ? activeMission.onCompleteWeights
+        : activeMission.onAbandonWeights
 
-    if (weights.distress) adjustDistress(weights.distress)
-    if (weights.hope)     adjustHope(weights.hope)
-    if (weights.denial)   adjustDenial(weights.denial)
+      if (weights.distress) adjustDistress(weights.distress)
+      if (weights.hope) adjustHope(weights.hope)
+      if (weights.denial) adjustDenial(weights.denial)
 
-    // Track played
-    setPlayedToday((prev) => new Set([...prev, activeMission.id]))
-    setMissionsDone((prev) => prev + 1)
+      // Track played
+      setPlayedToday((prev) => new Set([...prev, activeMission.id]))
+      setMissionsDone((prev) => prev + 1)
 
-    transitionTo('MISSION_RESULT')
-  }, [activeMission, adjustDistress, adjustHope, adjustDenial, transitionTo])
+      transitionTo('MISSION_RESULT')
+    },
+    [activeMission, adjustDistress, adjustHope, adjustDenial, transitionTo]
+  )
 
   // ── Dari result → lanjut atau selesai ────────────────────────────────────────
 
@@ -255,11 +274,10 @@ export function ChapterScene() {
 
   return (
     <div
-      className={`${styles.chapterScene} ${fading ? styles.fading : ''}`}
+      className={`${styles.chapterScene ?? ''} ${fading ? (styles.fading ?? '') : ''}`}
       data-chapter={chapter}
       data-phase={phase}
     >
-
       {/* ── Mission Select ── */}
       {phase === 'MISSION_SELECT' && (
         <MissionSelectView
@@ -268,7 +286,10 @@ export function ChapterScene() {
           day={day}
           chapter={chapter}
           onSelect={handleMissionSelect}
-          onSkipToEvening={() => { endDialogue(); transitionTo('EVENING_REFLECTION') }}
+          onSkipToEvening={() => {
+            endDialogue()
+            transitionTo('EVENING_REFLECTION')
+          }}
         />
       )}
 
@@ -279,7 +300,9 @@ export function ChapterScene() {
             type={activeMission.minigameType as Parameters<typeof MiniGameHost>[0]['type']}
             config={activeMission.config}
             onComplete={handleMissionComplete}
-            onAbandon={() => handleMissionComplete({ success: false })}
+            onAbandon={() => {
+              handleMissionComplete({ success: false })
+            }}
           />
         </div>
       )}
@@ -289,32 +312,26 @@ export function ChapterScene() {
         <MissionResultView
           mission={activeMission}
           result={lastResult}
-          canPlayMore={missionsDone < 2 && todayMissions.some(m => !playedToday.has(m.id))}
+          canPlayMore={missionsDone < 2 && todayMissions.some((m) => !playedToday.has(m.id))}
           onContinue={handleResultContinue}
-          onPlayMore={() => transitionTo('MISSION_SELECT')}
+          onPlayMore={() => {
+            transitionTo('MISSION_SELECT')
+          }}
         />
       )}
 
       {/* ── Evening Reflection ── */}
       {/* key={day} memastikan komponen di-unmount/remount setiap hari baru */}
       {phase === 'EVENING_REFLECTION' && (
-        <EveningReflection
-          key={day}
-          onComplete={handleEveningComplete}
-        />
+        <EveningReflection key={day} onComplete={handleEveningComplete} />
       )}
 
       {/* ── Dialogue overlay (DAY_START + CANON_EVENT) ── */}
       {isDialogueActive && dialogueNode && (
         <div className={styles.dialogueOverlay}>
-          <DialogueBox
-            node={dialogueNode}
-            onAdvance={advance}
-            onChoose={choose}
-          />
+          <DialogueBox node={dialogueNode} onAdvance={advance} onChoose={choose} />
         </div>
       )}
-
     </div>
   )
 }
@@ -331,7 +348,12 @@ interface MissionSelectProps {
 }
 
 function MissionSelectView({
-  missions, playedToday, day, chapter, onSelect, onSkipToEvening
+  missions,
+  playedToday,
+  day,
+  chapter,
+  onSelect,
+  onSkipToEvening,
 }: MissionSelectProps) {
   const chapterLabel = CHAPTER_LABELS[chapter] ?? chapter
 
@@ -348,8 +370,10 @@ function MissionSelectView({
           return (
             <button
               key={m.id}
-              className={`${styles.missionCard} ${done ? styles.missionCardDone : ''}`}
-              onClick={() => !done && onSelect(m)}
+              className={`${styles.missionCard ?? ''} ${done ? (styles.missionCardDone ?? '') : ''}`}
+              onClick={() => {
+                if (!done) onSelect(m)
+              }}
               disabled={done}
             >
               <span className={styles.missionTitle}>{m.label}</span>
@@ -374,7 +398,13 @@ interface MissionResultProps {
   onPlayMore: () => void
 }
 
-function MissionResultView({ mission, result, canPlayMore, onContinue, onPlayMore }: MissionResultProps) {
+function MissionResultView({
+  mission,
+  result,
+  canPlayMore,
+  onContinue,
+  onPlayMore,
+}: MissionResultProps) {
   return (
     <div className={styles.missionResult}>
       <div className={styles.resultIcon}>{result.success ? '✓' : '○'}</div>

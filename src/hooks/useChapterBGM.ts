@@ -18,7 +18,7 @@ export function useChapterBGM() {
     prevChapterRef.current = chapter
 
     const tracks = CHAPTER_PLAYLISTS[chapter]
-    if (!tracks || tracks.length === 0) return
+    if (tracks.length === 0) return
 
     const first = tracks[0]
     if (!first) return

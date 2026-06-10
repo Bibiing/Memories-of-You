@@ -8,7 +8,7 @@
 }
 
 /* Hidden Object — background pasar bunga untuk prologue */
-[data-step="CACTUS_HUNT"] .ho-scene-placeholder {
+[data-step='CACTUS_HUNT'] .ho-scene-placeholder {
   position: absolute;
   inset: 0;
   background-image: url('/src/assets/locations/pasar-bunga.svg');
@@ -16,7 +16,6 @@
   background-position: center;
   pointer-events: none;
 }
- 
 
 /* ── Adaptive Theme Variables (updated by color.ts applyTheme()) ── */
 :root {
@@ -55,23 +54,22 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
   transition: var(--transition-theme);
 }
 
-/* Game canvas container — fixed 16:9 viewport */
+/* Game canvas container — portrait-fill */
 #root {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #000;
+  align-items: stretch;
+  justify-content: stretch;
 }
 
 .game-viewport {
   position: relative;
-  width: min(100vw, calc(100vh * 16 / 9));
-  height: min(100vh, calc(100vw * 9 / 16));
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -114,8 +112,6 @@ body {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
-
-
 
 /* ── Scene Layout ────────────────────────────────────────── */
 .scene-manager {
@@ -234,48 +230,48 @@ body {
 /* ── Dialogue ────────────────────────────────────────────── */
 .dialogue-overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
   pointer-events: none;
 }
 
 .dialogue-box {
   pointer-events: auto;
-  width: 90%;
+  width: 100%;
   max-width: 860px;
   background: linear-gradient(135deg, rgba(8, 4, 20, 0.93) 0%, rgba(15, 8, 35, 0.95) 100%);
   border: 1px solid var(--color-border);
-  border-bottom: none;
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  padding: 1.25rem 2rem 1.5rem;
-  backdrop-filter: blur(6px);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.75rem 1.75rem;
+  backdrop-filter: blur(8px);
   animation: slideUp 0.3s ease both;
   cursor: pointer;
   position: relative;
   outline: none;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
 }
 
 .dialogue-speaker {
   color: var(--color-primary);
   font-family: var(--font-display);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: bold;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
   min-height: 1.1em;
 }
 
 .dialogue-text {
   color: var(--color-text);
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   line-height: 1.85;
-  min-height: 3.7em;
-  max-height: 8em;
+  min-height: 3.5em;
+  max-height: 7em;
   overflow-y: auto;
   white-space: pre-wrap;
   word-break: break-word;
@@ -303,25 +299,27 @@ body {
 /* ── Choices ─────────────────────────────────────────────── */
 .choice-list {
   pointer-events: auto;
-  width: 90%;
+  width: 100%;
   max-width: 860px;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  padding: 0.5rem 2rem 0.75rem;
-  background: rgba(8, 4, 20, 0.9);
+  padding: 0.5rem 1.75rem 0.9rem;
+  background: rgba(8, 4, 20, 0.93);
   border: 1px solid var(--color-border);
   border-top: none;
-  border-bottom: none;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
 }
 
 .choice-btn {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-sm);
-  padding: 0.55rem 1rem;
+  padding: 0.65rem 1rem;
   color: var(--color-text);
-  font-size: 0.88rem;
+  font-size: 1rem;
   text-align: left;
   cursor: pointer;
   transition:
@@ -346,13 +344,15 @@ body {
 /* ── Timed Choice ────────────────────────────────────────── */
 .timed-choice-root {
   pointer-events: auto;
-  width: 90%;
+  width: 100%;
   max-width: 860px;
-  background: rgba(8, 4, 20, 0.9);
+  background: rgba(8, 4, 20, 0.93);
   border: 1px solid var(--color-border);
   border-top: none;
-  border-bottom: none;
-  padding: 0.4rem 2rem 0.75rem;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  padding: 0.4rem 1.75rem 0.9rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
 }
 
 .timed-bar-wrap {
@@ -1607,12 +1607,13 @@ body {
 }
 
 .ho-stage {
-  flex: 1;
   position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  flex: none;
   border-radius: var(--radius-md);
   overflow: hidden;
   cursor: crosshair;
-  min-height: 200px;
 }
 
 .ho-scene-placeholder {

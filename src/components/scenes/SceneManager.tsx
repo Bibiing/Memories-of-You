@@ -29,7 +29,9 @@ function MainMenuView() {
       <button
         className="choice-btn"
         style={{ marginTop: '1.5rem', width: 'auto', padding: '0.75rem 2rem' }}
-        onClick={() => setScene('prologue')}
+        onClick={() => {
+          setScene('prologue')
+        }}
       >
         Mulai Game ▶
       </button>
@@ -38,7 +40,7 @@ function MainMenuView() {
 }
 
 function GameplayView() {
-  const chapter  = useGameStateStore((s) => s.currentChapter)
+  const chapter = useGameStateStore((s) => s.currentChapter)
   const location = useGameStateStore((s) => s.currentLocation)
   const setScene = useGameStateStore((s) => s.setScene)
   const startDialogue = useDialogueStore((s) => s.startDialogue)
@@ -67,7 +69,9 @@ function GameplayView() {
       {activeFlashback && (
         <FlashbackPlayer
           flashbackId={activeFlashback}
-          onClose={() => setActiveFlashback(null)}
+          onClose={() => {
+            setActiveFlashback(null)
+          }}
         />
       )}
 
@@ -81,7 +85,9 @@ function GameplayView() {
         <button
           className="choice-btn"
           style={{ pointerEvents: 'auto', opacity: 1, marginTop: '0.5rem', fontSize: '0.75rem' }}
-          onClick={() => setScene('evening-reflection')}
+          onClick={() => {
+            setScene('evening-reflection')
+          }}
         >
           Akhiri Hari →
         </button>
@@ -101,7 +107,13 @@ function GenericView({ scene }: { scene: GameScene }) {
 }
 
 // ── Chapters yang pakai ChapterScene ──────────────────────────────────────────
-const CHAPTER_SCENE_CHAPTERS = new Set(['denial', 'anger', 'bargaining', 'depression', 'acceptance'])
+const CHAPTER_SCENE_CHAPTERS = new Set([
+  'denial',
+  'anger',
+  'bargaining',
+  'depression',
+  'acceptance',
+])
 
 function resolveView(scene: GameScene, chapter: string) {
   switch (scene) {
@@ -124,42 +136,46 @@ function resolveView(scene: GameScene, chapter: string) {
 
 // ── SceneManager ───────────────────────────────────────────────────────────────
 export function SceneManager() {
-  const scene   = useGameStateStore((s) => s.currentScene)
+  const scene = useGameStateStore((s) => s.currentScene)
   const setScene = useGameStateStore((s) => s.setScene)
   const location = useGameStateStore((s) => s.currentLocation)
-  const chapter  = useGameStateStore((s) => s.currentChapter)
+  const chapter = useGameStateStore((s) => s.currentChapter)
 
   const isDialogueActive = useDialogueStore((s) => s.isActive)
-  const runnerState      = useDialogueStore((s) => s.runnerState)
-  const advance          = useDialogueStore((s) => s.advance)
-  const choose           = useDialogueStore((s) => s.choose)
+  const runnerState = useDialogueStore((s) => s.runnerState)
+  const advance = useDialogueStore((s) => s.advance)
+  const choose = useDialogueStore((s) => s.choose)
 
   const [visibleScene, setVisibleScene] = useState(scene)
-  const [fading, setFading]             = useState(false)
-  const pendingScene                    = useRef(scene)
+  const [fading, setFading] = useState(false)
+  const pendingScene = useRef(scene)
 
-  const [phoneOpen, setPhoneOpen]           = useState(false)
+  const [phoneOpen, setPhoneOpen] = useState(false)
   const [phoneFlashback, setPhoneFlashback] = useState<FlashbackId | null>(null)
 
   useEffect(() => {
     if (scene === visibleScene) return
     pendingScene.current = scene
-    const fadeIn = setTimeout(() => setFading(true), 0)
-    const swap   = setTimeout(() => {
+    const fadeIn = setTimeout(() => {
+      setFading(true)
+    }, 0)
+    const swap = setTimeout(() => {
       setVisibleScene(pendingScene.current)
       setFading(false)
     }, 320)
-    return () => { clearTimeout(fadeIn); clearTimeout(swap) }
+    return () => {
+      clearTimeout(fadeIn)
+      clearTimeout(swap)
+    }
   }, [scene, visibleScene])
 
   const dialogueNode = runnerState ? currentNode(runnerState) : null
-  const isPrologue   = visibleScene === 'prologue'
+  const isPrologue = visibleScene === 'prologue'
   const isChapterScene = visibleScene === 'gameplay' && CHAPTER_SCENE_CHAPTERS.has(chapter)
-  const isGameplay   = visibleScene === 'gameplay' && !isChapterScene
+  const isGameplay = visibleScene === 'gameplay' && !isChapterScene
 
   return (
     <div className={`scene-manager ${fading ? 'scene-fading' : ''}`}>
-
       <SceneBackground location={location} chapter={chapter} />
       <CactusRenderer chapter={chapter} />
 
@@ -173,7 +189,11 @@ export function SceneManager() {
       {!isPrologue && !isChapterScene && (
         <div className="scene-overlay">
           {visibleScene === 'evening-reflection' ? (
-            <EveningReflection onComplete={() => setScene('gameplay')} />
+            <EveningReflection
+              onComplete={() => {
+                setScene('gameplay')
+              }}
+            />
           ) : (
             resolveView(visibleScene, chapter)
           )}
@@ -184,7 +204,9 @@ export function SceneManager() {
       {isGameplay && !phoneOpen && !phoneFlashback && (
         <button
           className="smartphone-btn-open"
-          onClick={() => setPhoneOpen(true)}
+          onClick={() => {
+            setPhoneOpen(true)
+          }}
           aria-label="Buka smartphone"
         >
           📱
@@ -193,15 +215,23 @@ export function SceneManager() {
 
       {phoneOpen && (
         <SmartphoneFrame
-          onClose={() => setPhoneOpen(false)}
-          onOpenFlashback={(id) => { setPhoneFlashback(id); setPhoneOpen(false) }}
+          onClose={() => {
+            setPhoneOpen(false)
+          }}
+          onOpenFlashback={(id) => {
+            setPhoneFlashback(id)
+            setPhoneOpen(false)
+          }}
         />
       )}
 
       {phoneFlashback && (
         <FlashbackPlayer
           flashbackId={phoneFlashback}
-          onClose={() => { setPhoneFlashback(null); setPhoneOpen(true) }}
+          onClose={() => {
+            setPhoneFlashback(null)
+            setPhoneOpen(true)
+          }}
         />
       )}
 
@@ -211,7 +241,6 @@ export function SceneManager() {
           <DialogueBox node={dialogueNode} onAdvance={advance} onChoose={choose} />
         </div>
       )}
-
     </div>
   )
 }

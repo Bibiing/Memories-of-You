@@ -34,7 +34,6 @@ import {
   prologueWaterCactusConfig,
 } from '@data/missions/prologue_minigames'
 
-import type { MiniGameResult } from '@/types/minigame'
 import type { EmotionalState } from '@stores/emotionalStore'
 
 import styles from './PrologueScene.module.css'
@@ -57,66 +56,67 @@ type PrologueStep =
 
 // Step yang butuh dialogue — dengan script ID-nya
 const DIALOGUE_SCRIPT_ID: Partial<Record<PrologueStep, string>> = {
-  TAMAN_DIALOGUE:       'prologue_step1_taman',
-  PASAR_DIALOGUE:       'prologue_step3_pasar',
+  TAMAN_DIALOGUE: 'prologue_step1_taman',
+  PASAR_DIALOGUE: 'prologue_step3_pasar',
   PICK_CACTUS_DIALOGUE: 'prologue_step5_pilih_kaktus',
-  KAMAR_DIALOGUE:       'prologue_step6_kamar',
-  ROOFTOP_DIALOGUE:     'prologue_step9_rooftop',
+  KAMAR_DIALOGUE: 'prologue_step6_kamar',
+  ROOFTOP_DIALOGUE: 'prologue_step9_rooftop',
 }
 
-const DIALOGUE_STEPS = new Set<PrologueStep>(
-  Object.keys(DIALOGUE_SCRIPT_ID) as PrologueStep[]
-)
+const DIALOGUE_STEPS = new Set<PrologueStep>(Object.keys(DIALOGUE_SCRIPT_ID) as PrologueStep[])
 
 // Step berikutnya setelah dialogue selesai
 const DIALOGUE_NEXT: Partial<Record<PrologueStep, PrologueStep>> = {
-  TAMAN_DIALOGUE:       'MAP_PUZZLE',
-  PASAR_DIALOGUE:       'CACTUS_HUNT',
+  TAMAN_DIALOGUE: 'MAP_PUZZLE',
+  PASAR_DIALOGUE: 'CACTUS_HUNT',
   PICK_CACTUS_DIALOGUE: 'KAMAR_DIALOGUE',
-  KAMAR_DIALOGUE:       'WATER_CACTUS',
-  ROOFTOP_DIALOGUE:     'EVENING_REFLECTION',
+  KAMAR_DIALOGUE: 'WATER_CACTUS',
+  ROOFTOP_DIALOGUE: 'EVENING_REFLECTION',
 }
 
 // ─── Emotional init ─────────────────────────────────────────────────────────────
 
 const PROLOGUE_INIT: EmotionalState = {
-  distress:                 20,
-  hope:                     80,
-  denial:                   0,
-  rumination:               'neutral',
-  avoidanceCount:           0,
-  internalizedAngerCount:   0,
-  aggressiveChoiceCount:    0,
-  consecutiveHardDenial:    0,
+  distress: 20,
+  hope: 80,
+  denial: 0,
+  rumination: 'neutral',
+  avoidanceCount: 0,
+  internalizedAngerCount: 0,
+  aggressiveChoiceCount: 0,
+  consecutiveHardDenial: 0,
 }
 
 // ─── Component ──────────────────────────────────────────────────────────────────
 
 export function PrologueScene() {
-  const [step, setStep]           = useState<PrologueStep>('TAMAN_DIALOGUE')
-  const [fading, setFading]       = useState(false)
+  const [step, setStep] = useState<PrologueStep>('TAMAN_DIALOGUE')
+  const [fading, setFading] = useState(false)
   const [showTitle, setShowTitle] = useState(false)
-  const stepRef                   = useRef(step)
+  const stepRef = useRef(step)
 
-  const setChapter        = useGameStateStore((s) => s.setChapter)
-  const setScene          = useGameStateStore((s) => s.setScene)
-  const startDialogue     = useDialogueStore((s) => s.startDialogue)
-  const isDialogueActive  = useDialogueStore((s) => s.isActive)
-  const runnerState       = useDialogueStore((s) => s.runnerState)
-  const advance           = useDialogueStore((s) => s.advance)
-  const choose            = useDialogueStore((s) => s.choose)
-  const hydrate           = useEmotionalStore((s) => s.hydrate)
+  const setChapter = useGameStateStore((s) => s.setChapter)
+  const setScene = useGameStateStore((s) => s.setScene)
+  const startDialogue = useDialogueStore((s) => s.startDialogue)
+  const isDialogueActive = useDialogueStore((s) => s.isActive)
+  const runnerState = useDialogueStore((s) => s.runnerState)
+  const advance = useDialogueStore((s) => s.advance)
+  const choose = useDialogueStore((s) => s.choose)
+  const hydrate = useEmotionalStore((s) => s.hydrate)
 
   const wasActiveRef = useRef(false)
 
   // ── Mulai script dialogue untuk step tertentu ─────────────────────────────────
 
-  const startScriptForStep = useCallback((s: PrologueStep) => {
-    const scriptId = DIALOGUE_SCRIPT_ID[s]
-    if (!scriptId) return
-    const script = getDialogueScript(scriptId)
-    if (script) startDialogue(script)
-  }, [startDialogue])
+  const startScriptForStep = useCallback(
+    (s: PrologueStep) => {
+      const scriptId = DIALOGUE_SCRIPT_ID[s]
+      if (!scriptId) return
+      const script = getDialogueScript(scriptId)
+      if (script) startDialogue(script)
+    },
+    [startDialogue]
+  )
 
   // ── Init on mount ─────────────────────────────────────────────────────────────
 
@@ -134,14 +134,17 @@ export function PrologueScene() {
 
   // ── Transition helper ─────────────────────────────────────────────────────────
 
-  const transitionTo = useCallback((nextStep: PrologueStep, delay = 450) => {
-    setFading(true)
-    setTimeout(() => {
-      setStep(nextStep)
-      setFading(false)
-      startScriptForStep(nextStep)
-    }, delay)
-  }, [startScriptForStep])
+  const transitionTo = useCallback(
+    (nextStep: PrologueStep, delay = 450) => {
+      setFading(true)
+      setTimeout(() => {
+        setStep(nextStep)
+        setFading(false)
+        startScriptForStep(nextStep)
+      }, delay)
+    },
+    [startScriptForStep]
+  )
 
   // ── Deteksi dialogue selesai ──────────────────────────────────────────────────
 
@@ -161,14 +164,25 @@ export function PrologueScene() {
 
   // ── Mini-game complete ────────────────────────────────────────────────────────
 
-  const handleMiniGameComplete = useCallback((_result: MiniGameResult) => {
+  const handleMiniGameComplete = useCallback(() => {
     switch (stepRef.current) {
-      case 'MAP_PUZZLE':    transitionTo('PASAR_DIALOGUE');       break
-      case 'CACTUS_HUNT':  transitionTo('PICK_CACTUS_DIALOGUE'); break
-      case 'WATER_CACTUS': transitionTo('TIMELAPSE', 300);       break
-      default: break
+      case 'MAP_PUZZLE':
+        transitionTo('PASAR_DIALOGUE')
+        break
+      case 'CACTUS_HUNT':
+        transitionTo('PICK_CACTUS_DIALOGUE')
+        break
+      case 'WATER_CACTUS':
+        transitionTo('TIMELAPSE', 300)
+        break
+      default:
+        break
     }
   }, [transitionTo])
+
+  const handleMiniGameAbandon = useCallback(() => {
+    handleMiniGameComplete()
+  }, [handleMiniGameComplete])
 
   // ── Timelapse selesai ─────────────────────────────────────────────────────────
 
@@ -209,10 +223,9 @@ export function PrologueScene() {
 
   return (
     <div
-      className={`${styles.prologueScene} ${fading ? styles.fading : ''}`}
+      className={`${styles.prologueScene ?? ''} ${fading ? (styles.fading ?? '') : ''}`}
       data-step={step}
     >
-
       {/* Mini-games */}
       {step === 'MAP_PUZZLE' && (
         <div className={styles.minigameOverlay}>
@@ -220,7 +233,7 @@ export function PrologueScene() {
             type="slider-puzzle"
             config={prologueMapPuzzleConfig}
             onComplete={handleMiniGameComplete}
-            onAbandon={handleMiniGameComplete.bind(null, { success: false })}
+            onAbandon={handleMiniGameAbandon}
           />
         </div>
       )}
@@ -231,7 +244,7 @@ export function PrologueScene() {
             type="hidden-object"
             config={prologueCactusHuntConfig}
             onComplete={handleMiniGameComplete}
-            onAbandon={handleMiniGameComplete.bind(null, { success: false })}
+            onAbandon={handleMiniGameAbandon}
           />
         </div>
       )}
@@ -242,15 +255,13 @@ export function PrologueScene() {
             type="planting-game"
             config={prologueWaterCactusConfig}
             onComplete={handleMiniGameComplete}
-            onAbandon={handleMiniGameComplete.bind(null, { success: false })}
+            onAbandon={handleMiniGameAbandon}
           />
         </div>
       )}
 
       {/* Timelapse */}
-      {step === 'TIMELAPSE' && (
-        <PrologueTimelapse onComplete={handleTimelapseEnd} />
-      )}
+      {step === 'TIMELAPSE' && <PrologueTimelapse onComplete={handleTimelapseEnd} />}
 
       {/* Chat notification */}
       {step === 'ROOFTOP_CHAT_NOTIFICATION' && (
@@ -258,41 +269,35 @@ export function PrologueScene() {
       )}
 
       {/* Evening reflection — biarkan EveningReflection handle semuanya */}
-      {step === 'EVENING_REFLECTION' && (
-        <EveningReflection onComplete={handleEveningComplete} />
-      )}
+      {step === 'EVENING_REFLECTION' && <EveningReflection onComplete={handleEveningComplete} />}
 
       {/* Title card */}
       {step === 'TITLE_CARD' && showTitle && (
-        <TitleCard
-          title="Memories of You"
-          onComplete={handleTitleCardComplete}
-        />
+        <TitleCard title="Memories of You" onComplete={handleTitleCardComplete} />
       )}
 
       {/* Dialogue overlay */}
       {isDialogueActive && dialogueNode && (
         <div className={styles.dialogueOverlay}>
-          <DialogueBox
-            node={dialogueNode}
-            onAdvance={advance}
-            onChoose={choose}
-          />
+          <DialogueBox node={dialogueNode} onAdvance={advance} onChoose={choose} />
         </div>
       )}
-
     </div>
   )
 }
 
 // ─── Sub-components ────────────────────────────────────────────────────────────
 
-interface TimelapseProps { onComplete: () => void }
+interface TimelapseProps {
+  onComplete: () => void
+}
 
 function PrologueTimelapse({ onComplete }: TimelapseProps) {
   useEffect(() => {
     const t = setTimeout(onComplete, 4000)
-    return () => clearTimeout(t)
+    return () => {
+      clearTimeout(t)
+    }
   }, [onComplete])
 
   return (
@@ -306,7 +311,9 @@ function PrologueTimelapse({ onComplete }: TimelapseProps) {
   )
 }
 
-interface ChatNotifProps { onAcknowledge: () => void }
+interface ChatNotifProps {
+  onAcknowledge: () => void
+}
 
 function PrologueChatNotification({ onAcknowledge }: ChatNotifProps) {
   return (
@@ -315,7 +322,9 @@ function PrologueChatNotification({ onAcknowledge }: ChatNotifProps) {
       onClick={onAcknowledge}
       role="button"
       tabIndex={0}
-      onKeyDown={(e) => e.key === 'Enter' && onAcknowledge()}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter') onAcknowledge()
+      }}
       aria-label="Buka chat dari Dia"
     >
       <div className={styles.chatNotifBubble}>
