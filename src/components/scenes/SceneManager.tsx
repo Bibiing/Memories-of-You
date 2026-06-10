@@ -26,16 +26,6 @@ function MainMenuView() {
     <div className="scene-content scene-content--centered">
       <h1 className="title-game">Memories of You</h1>
       <p className="scene-subtitle">Chapter: {chapter}</p>
-      <div className="phase-checklist">
-        <span>✓ Phase 0 — Core Architecture</span>
-        <span>✓ Phase 1 — Systems &amp; Data</span>
-        <span>✓ Phase 2 — Visual Engine</span>
-        <span>✓ Phase 3 — Dialogue &amp; Narrative Engine</span>
-        <span>✓ Phase 4 — Smartphone UI</span>
-        <span>✓ Phase 5 — Mini-Game Systems</span>
-        <span>✓ Phase 6 — Konten: Prologue</span>
-        <span>✓ Phase 7 — Konten: Denial + Anger</span>
-      </div>
       <button
         className="choice-btn"
         style={{ marginTop: '1.5rem', width: 'auto', padding: '0.75rem 2rem' }}
